@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# Raw SEC XML is ~2.2 GB; the scripts in data/raw/<lender>/ re-download it from EDGAR.
+data/raw/**/*.xml
+# Run logs and internal build notes: they contain local paths and a personal contact address,
+# and Round 1 judging is blind, so they stay out of the public repository.
+*.log
+.claude/
+CLAUDE.md
+TASKS.md
+TASKS_*.md
+
+# NCUA Call Report bulk zip (8 MB); src/fetch_ncua_callreport.py re-downloads it.
+data/benchmark/ncua_callreport_*.zip
+
+# Prospectus and index copies the data scripts saved from EDGAR (about 50 MB); the scripts re-download them.
+data/raw/*/sec/

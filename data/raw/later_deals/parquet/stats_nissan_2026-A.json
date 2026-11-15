@@ -1,0 +1,101 @@
+{
+ "apr_max": 11.99,
+ "apr_median": 4.9,
+ "apr_min": 0.0,
+ "apr_zero_rows": 5219,
+ "balance_weighted": {
+  "beginning": {
+   "apr_pct": 4.4368,
+   "credit_score": 786.66,
+   "new_used_code_1_share_pct": 89.11
+  },
+  "end": {
+   "apr_pct": 4.4428,
+   "credit_score": 786.6,
+   "new_used_code_1_share_pct": 89.12
+  }
+ },
+ "bytes": 197733881,
+ "bytes_listed_by_edgar": 197733881,
+ "codes": {
+  "credit_score_type": {
+   "FICO": 51130
+  },
+  "employment_verification_code": {
+   "2": 51130
+  },
+  "income_verification_code": {
+   "2": 51130
+  },
+  "interest_rate_type_code": {
+   "1": 51130
+  },
+  "new_used_code": {
+   "1": 43194,
+   "2": 7936
+  },
+  "subvented": {
+   "1,2": 45139,
+   "2": 5991
+  },
+  "vehicle_type_code": {
+   "1": 10062,
+   "2": 6174,
+   "3": 2405,
+   "98": 32489
+  },
+  "vehicle_value_source_code": {
+   "1": 43194,
+   "3": 782,
+   "98": 7154
+  }
+ },
+ "credit_score_by_type": {
+  "FICO": {
+   "max": 900.0,
+   "median": 791.0,
+   "min": 660.0,
+   "numeric": 51130,
+   "rows": 51130
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 660.0,
+ "credit_score_outside_250_900": 0,
+ "credit_score_outside_300_850": 7582,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_after_2026_01": 0,
+ "origination_by_year": {
+  "2020": 372,
+  "2021": 975,
+  "2022": 1649,
+  "2023": 3192,
+  "2024": 16514,
+  "2025": 28428
+ },
+ "origination_month_max": "2025-12",
+ "origination_month_min": "2020-04",
+ "origination_month_unparsed": {},
+ "parquet_bytes": 1135349,
+ "prospectus_loan_count": 51130,
+ "prospectus_pool_balance": null,
+ "pti_999_99": 3,
+ "pti_median": 7.08,
+ "pti_missing": 0,
+ "repeated_tags": {
+  "subvented": 45139
+ },
+ "reporting_periods": {
+  "04-01-2026 to 04-30-2026": 51130
+ },
+ "rows_equal_prospectus_count": true,
+ "rows_parsed": 51130,
+ "rows_written": 51130,
+ "slug": "nissan_2026-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2130293/000119312526216202/narot26aex102_0508-1653lp.xml",
+ "sum_beginning_balance": "1420996821.53000000",
+ "sum_end_balance": "1394765218.37000000",
+ "xml_file": "narot26aex102_0508-1653lp.xml"
+}

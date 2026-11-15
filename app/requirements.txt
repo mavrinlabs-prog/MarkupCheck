@@ -1,0 +1,10 @@
+# Gradio itself is installed by Hugging Face Spaces from sdk_version in README.md (6.32.0).
+# Pinned to the versions in the project's .venv so pickled scikit-learn models load unchanged.
+scikit-learn==1.9.1
+joblib==1.6.0
+numpy==2.5.4
+pandas==3.1.1
+threadpoolctl==3.8.0
+# Imported by app.py directly, and by scikit-learn; pinned so the Space matches the tested versions.
+starlette==1.10.0
+scipy==1.18.1

@@ -1,0 +1,116 @@
+{
+  "alphas": [
+    0.05,
+    0.1,
+    0.15,
+    0.2,
+    0.25,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "lo": 0.1,
+  "hi": 0.9,
+  "views": {
+    "market": {
+      "dir": "A",
+      "features": [
+        "credit_score",
+        "is_used",
+        "vehicle_age",
+        "amount_financed",
+        "ltv",
+        "term_months"
+      ],
+      "conformal_qhat": 0.353861318908006,
+      "flag_delta": 1.08,
+      "coverage_by_group": {
+        "deep subprime|0": 0.764,
+        "deep subprime|1": 0.7249027237354085,
+        "near-prime|0": 0.8136775994417307,
+        "near-prime|1": 0.7731481481481481,
+        "prime|0": 0.8509384548232213,
+        "prime|1": 0.7626322608507882,
+        "subprime|0": 0.8648474430597336,
+        "subprime|1": 0.8250257974785768,
+        "super-prime|0": 0.9206549118387909,
+        "super-prime|1": 0.916500616756808
+      },
+      "coverage_overall": 0.8167357554346378
+    },
+    "same_lender": {
+      "dir": "B",
+      "features": [
+        "credit_score",
+        "is_used",
+        "vehicle_age",
+        "amount_financed",
+        "ltv",
+        "term_months",
+        "lender_code"
+      ],
+      "conformal_qhat": 0.2598352422350305,
+      "flag_delta": 0.61,
+      "coverage_by_group": {
+        "deep subprime|0": 0.744,
+        "deep subprime|1": 0.7035019455252919,
+        "near-prime|0": 0.8136775994417307,
+        "near-prime|1": 0.7916666666666666,
+        "prime|0": 0.8365342645133129,
+        "prime|1": 0.7279745195422155,
+        "subprime|0": 0.8536742587021917,
+        "subprime|1": 0.8230517295526941,
+        "super-prime|0": 0.836272040302267,
+        "super-prime|1": 0.8603757472245943
+      },
+      "coverage_overall": 0.7934526926866506,
+      "n_loans_by_lender": {
+        "carmax": 168938,
+        "santander": 157201,
+        "ally": 65372,
+        "capone": 47473,
+        "honda": 44888,
+        "toyota": 24992,
+        "gmf": 24400,
+        "hyundai": 13334,
+        "ford": 4158,
+        "nissan": 3265
+      },
+      "recalibrated": {}
+    }
+  },
+  "offer_benchmark_month": "2026-10",
+  "offer_benchmark_pct": 4.925238095238096,
+  "data_benchmark_min": 3.497,
+  "data_benchmark_max": 4.772380952380952,
+  "apr_observed_min": 0.9,
+  "apr_observed_max": 29.99,
+  "amount_max_train": 215736.24,
+  "newest_origination_month": "2026-01",
+  "reference_profile": {
+    "credit_score": 719.0,
+    "is_used": 1.0,
+    "vehicle_age": 3.0,
+    "amount_financed": 25381.9,
+    "ltv": 1.0085113978275282,
+    "term_months": 72.0
+  },
+  "data_note": "Compared with 554,021 loans from 28 SEC-filed bond deals (Ally, American Honda Finance, Capital One, CarMax Auto Finance, Ford Credit, GM Financial, Hyundai Capital America, Nissan Motor Acceptance, Santander Consumer, Toyota Financial Services), originated 2023-01 to 2026-01. Prices are compared after removing the 5-year Treasury rate; your offer uses the 2026-10 average of 4.93%.",
+  "weak_spots_always": [
+    "Only loans that lenders sold into public bonds are included; credit unions and many banks aren't.",
+    "Your credit app may show a VantageScore, while lenders often use FICO; the two can differ.",
+    "The data has no race, sex or age, and no information about the dealer, so some price differences can't be explained.",
+    "A high APR can also reflect risk the data doesn't show, not only a markup."
+  ]
+}

@@ -1,0 +1,61 @@
+
+== data/parquet/nissan/nissan_2024-A.parquet  (66,593 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'nissan'
+  [PASS] deal_cik is 10 digits  -- ['0002017943']
+  [PASS] rows == manifest rows_written  -- parquet 66,593, manifest 66,593
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 66,593, 424B5 66,593
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2018-03 .. 2024-01
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 4.99, max 11.99; 10508 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO'  -- rows 66,593, numeric 66,593, min 660.0, median 786.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 9087 rows outside (9087 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 6.95, max 999.99, NaN 2, rows == 999.99: 6
+
+== data/parquet/nissan/nissan_2025-A.parquet  (64,964 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'nissan'
+  [PASS] deal_cik is 10 digits  -- ['0002063629']
+  [PASS] rows == manifest rows_written  -- parquet 64,964, manifest 64,964
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 64,964, 424B5 64,964
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2019-04 .. 2024-11
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 3.9, max 11.99; 6546 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO'  -- rows 64,964, numeric 64,964, min 660.0, median 794.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 10266 rows outside (10266 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 7.11, max 999.99, NaN 1356, rows == 999.99: 3
+
+== data/parquet/nissan/nissan_2025-B.parquet  (52,533 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'nissan'
+  [PASS] deal_cik is 10 digits  -- ['0002091790']
+  [PASS] rows == manifest rows_written  -- parquet 52,533, manifest 52,533
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 52,533, 424B5 52,533
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2019-10 .. 2025-06
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 4.9, max 11.99; 3699 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO'  -- rows 52,533, numeric 52,533, min 660.0, median 797.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 8465 rows outside (8465 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 6.79, max 999.99, NaN 0, rows == 999.99: 6
+
+code_values_seen[credit_score_type] = {'FICO': 184090}
+
+code_values_seen[subvented] = {'0': 5793, '1': 57722, '1,2': 107863, '2': 12712}
+
+code_values_seen[new_used_code] = {'1': 163457, '2': 20633}
+
+code_values_seen[interest_rate_type_code] = {'1': 184090}
+
+3 file(s) checked, 0 hard check(s) failed

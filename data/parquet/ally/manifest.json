@@ -1,0 +1,143 @@
+{
+ "issuer": "ally",
+ "user_agent": "MarkupCheck student research project + the user-approved contact address from CLAUDE.md (address deliberately not stored in project files)",
+ "deals": [
+  {
+   "deal": "Ally Auto Receivables Trust 2024-1",
+   "deal_cik": "0002010413",
+   "filing_date": "2024-02-26",
+   "accession": "0001477336-24-000006",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2010413/000147733624000006/ex102jan2024aart20241_1.xml",
+   "why_this_is_the_first_pool_filing": "Earliest ABS-EE for this trust: its data.sec.gov submissions list has only an ABS-15G (2024-02-23) before it. Filed 2024-02-26 by the depositor Ally Auto Assets LLC (accession prefix 0001477336, not the trust's own 0002010413), reporting period 01-01-2024 to 01-31-2024, two days before the 424H (2024-02-28) and nine days before the 424B5 (2024-03-07). The file has 59,162 rows and its reportingPeriodActualEndBalanceAmount sums to $1,121,999,935.31, equal to the prospectus 'Number of Contracts in Pool' and 'Aggregate Amount Financed'. The trust's own monthly ABS-EE filings start later (Feb 2024 period, filed 2024-04-24). One EX-102 only; no large/small pool split.",
+   "bytes": 194598274,
+   "rows_parsed": 59162,
+   "rows_written": 59162,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2016-05",
+   "origination_month_max": "2024-01",
+   "prospectus_loan_count_if_found": 59162,
+   "prospectus_loan_count_source": "424B5 filed 2024-03-07, summary table 'Number of Contracts in Pool', read directly: https://www.sec.gov/Archives/edgar/data/2010413/000119312524062017/d748251d424b5.htm",
+   "parquet_file": "ally_2024-1.parquet"
+  },
+  {
+   "deal": "Ally Auto Receivables Trust 2025-1",
+   "deal_cik": "0002087070",
+   "filing_date": "2025-09-30",
+   "accession": "0001477336-25-000006",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2087070/000147733625000006/ex102aug2025aart20251_1.xml",
+   "why_this_is_the_first_pool_filing": "Earliest ABS-EE for this trust: its submissions list has only an ABS-15G (2025-09-29) before it. Filed 2025-09-30 by the depositor Ally Auto Assets LLC (prefix 0001477336), reporting period 08-01-2025 to 08-31-2025 inside the XML (EDGAR's header reportDate reads 2024-08-31, an apparent filer typo), one day before the 424H (2025-10-01) and nine days before the 424B5 (2025-10-09). The file has 58,335 rows and its end-balance column sums to $1,121,998,836.17, equal to the prospectus count and 'Aggregate Amount Financed'. The trust's own monthly ABS-EE filings start later (Sep 2025 period, filed 2025-11-20). One EX-102 only.",
+   "bytes": 191892877,
+   "rows_parsed": 58335,
+   "rows_written": 58335,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2017-11",
+   "origination_month_max": "2025-08",
+   "prospectus_loan_count_if_found": 58335,
+   "prospectus_loan_count_source": "424B5 filed 2025-10-09, summary table 'Number of Contracts in Pool', read directly: https://www.sec.gov/Archives/edgar/data/2087070/000119312525235593/d93972d424b5.htm",
+   "parquet_file": "ally_2025-1.parquet"
+  },
+  {
+   "deal": "Ally Auto Receivables Trust 2026-1",
+   "deal_cik": "0002111835",
+   "filing_date": "2026-02-24",
+   "accession": "0001477336-26-000006",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2111835/000147733626000006/ex102jan2026aart20261_1.xml",
+   "why_this_is_the_first_pool_filing": "Earliest ABS-EE for this trust: its submissions list has only an ABS-15G (2026-02-23) before it. Filed 2026-02-24 by the depositor Ally Auto Assets LLC (prefix 0001477336), reporting period 01-01-2026 to 01-31-2026, two days before the 424H (2026-02-26) and nine days before the 424B5 (2026-03-05). The file has 59,907 rows and its end-balance column sums to $1,121,938,434.96, equal to the 'Initial' column of the trust's first 10-D servicer report (Number of Receivables 59,907; Aggregate Receivables Principal Balance 1,121,938,434.96). The trust's own monthly ABS-EE filings start later (Feb 2026 period, filed 2026-04-23). One EX-102 only.",
+   "bytes": 197058047,
+   "rows_parsed": 59907,
+   "rows_written": 59907,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-03",
+   "origination_month_max": "2026-01",
+   "prospectus_loan_count_if_found": 59907,
+   "prospectus_loan_count_source": "NOT the prospectus: the 424B5 document returned HTTP 404 (see couldnt_confirm). Count is the 'Initial' Number of Receivables in the trust's first 10-D servicer report, accession 0002111835-26-000009: https://www.sec.gov/Archives/edgar/data/0002111835/000211183526000009/aart2026-1_exx99xmarch2026.htm",
+   "parquet_file": "ally_2026-1.parquet"
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 147236,
+   "2": 30152,
+   "1": 16
+  },
+  "new_used_code": {
+   "2": 121125,
+   "1": 56279
+  },
+  "credit_score_type": {
+   "Consumer Bureau": 160560,
+   "Commercial Bureau": 9360,
+   "None": 7484
+  }
+ },
+ "code_values_seen_by_deal": {
+  "Ally Auto Receivables Trust 2024-1": {
+   "subvented": {
+    "0": 47248,
+    "2": 11908,
+    "1": 6
+   },
+   "new_used_code": {
+    "2": 38872,
+    "1": 20290
+   },
+   "credit_score_type": {
+    "Consumer Bureau": 53985,
+    "Commercial Bureau": 3310,
+    "None": 1867
+   }
+  },
+  "Ally Auto Receivables Trust 2025-1": {
+   "subvented": {
+    "0": 49465,
+    "2": 8866,
+    "1": 4
+   },
+   "new_used_code": {
+    "2": 40647,
+    "1": 17688
+   },
+   "credit_score_type": {
+    "Consumer Bureau": 52894,
+    "Commercial Bureau": 2870,
+    "None": 2571
+   }
+  },
+  "Ally Auto Receivables Trust 2026-1": {
+   "subvented": {
+    "0": 50523,
+    "2": 9378,
+    "1": 6
+   },
+   "new_used_code": {
+    "2": 41606,
+    "1": 18301
+   },
+   "credit_score_type": {
+    "Consumer Bureau": 53681,
+    "Commercial Bureau": 3180,
+    "None": 3046
+   }
+  }
+ },
+ "spec_url": "https://www.sec.gov/files/absxml-31.zip (EDGAR ABS XML Technical Specification v3.1, Sep 18 2023, listed at https://www.sec.gov/submit-filings/technical-specifications; code meanings are in the annotations of eis_ABS_AutoLoanAssetData.xsd inside the zip, unpacked in data/raw/ally/spec_absxml31/)",
+ "notes": [
+  "Ally files each deal's first pool ABS-EE through the depositor Ally Auto Assets LLC (CIK 0001477336, accession prefix 0001477336-YY), a few days before the 424H/424B5; the trust's own CIK files the later monthly ABS-EE. Each such filing holds one EX-102 (~190-200 MB, ~58-60k loans) plus a ~25 KB EX-103 (asset related document, not used).",
+  "Each Parquet equals its pool at the cutoff: row counts match the prospectus (2024-1, 2025-1) and the first 10-D (2026-1) exactly, and the sum of reportingPeriodActualEndBalanceAmount matches the stated aggregate balance to the cent in all three. For 2024-1 and 2025-1 the balance-weighted share of new vehicles is 40.00% and 40.03%, matching the prospectus 'Percentage of New Vehicles' (confirms vehicleNewUsedCode 1 = New).",
+  "Code meanings from the spec XSD annotations: subvented 0 No, 1 Yes - Rate Subvention, 2 Yes - Cash Rebate, 98 Yes - Other; vehicleNewUsedCode 1 New, 2 Used; vehicleTypeCode 1 Car, 2 Truck, 3 SUV, 4 Motorcycle, 98 Other, 99 Unknown; vehicleValueSourceCode 1 Invoice Price, 2 MSRP, 3 Kelly Blue Book, 98 Other; originalInterestRateTypeCode 1 Fixed (all rows are 1); income verification 1 Not stated/not verified, 2 Stated/not verified, 3 Stated verified but not to level 4 or 5, 4 level 4, 5 level 5; employment verification 1 Not stated/not verified, 2 Stated/not verified, 3 Stated, level 3 verified. obligorCreditScoreType is free text in these files: 'Consumer Bureau', 'Commercial Bureau', 'None'.",
+  "Seasoned loans: pools include loans originated years before the deal. Origination-month range is 2016-05..2024-01 (2024-1), 2017-11..2025-08 (2025-1), 2018-03..2026-01 (2026-1). Share by origination year: 2024-1 has 46% in 2023 and the rest spread over 2016-2022; 2025-1 has 35% in 2025, 18% in 2024, about 20% in 2023; 2026-1 has 52% in 2025, about 14% in 2024, 10% in 2023. The main session decides whether to keep only recent vintages.",
+  "credit_score: rows with credit_score_type 'None' have no score (NaN): 1,867 / 2,571 / 3,046. About 3.3-3.6% of rows (1,928 / 2,104 / 2,024) have a score outside 300-850, nearly all above 850 (values like 851-900 and a few 999; 1,919 / 2,097 / 2,022 above 850) with 9 / 7 / 2 below 300; scores are kept as written. Consumer-bureau scores up to ~900 are consistent with auto-industry FICO scores, and the consumer-only balance-weighted mean is 735.2 / 735.7 against the prospectus weighted-average FICO 734.63 / 734.97. 'Commercial Bureau' rows (3,310 / 2,870 / 3,180) have a very different score scale (median ~530-600, range 200-999).",
+  "apr_pct == 0 exactly: 27 (2024-1), 338 (2025-1), 333 (2026-1) rows, kept. In 2025-1 and 2026-1 almost all of them have subvented '0' (335 of 338, 329 of 333), so Ally does not flag these 0% loans as subvented; subvented '1' (rate subvention) has only 6 / 4 / 6 rows. apr_pct max is 25.0 in every deal (7 / 20 / 14 rows at exactly 25).",
+  "Conversions: apr_pct = originalInterestRatePercentage x 100 and pti_pct = paymentToIncomePercentage x 100, rounded to 6 decimals; origination_month from MM/YYYY; credit_score and vehicle_model_year NaN/null if non-numeric. No rows dropped; no duplicate asset numbers in any file. pti_pct has no missing values (0.0 appears).",
+  "Stretch file data/parquet/ally/perf_ally_2024-1.parquet: 709,933 rows = the trust's first 12 monthly EX-102 files, reporting periods 2024-02 .. 2025-01 (accessions listed in data/raw/ally/perf_ally.py), 59,162 distinct loans, every one also in ally_2024-1.parquet. Columns: asset_number, reporting_period_end, current_delinquency_status (integer, days past due), chargedoff_principal_amount, zero_balance_code (string; 1 Prepaid or Matured, 3 Repurchased or Replaced, 4 Charged-off), repossessed (bool; null where the file omits repossessedIndicator). Each monthly XML was deleted right after parsing (log in data/raw/ally/perf_ally.log, stats_perf_ally_2024-1.json).",
+  "Ally's monthly EX-102 files do not drop paid-off loans, at least in the first year: each of the 12 monthly files has 59,161 rows (59,162 in Feb 2024; one loan is missing from March on), and loans that paid off stay listed with zero_balance_code 1 (956 rows in Feb 2024 rising to 16,051 in Jan 2025). The first pool file is still the cleanest source because it is the pool as priced, but for Ally the loss of paid-off loans described in the brief did not show up in these 12 months.",
+  "Spec element names confirmed against eis_ABS_AutoLoanAssetData.xsd; currentDelinquencyStatus is the number of days past due (Item 3(f)(25)); zeroBalanceCode 1 Prepaid or Matured, 2 Third-party Sale, 3 Repurchased or Replaced, 4 Charged-off, 5 Servicing Transfer, 99 Unavailable."
+ ],
+ "couldnt_confirm": [
+  "2026-1 prospectus loan count from the 424B5 itself: EDGAR's submissions JSON lists it (accession 0001193125-26-093780, filed 2026-03-05, d87563d424b5.htm) but the document returned HTTP 404 on Nov 14 2026 under both the trust folder (2111835) and the depositor folder (1477336); the 424H (0001193125-26-073646) and the FWP (0001193125-26-089537) returned 404 too. The 59,907 count comes from the first 10-D servicer report instead.",
+  "Prospectus weighted-average APR does not reproduce from the file: prospectus 9.62% (2024-1) and 9.52% (2025-1) against 9.147% and 9.379% weighted by end balance (8.40% and 8.99% weighted by original amount, simple mean 8.679% and 9.515%). I tried balance and amount weights, dropping 0% rows and consumer-only; original and current rate columns are identical. Cause unknown. The file's rates look like normal Ally contract rates (median 8.2-9.0%), but treat apr_pct as the file's originalInterestRatePercentage x 100, not as proven equal to the prospectus APR.",
+  "Weighted-average FICO from the prospectus (734.63 / 734.97) is close to, not equal to, the consumer-only balance-weighted mean of the file (735.22 / 735.72); the exact prospectus weighting is not known.",
+  "Why EDGAR's header reportDate for the 2025-1 first filing reads 2024-08-31: the XML inside says 08-01-2025 to 08-31-2025, so I treated the header as a typo; not confirmed with Ally.",
+  "Spec URL: I opened the zip's contents locally (xsd and sample XML) but did not read the full PDF text for any definition that differs from the xsd annotations."
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "apr_max": 11.99,
+ "apr_median": 4.9,
+ "apr_min": 0.0,
+ "apr_zero_rows": 3699,
+ "balance_weighted": {
+  "beginning": {
+   "apr_pct": 4.5958,
+   "credit_score": 795.1,
+   "new_used_code_1_share_pct": 90.02
+  },
+  "end": {
+   "apr_pct": 4.6017,
+   "credit_score": 795.05,
+   "new_used_code_1_share_pct": 90.02
+  }
+ },
+ "bytes": 196383577,
+ "bytes_listed_by_edgar": 196383577,
+ "codes": {
+  "credit_score_type": {
+   "FICO": 52533
+  },
+  "employment_verification_code": {
+   "2": 52533
+  },
+  "income_verification_code": {
+   "2": 52533
+  },
+  "interest_rate_type_code": {
+   "1": 52533
+  },
+  "new_used_code": {
+   "1": 45330,
+   "2": 7203
+  },
+  "subvented": {
+   "1,2": 42428,
+   "2": 10105
+  },
+  "vehicle_type_code": {
+   "1": 13118,
+   "2": 5687,
+   "3": 2101,
+   "98": 31627
+  },
+  "vehicle_value_source_code": {
+   "1": 45330,
+   "3": 815,
+   "98": 6388
+  }
+ },
+ "credit_score_by_type": {
+  "FICO": {
+   "max": 900.0,
+   "median": 797.0,
+   "min": 660.0,
+   "numeric": 52533,
+   "rows": 52533
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 660.0,
+ "credit_score_outside_250_900": 0,
+ "credit_score_outside_300_850": 8465,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_after_2026_01": 0,
+ "origination_by_year": {
+  "2019": 13,
+  "2020": 116,
+  "2021": 1469,
+  "2022": 2028,
+  "2023": 7483,
+  "2024": 25521,
+  "2025": 15903
+ },
+ "origination_month_max": "2025-06",
+ "origination_month_min": "2019-10",
+ "origination_month_unparsed": {},
+ "parquet_bytes": 1176245,
+ "prospectus_loan_count": 52533,
+ "prospectus_pool_balance": "1381270659.94",
+ "pti_999_99": 6,
+ "pti_median": 6.79,
+ "pti_missing": 0,
+ "repeated_tags": {
+  "subvented": 42428
+ },
+ "reporting_periods": {
+  "10-01-2025 to 10-31-2025": 52533
+ },
+ "rows_equal_prospectus_count": true,
+ "rows_parsed": 52533,
+ "rows_written": 52533,
+ "slug": "nissan_2025-B",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2091790/000119312525287965/narot25bex102_1118-1657lp.xml",
+ "sum_beginning_balance": "1409098169.67000000",
+ "sum_end_balance": "1381270659.94000000",
+ "xml_file": "narot25bex102_1118-1657lp.xml"
+}

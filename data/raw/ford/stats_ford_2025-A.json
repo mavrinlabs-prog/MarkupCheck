@@ -1,0 +1,68 @@
+{
+ "bytes": 159083183,
+ "codes": {
+  "credit_score_type": {
+   "Commercial Bureau": 9173,
+   "Consumer Bureau": 36549
+  },
+  "employment_verification_code": {
+   "1": 1,
+   "2": 34986,
+   "3": 1562,
+   "None": 9173
+  },
+  "income_verification_code": {
+   "2": 34987,
+   "3": 1558,
+   "4": 2,
+   "5": 2,
+   "None": 9173
+  },
+  "interest_rate_type_code": {
+   "1": 45722
+  },
+  "new_used_code": {
+   "1": 41886,
+   "2": 3836
+  },
+  "subvented": {
+   "0": 6254,
+   "1": 12315,
+   "1|2": 23841,
+   "2": 3312
+  },
+  "vehicle_type_code": {
+   "1": 1765,
+   "2": 22034,
+   "3": 21923
+  },
+  "vehicle_value_source_code": {
+   "1": 41973,
+   "98": 3749
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_median": 742.0,
+ "credit_score_min": 1.0,
+ "credit_score_outside_300_850": 11070,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {
+  "No Score": 737
+ },
+ "origination_month_max": "2025-02",
+ "origination_month_min": "2018-04",
+ "parquet_bytes": 1067293,
+ "rows_parsed": 45722,
+ "rows_written": 45722,
+ "slug": "ford_2025-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2057342/000112998725000004/autoloaninitial1183lp.xml",
+ "subvented_each_code": {
+  "0": 6254,
+  "1": 36156,
+  "2": 27153
+ },
+ "sum_reportingPeriodActualEndBalanceAmount": 1668378947.84,
+ "sum_reportingPeriodBeginningLoanBalanceAmount": 1652956388.09,
+ "unparsed_origination_dates": {},
+ "xml_file": "autoloaninitial1183lp.xml"
+}

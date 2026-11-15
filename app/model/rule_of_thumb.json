@@ -1,0 +1,80 @@
+{
+ "about": "B1 rule of thumb: 10th, 50th and 90th percentile spread (APR minus 5-year Treasury) by credit tier and new/used in the training months; b0 is the fallback for an empty cell.",
+ "lo": 0.1,
+ "hi": 0.9,
+ "table": {
+  "deep subprime|0": {
+   "q_lo": 8.3558,
+   "q50": 13.4334,
+   "q_hi": 23.2717,
+   "n_train": 822
+  },
+  "deep subprime|1": {
+   "q_lo": 10.866,
+   "q50": 18.4775,
+   "q_hi": 25.503,
+   "n_train": 3418
+  },
+  "subprime|0": {
+   "q_lo": 7.2423,
+   "q50": 12.3295,
+   "q_hi": 21.0795,
+   "n_train": 10636
+  },
+  "subprime|1": {
+   "q_lo": 9.9816,
+   "q50": 15.9416,
+   "q_hi": 24.4015,
+   "n_train": 40042
+  },
+  "near-prime|0": {
+   "q_lo": 3.403,
+   "q50": 9.2077,
+   "q_hi": 15.2104,
+   "n_train": 11900
+  },
+  "near-prime|1": {
+   "q_lo": 7.8129,
+   "q50": 12.3074,
+   "q_hi": 20.5138,
+   "n_train": 44240
+  },
+  "prime|0": {
+   "q_lo": 1.5935,
+   "q50": 3.8505,
+   "q_hi": 7.5117,
+   "n_train": 30270
+  },
+  "prime|1": {
+   "q_lo": 2.802,
+   "q50": 5.9782,
+   "q_hi": 11.7295,
+   "n_train": 115389
+  },
+  "super-prime|0": {
+   "q_lo": 1.413,
+   "q50": 2.4189,
+   "q_hi": 4.512,
+   "n_train": 22586
+  },
+  "super-prime|1": {
+   "q_lo": 1.5116,
+   "q50": 3.0277,
+   "q_hi": 5.339,
+   "n_train": 73632
+  }
+ },
+ "b0": {
+  "q_lo": 2.0079,
+  "q50": 5.9276,
+  "q_hi": 16.7655
+ },
+ "test": {
+  "rule_mae": 3.5,
+  "model_mae": 2.53,
+  "rule_coverage_pct": 78.0,
+  "model_coverage_pct": 81.7,
+  "rule_width": 9.74,
+  "model_width": 8.13
+ }
+}

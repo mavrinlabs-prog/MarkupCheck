@@ -1,0 +1,569 @@
+{
+  "what": "Forward test of the frozen app/model/ files on CarMax loans originated after the training data's newest month",
+  "newest_training_month": "2026-01",
+  "deals": [
+    {
+      "slug": "carmax_2026-2",
+      "deal": "CarMax Auto Owner Trust 2026-2",
+      "cik": "0002117307",
+      "filing_date": "2026-04-14",
+      "accession": "0001259380-26-000017",
+      "xml": "cart20262u.xml",
+      "b424": "0001193125-26-173162 (2026-04-23)",
+      "prospectus_loan_count": 52812,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2117307/000125938026000017/cart20262u.xml",
+      "bytes": 169066439,
+      "rows_parsed": 52812,
+      "origination_month_min": "2019-08",
+      "origination_month_max": "2026-02"
+    },
+    {
+      "slug": "carmax_2026-3",
+      "deal": "CarMax Auto Owner Trust 2026-3",
+      "cik": "0002142044",
+      "filing_date": "2026-07-07",
+      "accession": "0001259380-26-000027",
+      "xml": "cart20263u.xml",
+      "b424": "0001193125-26-305902 (2026-07-16)",
+      "prospectus_loan_count": 79198,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2142044/000125938026000027/cart20263u.xml",
+      "bytes": 253438487,
+      "rows_parsed": 79198,
+      "origination_month_min": "2020-01",
+      "origination_month_max": "2026-05"
+    },
+    {
+      "slug": "carmax_2026-4",
+      "deal": "CarMax Auto Owner Trust 2026-4",
+      "cik": "0002150706",
+      "filing_date": "2026-10-06",
+      "accession": "0001259380-26-000035",
+      "xml": "cart20264u.xml",
+      "b424": "0001193125-26-423742 (2026-10-16)",
+      "prospectus_loan_count": 69556,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2150706/000125938026000035/cart20264u.xml",
+      "bytes": 222624601,
+      "rows_parsed": 69556,
+      "origination_month_min": "2020-02",
+      "origination_month_max": "2026-08"
+    }
+  ],
+  "asset_numbers_repeated_across_deals": 0,
+  "asset_numbers_also_in_training_carmax_files": 0,
+  "months_without_benchmark": [],
+  "benchmark_file": "data/benchmark/treasury_5y_monthly.csv (unchanged)",
+  "treasury_5y_forward_months": {
+    "2026-02": 3.681578947368421,
+    "2026-03": 3.848181818181818,
+    "2026-04": 3.9354545454545455,
+    "2026-05": 4.1450000000000005,
+    "2026-06": 4.21,
+    "2026-07": 4.330909090909091,
+    "2026-08": 4.384285714285714
+  },
+  "drops": [
+    {
+      "step": "all loans parsed",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "duplicate (deal, asset_number) removed",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "fixed-rate loans only",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+      "rows_removed": 0,
+      "rows_left": 201566
+    },
+    {
+      "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+      "rows_removed": 43855,
+      "rows_left": 157711
+    },
+    {
+      "step": "APR above 0% and at most 40%",
+      "rows_removed": 0,
+      "rows_left": 157711
+    },
+    {
+      "step": "new (1) or used (2) code",
+      "rows_removed": 0,
+      "rows_left": 157711
+    },
+    {
+      "step": "term 12\u201396 months",
+      "rows_removed": 0,
+      "rows_left": 157711
+    },
+    {
+      "step": "loan amount and vehicle value above $1,000",
+      "rows_removed": 5,
+      "rows_left": 157706
+    },
+    {
+      "step": "loan-to-value 0.2\u20133.0",
+      "rows_removed": 724,
+      "rows_left": 156982
+    },
+    {
+      "step": "origination month has a Treasury benchmark",
+      "rows_removed": 0,
+      "rows_left": 156982
+    },
+    {
+      "step": "vehicle model year plausible (1990 to origination year + 1)",
+      "rows_removed": 0,
+      "rows_left": 156982
+    },
+    {
+      "step": "originated after 2026-01 (newest month in the training data)",
+      "rows_removed": 43782,
+      "rows_left": 113200
+    }
+  ],
+  "n_loans": 113200,
+  "months": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+  ],
+  "forward": {
+    "market": {
+      "loans": 113200,
+      "model_mae": 1.724231330695615,
+      "b1_mae": 2.4475200793483065,
+      "coverage": 0.6881272084805654,
+      "mean_width": 4.995942966343585,
+      "prime_used_loans": 58894,
+      "coverage_prime_used": 0.6572995551329507,
+      "b1_coverage": 0.6698586572438162,
+      "share_high": 0.07312720848056536,
+      "share_well_above": 0.03836572438162544,
+      "share_below_range": 0.23874558303886925,
+      "mean_residual": -0.37349925135822043
+    },
+    "same_lender": {
+      "loans": 113200,
+      "model_mae": 1.6230567108046505,
+      "b1_mae": 2.4475200793483065,
+      "coverage": 0.6201236749116608,
+      "mean_width": 4.056811363938504,
+      "prime_used_loans": 58894,
+      "coverage_prime_used": 0.5899072910653038,
+      "b1_coverage": 0.6698586572438162,
+      "share_high": 0.08798586572438162,
+      "share_well_above": 0.057765017667844525,
+      "share_below_range": 0.2918904593639576,
+      "mean_residual": -0.333922462150629
+    }
+  },
+  "by_month": [
+    {
+      "month": "2026-02",
+      "loans": 15718,
+      "model_MAE": 1.5899912231521451,
+      "same_lender_MAE": 1.491340588832718,
+      "B1_rule_MAE": 2.303674183318306,
+      "model_coverage": 0.7999745514696526,
+      "same_lender_coverage": 0.7145947321542181,
+      "model_below_range": 0.14079399414683802,
+      "model_above_range": 0.05923145438350935,
+      "model_mean_residual": -0.4179520912814133,
+      "model_well_above_share": 0.02894770327013615
+    },
+    {
+      "month": "2026-03",
+      "loans": 18309,
+      "model_MAE": 1.660486658357383,
+      "same_lender_MAE": 1.5555483890308346,
+      "B1_rule_MAE": 2.3679316282603193,
+      "model_coverage": 0.7382707957834944,
+      "same_lender_coverage": 0.6590747719700694,
+      "model_below_range": 0.20186793380304768,
+      "model_above_range": 0.05986127041345786,
+      "model_mean_residual": -0.48690890378977436,
+      "model_well_above_share": 0.032006117210115245
+    },
+    {
+      "month": "2026-04",
+      "loans": 17723,
+      "model_MAE": 1.685991249586472,
+      "same_lender_MAE": 1.5793116428418648,
+      "B1_rule_MAE": 2.3798876703615743,
+      "model_coverage": 0.6972295886700897,
+      "same_lender_coverage": 0.6333013598149297,
+      "model_below_range": 0.23923714946679456,
+      "model_above_range": 0.06353326186311573,
+      "model_mean_residual": -0.48815995811475343,
+      "model_well_above_share": 0.03323365118772217
+    },
+    {
+      "month": "2026-05",
+      "loans": 19509,
+      "model_MAE": 1.8205955905611702,
+      "same_lender_MAE": 1.7178567787174932,
+      "B1_rule_MAE": 2.564088332191669,
+      "model_coverage": 0.6091547490901635,
+      "same_lender_coverage": 0.5477984519965144,
+      "model_below_range": 0.3107796401660772,
+      "model_above_range": 0.08006561074375929,
+      "model_mean_residual": -0.41418838852985335,
+      "model_well_above_share": 0.0411092316366805
+    },
+    {
+      "month": "2026-06",
+      "loans": 16311,
+      "model_MAE": 1.791839558690751,
+      "same_lender_MAE": 1.6855713245144721,
+      "B1_rule_MAE": 2.509222749845336,
+      "model_coverage": 0.6347250321868677,
+      "same_lender_coverage": 0.5782600698914843,
+      "model_below_range": 0.2799337870148979,
+      "model_above_range": 0.08534118079823431,
+      "model_mean_residual": -0.2982827594716342,
+      "model_well_above_share": 0.046103856293299
+    },
+    {
+      "month": "2026-07",
+      "loans": 15881,
+      "model_MAE": 1.779073551083002,
+      "same_lender_MAE": 1.6790421253989067,
+      "B1_rule_MAE": 2.514529042709699,
+      "model_coverage": 0.6742648447830741,
+      "same_lender_coverage": 0.6091555947358479,
+      "model_below_range": 0.23480889112776274,
+      "model_above_range": 0.09092626408916316,
+      "model_mean_residual": -0.14883429597256853,
+      "model_well_above_share": 0.050311693218311186
+    },
+    {
+      "month": "2026-08",
+      "loans": 9749,
+      "model_MAE": 1.734605596690938,
+      "same_lender_MAE": 1.6562275949683767,
+      "B1_rule_MAE": 2.5062001777072043,
+      "model_coverage": 0.667042773617807,
+      "same_lender_coverage": 0.6033439327110472,
+      "model_below_range": 0.2583854754333778,
+      "model_above_range": 0.07457175094881527,
+      "model_mean_residual": -0.29079304645845216,
+      "model_well_above_share": 0.03692686429377372
+    }
+  ],
+  "model_beats_b1_months": 7,
+  "check_original_test": {
+    "all_lenders_market": {
+      "loans": 112657,
+      "model_mae": 2.532654508314098,
+      "b1_mae": 3.4989281529669642,
+      "coverage": 0.8167357554346378,
+      "mean_width": 8.133018878923396,
+      "prime_used_loans": 37048,
+      "coverage_prime_used": 0.7626322608507882,
+      "b1_coverage": 0.7801290643280044,
+      "share_high": 0.10084593056800731,
+      "share_well_above": 0.05489228365747357,
+      "share_below_range": 0.0824183139973548,
+      "mean_residual": 0.5307873770972277
+    },
+    "reproduces_readme": true,
+    "carmax_only": {
+      "A": {
+        "loans": 42221,
+        "model_mae": 1.5456764836176295,
+        "b1_mae": 2.3251395690435746,
+        "coverage": 0.8312924847824542,
+        "mean_width": 5.222601541414056,
+        "prime_used_loans": 23228,
+        "coverage_prime_used": 0.7552953332185294,
+        "b1_coverage": 0.8144051538334004,
+        "share_high": 0.07086520925605741,
+        "share_well_above": 0.03619052130456408,
+        "share_below_range": 0.09784230596148837,
+        "mean_residual": -0.18478114727664166
+      },
+      "B": {
+        "loans": 42221,
+        "model_mae": 1.4634681394303586,
+        "b1_mae": 2.3251395690435746,
+        "coverage": 0.7529191634494683,
+        "mean_width": 4.271843169666154,
+        "prime_used_loans": 23228,
+        "coverage_prime_used": 0.6735836059927673,
+        "b1_coverage": 0.8144051538334004,
+        "share_high": 0.08796570427038677,
+        "share_well_above": 0.05601477937519244,
+        "share_below_range": 0.15911513228014496,
+        "mean_residual": -0.1521431915906419
+      }
+    }
+  },
+  "readme_test": {
+    "model_mae": 2.53,
+    "b1_mae": 3.5,
+    "coverage": 0.817,
+    "coverage_prime_used": 0.763
+  },
+  "reported_test": {
+    "same_lender_mae": 2.3524572697521924,
+    "same_lender_coverage": 0.7934526926866506,
+    "model_well_above_share": 0.05489228365747357,
+    "b1_coverage": 0.7801290643280044
+  },
+  "conformal_qhat": {
+    "market": 0.353861318908006,
+    "same_lender": 0.2598352422350305
+  },
+  "flag_delta": {
+    "market": 1.08,
+    "same_lender": 0.61
+  },
+  "out_of_lender": {
+    "deal": {
+      "slug": "capone_2026-1",
+      "deal": "Capital One Prime Auto Receivables Trust 2026-1",
+      "cik": "0002149906",
+      "filing_date": "2026-09-02",
+      "accession": "0001193125-26-379485",
+      "xml": "copart261ex102_0831-1940lp.xml",
+      "b424": "0001193125-26-389225 (2026-09-11)",
+      "prospectus_loan_count": 91627,
+      "source_url": "https://www.sec.gov/Archives/edgar/data/2149906/000119312526379485/copart261ex102_0831-1940lp.xml",
+      "bytes": 352286257,
+      "rows_parsed": 91627,
+      "origination_month_min": "2025-02",
+      "origination_month_max": "2026-01"
+    },
+    "score_type_map": {
+      "FICO": "Bureau"
+    },
+    "drops": [
+      {
+        "step": "all loans parsed",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "duplicate (deal, asset_number) removed",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "fixed-rate loans only",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+        "rows_removed": 0,
+        "rows_left": 91627
+      },
+      {
+        "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+        "rows_removed": 46875,
+        "rows_left": 44752
+      },
+      {
+        "step": "APR above 0% and at most 40%",
+        "rows_removed": 0,
+        "rows_left": 44752
+      },
+      {
+        "step": "new (1) or used (2) code",
+        "rows_removed": 0,
+        "rows_left": 44752
+      },
+      {
+        "step": "term 12\u201396 months",
+        "rows_removed": 0,
+        "rows_left": 44752
+      },
+      {
+        "step": "loan amount and vehicle value above $1,000",
+        "rows_removed": 0,
+        "rows_left": 44752
+      },
+      {
+        "step": "loan-to-value 0.2\u20133.0",
+        "rows_removed": 62,
+        "rows_left": 44690
+      },
+      {
+        "step": "origination month has a Treasury benchmark",
+        "rows_removed": 0,
+        "rows_left": 44690
+      },
+      {
+        "step": "vehicle model year plausible (1990 to origination year + 1)",
+        "rows_removed": 0,
+        "rows_left": 44690
+      }
+    ],
+    "n_loans": 44690,
+    "months": [
+      "2025-09",
+      "2025-10",
+      "2025-11",
+      "2025-12",
+      "2026-01"
+    ],
+    "credit_score_min": 740.0,
+    "after_newest_training_month": 0,
+    "capital_one": {
+      "loans": 44690,
+      "model_mae": 1.1917564040721125,
+      "b1_mae": 1.4513484424689953,
+      "coverage": 0.7707988364287313,
+      "mean_width": 4.249577238813648,
+      "prime_used_loans": 10016,
+      "coverage_prime_used": 0.6971845047923323,
+      "b1_coverage": 0.6925039158648467,
+      "share_high": 0.006175878272544193,
+      "share_well_above": 0.0005146565227120161,
+      "share_below_range": 0.22302528529872453,
+      "mean_residual": -0.825988077948772
+    },
+    "capital_one_n_well_above": 23,
+    "groups_where_rule_beats_model": [
+      "super-prime new cars (1.01 vs 0.86)",
+      "super-prime used cars (1.10 vs 0.97)"
+    ],
+    "original_test_same_months_same_scores": {
+      "loans": 27039,
+      "model_mae": 1.1828030790919606,
+      "b1_mae": 1.742690136533585,
+      "coverage": 0.8932282998631607,
+      "mean_width": 4.3016716485742785,
+      "prime_used_loans": 9096,
+      "coverage_prime_used": 0.8309146877748461,
+      "b1_coverage": 0.8527682236769111,
+      "share_high": 0.06268722955730612,
+      "share_well_above": 0.03298938570213395,
+      "share_below_range": 0.04408447057953327,
+      "mean_residual": 0.0902641827183134
+    },
+    "by_group_capital_one": [
+      {
+        "tier": "prime",
+        "new_or_used": "new",
+        "loans": 3275,
+        "model_MAE": 1.130627625410993,
+        "B1_rule_MAE": 1.6634062747430685,
+        "model_coverage": 0.8137404580152672,
+        "B1_coverage": 0.6723664122137405,
+        "below_range": 0.18595419847328246,
+        "above_range": 0.0003053435114503817
+      },
+      {
+        "tier": "prime",
+        "new_or_used": "used",
+        "loans": 10016,
+        "model_MAE": 1.5912666712394101,
+        "B1_rule_MAE": 3.021897751908635,
+        "model_coverage": 0.6971845047923323,
+        "B1_coverage": 0.595547124600639,
+        "below_range": 0.299620607028754,
+        "above_range": 0.003194888178913738
+      },
+      {
+        "tier": "super-prime",
+        "new_or_used": "new",
+        "loans": 10541,
+        "model_MAE": 1.0125016079606006,
+        "B1_rule_MAE": 0.8553181058419177,
+        "model_coverage": 0.8029598709799829,
+        "B1_coverage": 0.628593112607912,
+        "below_range": 0.19656579072194288,
+        "above_range": 0.0004743382980741865
+      },
+      {
+        "tier": "super-prime",
+        "new_or_used": "used",
+        "loans": 20858,
+        "model_MAE": 1.1000998080408035,
+        "B1_rule_MAE": 0.9650911068826977,
+        "model_coverage": 0.7831527471473775,
+        "B1_coverage": 0.7745229648096653,
+        "below_range": 0.20543676287275867,
+        "above_range": 0.01141048997986384
+      }
+    ],
+    "by_group_original_test": [
+      {
+        "tier": "prime",
+        "new_or_used": "new",
+        "loans": 845,
+        "model_MAE": 1.5325682572475252,
+        "B1_rule_MAE": 1.8281159148543764,
+        "model_coverage": 0.8662721893491124,
+        "B1_coverage": 0.808284023668639,
+        "below_range": 0.05088757396449704,
+        "above_range": 0.08284023668639054
+      },
+      {
+        "tier": "prime",
+        "new_or_used": "used",
+        "loans": 9096,
+        "model_MAE": 1.70713537583488,
+        "B1_rule_MAE": 2.8166067307069946,
+        "model_coverage": 0.8309146877748461,
+        "B1_coverage": 0.7372471416007036,
+        "below_range": 0.07398856640281443,
+        "above_range": 0.09509674582233948
+      },
+      {
+        "tier": "super-prime",
+        "new_or_used": "new",
+        "loans": 1080,
+        "model_MAE": 1.031663843042962,
+        "B1_rule_MAE": 1.1402647867564535,
+        "model_coverage": 0.9018518518518519,
+        "B1_coverage": 0.8064814814814815,
+        "below_range": 0.044444444444444446,
+        "above_range": 0.053703703703703705
+      },
+      {
+        "tier": "super-prime",
+        "new_or_used": "used",
+        "loans": 16018,
+        "model_MAE": 0.8767943531722371,
+        "B1_rule_MAE": 1.1689661544182706,
+        "model_coverage": 0.9294543638406793,
+        "B1_coverage": 0.9238356848545386,
+        "below_range": 0.026719940067424147,
+        "above_range": 0.04382569609189662
+      }
+    ]
+  }
+}

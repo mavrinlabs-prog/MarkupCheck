@@ -1,0 +1,9 @@
+{
+ "lender": "CarMax",
+ "loans": 113200,
+ "months": "February to August 2026",
+ "model_mae": 1.72,
+ "rule_mae": 2.45,
+ "coverage_pct": 68.8,
+ "below_pct": 23.9
+}

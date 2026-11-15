@@ -1,0 +1,63 @@
+
+== data/parquet/ally/ally_2024-1.parquet  (59,162 rows, Ally Auto Receivables Trust 2024-1)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] file has rows  -- 59162 rows
+  [PASS] apr_pct present and within [0, 40] for every row  -- min 0.0000, max 25.0000, bad rows 0
+  [FAIL] apr_pct strictly in (0, 40] (brief wording)  -- 27 rows have apr_pct == 0 (zero-rate loans, kept as written)
+  [PASS] credit_score is NaN or within 1-999 (no scale errors)  -- min 200.0, max 999.0, NaN 1867
+  [PASS] credit_score is NaN exactly when credit_score_type == 'None'  -- 1867 NaN vs 1867 type 'None'; mismatches 0
+  [FAIL] credit_score 300-850 or NaN (brief wording)  -- 1928 rows outside 300-850 (1919 above 850, 9 below 300), by score type {'Consumer Bureau': 1886, 'Commercial Bureau': 42}; kept as written
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month parses as YYYY-MM  -- range 2016-05 .. 2024-01, bad rows 0
+  [PASS] filing_date is YYYY-MM-DD and constant  -- 1 distinct value(s): ['2024-02-26']
+  [PASS] issuer == 'ally'
+  [PASS] deal_cik is 10 digits  -- ['0002010413']
+  [PASS] manifest rows_written == rows in Parquet  -- 59,162 vs 59,162
+
+== data/parquet/ally/ally_2025-1.parquet  (58,335 rows, Ally Auto Receivables Trust 2025-1)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] file has rows  -- 58335 rows
+  [PASS] apr_pct present and within [0, 40] for every row  -- min 0.0000, max 25.0000, bad rows 0
+  [FAIL] apr_pct strictly in (0, 40] (brief wording)  -- 338 rows have apr_pct == 0 (zero-rate loans, kept as written)
+  [PASS] credit_score is NaN or within 1-999 (no scale errors)  -- min 200.0, max 999.0, NaN 2571
+  [PASS] credit_score is NaN exactly when credit_score_type == 'None'  -- 2571 NaN vs 2571 type 'None'; mismatches 0
+  [FAIL] credit_score 300-850 or NaN (brief wording)  -- 2104 rows outside 300-850 (2097 above 850, 7 below 300), by score type {'Consumer Bureau': 2042, 'Commercial Bureau': 62}; kept as written
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month parses as YYYY-MM  -- range 2017-11 .. 2025-08, bad rows 0
+  [PASS] filing_date is YYYY-MM-DD and constant  -- 1 distinct value(s): ['2025-09-30']
+  [PASS] issuer == 'ally'
+  [PASS] deal_cik is 10 digits  -- ['0002087070']
+  [PASS] manifest rows_written == rows in Parquet  -- 58,335 vs 58,335
+
+== data/parquet/ally/ally_2026-1.parquet  (59,907 rows, Ally Auto Receivables Trust 2026-1)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] file has rows  -- 59907 rows
+  [PASS] apr_pct present and within [0, 40] for every row  -- min 0.0000, max 25.0000, bad rows 0
+  [FAIL] apr_pct strictly in (0, 40] (brief wording)  -- 333 rows have apr_pct == 0 (zero-rate loans, kept as written)
+  [PASS] credit_score is NaN or within 1-999 (no scale errors)  -- min 256.0, max 999.0, NaN 3046
+  [PASS] credit_score is NaN exactly when credit_score_type == 'None'  -- 3046 NaN vs 3046 type 'None'; mismatches 0
+  [FAIL] credit_score 300-850 or NaN (brief wording)  -- 2024 rows outside 300-850 (2022 above 850, 2 below 300), by score type {'Consumer Bureau': 1941, 'Commercial Bureau': 83}; kept as written
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month parses as YYYY-MM  -- range 2018-03 .. 2026-01, bad rows 0
+  [PASS] filing_date is YYYY-MM-DD and constant  -- 1 distinct value(s): ['2026-02-24']
+  [PASS] issuer == 'ally'
+  [PASS] deal_cik is 10 digits  -- ['0002111835']
+  [PASS] manifest rows_written == rows in Parquet  -- 59,907 vs 59,907
+
+== data/parquet/ally/perf_ally_2024-1.parquet  (709,933 rows)
+  [PASS] columns match CONTRACT stretch list
+  [PASS] reporting_period_end is YYYY-MM, at most 12 months  -- 12 months, 2024-02 .. 2025-01
+  [PASS] no duplicate (asset_number, month)
+  [PASS] every asset_number exists in ally_2024-1.parquet  -- 59,162 distinct of 59,162 pool loans
+
+STRICT BRIEF-WORDING CHECKS THAT FAILED (6): data kept as written, main session filters
+  ally_2024-1.parquet: apr_pct strictly in (0, 40] (brief wording)
+  ally_2024-1.parquet: credit_score 300-850 or NaN (brief wording)
+  ally_2025-1.parquet: apr_pct strictly in (0, 40] (brief wording)
+  ally_2025-1.parquet: credit_score 300-850 or NaN (brief wording)
+  ally_2026-1.parquet: apr_pct strictly in (0, 40] (brief wording)
+  ally_2026-1.parquet: credit_score 300-850 or NaN (brief wording)
+OVERALL (hard checks): ALL PASSED

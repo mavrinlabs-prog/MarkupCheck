@@ -1,0 +1,14 @@
+[
+ {"slug": "ally_2024-1", "deal": "Ally Auto Receivables Trust 2024-1", "deal_cik": "0002010413",
+  "accession": "0001477336-24-000006", "filing_date": "2024-02-26",
+  "xml_name": "ex102jan2024aart20241_1.xml", "expected_bytes": 194598274,
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2010413/000147733624000006/ex102jan2024aart20241_1.xml"},
+ {"slug": "ally_2025-1", "deal": "Ally Auto Receivables Trust 2025-1", "deal_cik": "0002087070",
+  "accession": "0001477336-25-000006", "filing_date": "2025-09-30",
+  "xml_name": "ex102aug2025aart20251_1.xml", "expected_bytes": 191892877,
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2087070/000147733625000006/ex102aug2025aart20251_1.xml"},
+ {"slug": "ally_2026-1", "deal": "Ally Auto Receivables Trust 2026-1", "deal_cik": "0002111835",
+  "accession": "0001477336-26-000006", "filing_date": "2026-02-24",
+  "xml_name": "ex102jan2026aart20261_1.xml", "expected_bytes": 197058047,
+  "source_url": "https://www.sec.gov/Archives/edgar/data/2111835/000147733626000006/ex102jan2026aart20261_1.xml"}
+]

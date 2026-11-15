@@ -1,0 +1,49 @@
+{
+ "bytes": 352286257,
+ "codes": {
+  "credit_score_type": {
+   "FICO": 91627
+  },
+  "employment_verification_code": {
+   "2": 91621,
+   "3": 6
+  },
+  "income_verification_code": {
+   "2": 91343,
+   "3": 284
+  },
+  "interest_rate_type_code": {
+   "1": 91627
+  },
+  "new_used_code": {
+   "1": 27511,
+   "2": 64116
+  },
+  "subvented": {
+   "0": 91627
+  },
+  "vehicle_type_code": {
+   "1": 17073,
+   "2": 15297,
+   "3": 55825,
+   "98": 3432
+  },
+  "vehicle_value_source_code": {
+   "1": 26940,
+   "98": 64687
+  }
+ },
+ "credit_score_max": 889.0,
+ "credit_score_min": 740.0,
+ "credit_score_outside_300_850": 2761,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "origination_month_max": "2026-01",
+ "origination_month_min": "2025-02",
+ "parquet_bytes": 3277766,
+ "rows_parsed": 91627,
+ "rows_written": 91627,
+ "slug": "capone_2026-1",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2149906/000119312526379485/copart261ex102_0831-1940lp.xml",
+ "xml_file": "copart261ex102_0831-1940lp.xml"
+}

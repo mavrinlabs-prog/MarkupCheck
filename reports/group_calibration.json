@@ -1,0 +1,200 @@
+{
+ "rule": "widths are set on the calibration months' first half (cal_width), exactly as\nthe single width is. They are adopted only if, on the other half (cal_flag, never used to set them):\n  (a) the largest gap between any group's coverage and 80% shrinks, and\n  (b) overall coverage stays between 78% and 82%.\nThe test months are reported for both, but never used to decide. Groups with fewer than MIN_N calibration loans keep\nthe single width.",
+ "min_n": 200,
+ "market": {
+  "q_global": 0.353861318908006,
+  "q_group": {
+   "near-prime|0": 0.4449086491928176,
+   "near-prime|1": 1.0996496497344026,
+   "prime|0": 0.3727135582143113,
+   "prime|1": 0.35098228412144694,
+   "subprime|0": 0.5379171742686744,
+   "subprime|1": 1.1954413194787623,
+   "super-prime|0": 0.2726668987364833,
+   "super-prime|1": 0.2806802446335652
+  },
+  "n_cal_width": {
+   "deep subprime|0": 28,
+   "deep subprime|1": 156,
+   "near-prime|0": 570,
+   "near-prime|1": 1558,
+   "prime|0": 6297,
+   "prime|1": 17286,
+   "subprime|0": 439,
+   "subprime|1": 1408,
+   "super-prime|0": 5674,
+   "super-prime|1": 10786
+  },
+  "cal_flag": {
+   "single": {
+    "overall": 0.8034232482420242,
+    "by_group": {
+     "deep subprime|0": 0.6153846153846154,
+     "deep subprime|1": 0.6827586206896552,
+     "near-prime|0": 0.8127272727272727,
+     "near-prime|1": 0.7259646827992152,
+     "prime|0": 0.7992044550517104,
+     "prime|1": 0.8066432155008362,
+     "subprime|0": 0.7629310344827587,
+     "subprime|1": 0.7030213706705969,
+     "super-prime|0": 0.8265034592868548,
+     "super-prime|1": 0.8157169117647058
+    },
+    "worst_gap": 0.18461538461538463,
+    "mean_width": 5.450310148275567
+   },
+   "per_group": {
+    "overall": 0.8019535577814457,
+    "by_group": {
+     "deep subprime|0": 0.6153846153846154,
+     "deep subprime|1": 0.6827586206896552,
+     "near-prime|0": 0.8181818181818182,
+     "near-prime|1": 0.8103335513407456,
+     "prime|0": 0.8015910898965791,
+     "prime|1": 0.8062972146935009,
+     "subprime|0": 0.7823275862068966,
+     "subprime|1": 0.8142962417096536,
+     "super-prime|0": 0.7974099698421147,
+     "super-prime|1": 0.7971507352941176
+    },
+    "worst_gap": 0.18461538461538463,
+    "mean_width": 5.506043990242948
+   }
+  },
+  "test": {
+   "single": {
+    "overall": 0.8167357554346378,
+    "by_group": {
+     "deep subprime|0": 0.764,
+     "deep subprime|1": 0.7249027237354085,
+     "near-prime|0": 0.8136775994417307,
+     "near-prime|1": 0.7731481481481481,
+     "prime|0": 0.8509384548232213,
+     "prime|1": 0.7626322608507882,
+     "subprime|0": 0.8648474430597336,
+     "subprime|1": 0.8250257974785768,
+     "super-prime|0": 0.9206549118387909,
+     "super-prime|1": 0.916500616756808
+    },
+    "worst_gap": 0.12065491183879085,
+    "mean_width": 8.133018878923396
+   },
+   "per_group": {
+    "overall": 0.8367700187294176,
+    "by_group": {
+     "deep subprime|0": 0.764,
+     "deep subprime|1": 0.7249027237354085,
+     "near-prime|0": 0.823447313328681,
+     "near-prime|1": 0.8320397603485838,
+     "prime|0": 0.853339153208206,
+     "prime|1": 0.7619574605916649,
+     "subprime|0": 0.8790287924366137,
+     "subprime|1": 0.900982547444928,
+     "super-prime|0": 0.9009235936188077,
+     "super-prime|1": 0.9006547110731569
+    },
+    "worst_gap": 0.10098254744492796,
+    "mean_width": 8.649160013920216
+   }
+  },
+  "adopt": false
+ },
+ "same_lender": {
+  "q_global": 0.2598352422350305,
+  "q_group": {
+   "near-prime|0": 0.3740522825469492,
+   "near-prime|1": 0.764903065069765,
+   "prime|0": 0.3680148626187272,
+   "prime|1": 0.1785494964771157,
+   "subprime|0": 0.3850503721535343,
+   "subprime|1": 0.8768620614961264,
+   "super-prime|0": 0.3236258006847037,
+   "super-prime|1": 0.1707204062112857
+  },
+  "n_cal_width": {
+   "deep subprime|0": 28,
+   "deep subprime|1": 156,
+   "near-prime|0": 570,
+   "near-prime|1": 1558,
+   "prime|0": 6297,
+   "prime|1": 17286,
+   "subprime|0": 439,
+   "subprime|1": 1408,
+   "super-prime|0": 5674,
+   "super-prime|1": 10786
+  },
+  "cal_flag": {
+   "single": {
+    "overall": 0.8015465665769779,
+    "by_group": {
+     "deep subprime|0": 0.6153846153846154,
+     "deep subprime|1": 0.7241379310344828,
+     "near-prime|0": 0.7909090909090909,
+     "near-prime|1": 0.7534336167429693,
+     "prime|0": 0.7882259347653142,
+     "prime|1": 0.8164465717086673,
+     "subprime|0": 0.7823275862068966,
+     "subprime|1": 0.7339719970523213,
+     "super-prime|0": 0.7656554905091361,
+     "super-prime|1": 0.8223345588235295
+    },
+    "worst_gap": 0.18461538461538463,
+    "mean_width": 4.878103398814255
+   },
+   "per_group": {
+    "overall": 0.8003255929635743,
+    "by_group": {
+     "deep subprime|0": 0.6153846153846154,
+     "deep subprime|1": 0.7241379310344828,
+     "near-prime|0": 0.8127272727272727,
+     "near-prime|1": 0.8175277959450621,
+     "prime|0": 0.8127287191726332,
+     "prime|1": 0.8011072025834727,
+     "subprime|0": 0.7974137931034483,
+     "subprime|1": 0.815033161385409,
+     "super-prime|0": 0.7880078055703388,
+     "super-prime|1": 0.7952205882352941
+    },
+    "worst_gap": 0.18461538461538463,
+    "mean_width": 4.895776948739474
+   }
+  },
+  "test": {
+   "single": {
+    "overall": 0.7934526926866506,
+    "by_group": {
+     "deep subprime|0": 0.744,
+     "deep subprime|1": 0.7035019455252919,
+     "near-prime|0": 0.8136775994417307,
+     "near-prime|1": 0.7916666666666666,
+     "prime|0": 0.8365342645133129,
+     "prime|1": 0.7279745195422155,
+     "subprime|0": 0.8536742587021917,
+     "subprime|1": 0.8230517295526941,
+     "super-prime|0": 0.836272040302267,
+     "super-prime|1": 0.8603757472245943
+    },
+    "worst_gap": 0.09649805447470816,
+    "mean_width": 7.776076422045763
+   },
+   "per_group": {
+    "overall": 0.7990803944717151,
+    "by_group": {
+     "deep subprime|0": 0.744,
+     "deep subprime|1": 0.7035019455252919,
+     "near-prime|0": 0.8248429867411026,
+     "near-prime|1": 0.835511982570806,
+     "prime|0": 0.8611959842863378,
+     "prime|1": 0.7077305117685165,
+     "subprime|0": 0.8665663944993554,
+     "subprime|1": 0.8904840952936426,
+     "super-prime|0": 0.8547439126784215,
+     "super-prime|1": 0.812363601859759
+    },
+    "worst_gap": 0.09649805447470816,
+    "mean_width": 8.09277641435444
+   }
+  },
+  "adopt": false
+ }
+}

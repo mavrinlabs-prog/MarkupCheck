@@ -1,0 +1,139 @@
+{
+ "issuer": "nissan",
+ "user_agent": "MarkupCheck student research project",
+ "deals": [
+  {
+   "deal": "Nissan Auto Receivables 2024-A Owner Trust",
+   "deal_cik": "0002017943",
+   "filing_date": "2024-05-07",
+   "accession": "0000950131-24-001680",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2017943/000095013124001680/narot24aex102_0506-1852lp.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2024-05-07 under the trust's CIK (depositor Nissan Auto Receivables Company II LLC, CIK 0001129068), accession 0000950131-24-001680. The trust's first EDGAR filings are its pool ABS-EE filings, all made before the final prospectus (424B5 0001193125-24-140434 (2024-05-16)); the preliminary prospectus was 424H 0001193125-24-133808 (2024-05-08). Nissan filed one pool file per deal size; this is the 'lp' file.  Not used: 'narot24aex102_0506-1902sp.xml' (sp, accession 0000950131-24-001678, 189,223,522 bytes). The 424B5 states 66,593 receivables with an aggregate principal balance of $1,424,116,746.73; this file has 66,593 rows; its reportingPeriodActualEndBalanceAmount sums to $1,424,116,746.73 and reportingPeriodBeginningLoanBalanceAmount to $1,457,769,255.87.",
+   "bytes": 235477556,
+   "rows_parsed": 66593,
+   "rows_written": 66593,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-03",
+   "origination_month_max": "2024-01",
+   "prospectus_loan_count_if_found": 66593,
+   "prospectus_url": "https://www.sec.gov/Archives/edgar/data/2017943/000119312524140434/d806834d424b5.htm",
+   "numeric_credit_score_share": 1.0,
+   "credit_score_by_type": {
+    "FICO": {
+     "max": 900.0,
+     "median": 786.0,
+     "min": 660.0,
+     "numeric": 66593,
+     "rows": 66593
+    }
+   }
+  },
+  {
+   "deal": "Nissan Auto Receivables 2025-A Owner Trust",
+   "deal_cik": "0002063629",
+   "filing_date": "2025-05-16",
+   "accession": "0000950131-25-002079",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2063629/000095013125002079/narot25aex102_0516-1634lp.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2025-05-16 under the trust's CIK (depositor Nissan Auto Receivables Company II LLC, CIK 0001129068), accession 0000950131-25-002079. The trust's first EDGAR filings are its pool ABS-EE filings, all made before the final prospectus (424B5 0001193125-25-124850 (2025-05-22)); the preliminary prospectus was 424H 0001193125-25-119823 (2025-05-14). Nissan filed one pool file per deal size; this is the 'lp' file. This is an ABS-EE/A. The original pool files were filed 2025-05-13 (lp accession 0000950131-25-001860). The amendment's cover page says it adds 'Payment-to-income ratio' values inadvertently omitted from the original and that its Exhibit 102 replaces and supersedes the original's in their entirety; it states the same $1,668,465,701.04 pool. The original lp file was not downloaded. A 424H/A (0001193125-25-121812) was filed 2025-05-16, the same day. Not used: 'narot25aex102_0508-1208sp.xml' (sp, accession 0000950131-25-001855, 150,902,070 bytes); 'narot25aex102_0508-1228mp.xml' (mp, accession 0000950131-25-001858, 188,683,441 bytes); 'narot25aex102_0508-1246lp.xml' (lp, superseded, accession 0000950131-25-001860, 226,285,374 bytes); 'narot25aex102_0516-1733mp.xml' (mp ABS-EE/A, accession 0000950131-25-002082, 189,750,897 bytes); 'narot25aex102_0516-1803sp.xml' (sp ABS-EE/A, accession 0000950131-25-002083, 151,749,840 bytes). The 424B5 states 64,964 receivables with an aggregate principal balance of $1,668,465,701.04; this file has 64,964 rows; its reportingPeriodActualEndBalanceAmount sums to $1,668,465,701.04 and reportingPeriodBeginningLoanBalanceAmount to $1,702,810,413.47.",
+   "bytes": 227573593,
+   "rows_parsed": 64964,
+   "rows_written": 64964,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2019-04",
+   "origination_month_max": "2024-11",
+   "prospectus_loan_count_if_found": 64964,
+   "prospectus_url": "https://www.sec.gov/Archives/edgar/data/2063629/000119312525124850/d849494d424b5.htm",
+   "numeric_credit_score_share": 1.0,
+   "credit_score_by_type": {
+    "FICO": {
+     "max": 900.0,
+     "median": 794.0,
+     "min": 660.0,
+     "numeric": 64964,
+     "rows": 64964
+    }
+   }
+  },
+  {
+   "deal": "Nissan Auto Receivables 2025-B Owner Trust",
+   "deal_cik": "0002091790",
+   "filing_date": "2025-11-19",
+   "accession": "0001193125-25-287965",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2091790/000119312525287965/narot25bex102_1118-1657lp.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2025-11-19 under the trust's CIK (depositor Nissan Auto Receivables Company II LLC, CIK 0001129068), accession 0001193125-25-287965. The trust's first EDGAR filings are its pool ABS-EE filings, all made before the final prospectus (424B5 0001193125-25-289582 (2025-11-20)); the preliminary prospectus was 424H 0001193125-25-277670 (2025-11-12). Nissan filed one pool file per deal size; this is the 'lp' file. Nissan filed the large pool twice before the 424B5: 2025-11-07 (accession 0001193125-25-272395) and 2025-11-19 (this one); both cover pages state the same $1,381,270,659.94 pool and neither explains the refiling. I downloaded both and compared them loan by loan: the same 52,533 asset numbers, and the only difference is 12 loans whose paymentToIncomePercentage is missing in the 2025-11-07 file and filled in the 2025-11-19 file (the size gap is whitespace). The 2025-11-07 copy was deleted after the comparison. Not used: 'narot25bex102_1106-1933sp.xml' (sp, accession 0001193125-25-272285, 149,343,204 bytes); 'narot25bex102_1106-2026lp.xml' (lp, earlier, accession 0001193125-25-272395, 186,757,595 bytes). The 424B5 states 52,533 receivables with an aggregate principal balance of $1,381,270,659.94; this file has 52,533 rows; its reportingPeriodActualEndBalanceAmount sums to $1,381,270,659.94 and reportingPeriodBeginningLoanBalanceAmount to $1,409,098,169.67.",
+   "bytes": 196383577,
+   "rows_parsed": 52533,
+   "rows_written": 52533,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2019-10",
+   "origination_month_max": "2025-06",
+   "prospectus_loan_count_if_found": 52533,
+   "prospectus_url": "https://www.sec.gov/Archives/edgar/data/2091790/000119312525289582/d26819d424b5.htm",
+   "numeric_credit_score_share": 1.0,
+   "credit_score_by_type": {
+    "FICO": {
+     "max": 900.0,
+     "median": 797.0,
+     "min": 660.0,
+     "numeric": 52533,
+     "rows": 52533
+    }
+   }
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 5793,
+   "1": 57722,
+   "1,2": 107863,
+   "2": 12712
+  },
+  "new_used_code": {
+   "1": 163457,
+   "2": 20633
+  },
+  "credit_score_type": {
+   "FICO": 184090
+  },
+  "interest_rate_type_code": {
+   "1": 184090
+  },
+  "vehicle_type_code": {
+   "1": 52268,
+   "2": 20649,
+   "3": 6079,
+   "98": 105094
+  },
+  "vehicle_value_source_code": {
+   "1": 163457,
+   "3": 2131,
+   "98": 18502
+  },
+  "income_verification_code": {
+   "2": 184090
+  },
+  "employment_verification_code": {
+   "2": 184090
+  }
+ },
+ "spec_url": "https://www.sec.gov/files/absxml-31.zip (EDGAR ABS XML Technical Specification v3.1, listed at https://www.sec.gov/submit-filings/technical-specifications). Code meanings were read from the copy already unpacked in data/raw/ally/spec_absxml31/ (eis_ABS_AutoLoanAssetData.xsd annotations); no new download.",
+ "notes": [
+  "Deal choice. Trust names and CIKs come from the EDGAR quarterly ABS-EE index lists for 2026 Q3/Q4 saved earlier in Veritas_Hackathon_2026_Finance_Ideas/feature_hunt/lanes/3_data/sec/, which list Nissan Auto Receivables trusts 2022-B, 2023-A, 2023-B, 2024-A, 2024-B, 2025-A, 2025-B, 2026-A and 2026-B; filing dates come from each trust's data.sec.gov submissions JSON. Brief windows: Jan-Jun 2024 -> 2024-A (pool ABS-EE 2024-05-07); Jan-Jun 2025 -> 2025-A (2025-05-13, amended 2025-05-16); Oct 2025-Feb 28 2026 -> 2025-B (2025-11-07, large pool refiled 2025-11-19), the latest Nissan pool filing in that window: the next trust, 2026-A, first filed 2026-05-11. All three are Nissan Auto Receivables Owner Trusts (prime retail loans; Nissan's lease trusts file under Nissan Auto Leasing LLC II and were not used).",
+  "Pool files. Nissan files one pool ABS-EE per deal size before the 424B5: 'sp' and 'lp' (2024-A, 2025-B), 'sp', 'mp' and 'lp' (2025-A). In all three deals the 'lp' file's row count equals the 424B5 'Number of Receivables' exactly (66,593; 64,964; 52,533). 2025-A: the 2025-05-13 files were replaced on 2025-05-16/19 by ABS-EE/A filings; the lp amendment's cover page says it adds payment-to-income values inadvertently omitted and supersedes the original Exhibit 102 in its entirety, so the amended lp file (filing_date 2025-05-16) is the one parsed. 2025-B: the lp pool was filed on 2025-11-07 and again on 2025-11-19, both for the same $1,381,270,659.94 pool; a loan-by-loan comparison found the same 52,533 asset numbers and one difference, 12 payment-to-income values missing in the earlier file, so the 2025-11-19 file is parsed. Each parsed file's size equals the size in EDGAR's index.json.",
+  "Cutoff balance check. In all three deals the sum of reportingPeriodActualEndBalanceAmount equals the 424B5 Aggregate Principal Balance to the cent ($1,424,116,746.73; $1,668,465,701.04; $1,381,270,659.94). Weighted by it, the file reproduces the 424B5 summary: weighted APR 4.8087% / 4.4630% / 4.6017% (424B5 4.81% / 4.46% / 4.60%), weighted credit score 780.97 / 789.83 / 795.05 (424B5 'Non-Zero Weighted Average Credit Score' 781 / 790 / 795), share of new_used_code '1' 89.52% / 93.03% / 90.02% (424B5 'New' 89.52% / 93.03% / 90.02%).",
+  "new_used_code '2' is Nissan's 'Near-New' class: the 424B5 splits the pool into New, Near-New (10.48% / 6.97% / 9.98% of balance) and Used (0.00% in all three), and the code-2 balance share equals the Near-New share. So in these pools '2' means near-new, not an ordinary used car.",
+  "pti_pct differs from CONTRACT's formula on purpose: Nissan writes paymentToIncomePercentage in percent (median 6.95 / 7.11 / 6.79, e.g. 7.45 = 7.45%), while CarMax and Toyota write a fraction (0.0745). Multiplying by 100 would give 695%, so pti_pct is the file value as written. The value 999.99 appears in 6 / 3 / 6 rows (kept; looks like a placeholder, not confirmed); pti_pct is missing (NaN) in 2 / 1,356 / 0 rows (2025-A's amendment still leaves 1,356 blank).",
+  "Credit scores: obligorCreditScoreType is 'FICO' for every loan and every score is numeric (100%). Range 660-900 in all three deals, equal to the 424B5 'Range of FICO Scores 660 to 900'; medians 786 / 794 / 797. Scores above 850 (9,087 / 10,266 / 8,465 rows) fit the auto-industry FICO scale (up to 900); none are outside 250-900.",
+  "subvented as written, with repeated <subvented> elements joined by a comma: 2024-A '0' 3,955, '1' 41,608, '1,2' 18,922, '2' 2,108; 2025-A '0' 1,838, '1' 16,114, '1,2' 46,513, '2' 499; 2025-B '1,2' 42,428, '2' 10,105 (no '0' at all). Spec codes: 0 No, 1 Rate subvention, 2 Cash rebate, 98 Other. apr_pct is exactly 0 for 10,508 / 6,546 / 3,699 loans; maximum 11.99 in all three (424B5 range 0.00% to 11.99%).",
+  "Pools are seasoned: origination months 2018-03..2024-01 (cutoff 2024-04), 2019-04..2024-11 (cutoff 2025-04), 2019-10..2025-06 (cutoff 2025-10). Share originated 12 or more months before the cutoff month: 45.4% / 49.2% / 60.9%. No loan was originated after 2026-01.",
+  "Other codes as written: interest_rate_type_code '1' (fixed) for every loan; vehicle_type_code '98' (other) for most loans (38,454 / 35,013 / 31,627) plus 1/2/3; vehicle_value_source_code '1' (invoice) for exactly the new-vehicle loans, '3' or '98' otherwise; income_verification_code and employment_verification_code '2' for every loan; asset numbers carry a letter suffix (e.g. '16455700b'). vehicle_make is upper case ('NISSAN', 'INFINITI').",
+  "Downloads: Python requests (one curl call for the earlier 2025-B lp file) with the sec.gov User-Agent from CLAUDE.md passed in the SEC_UA environment variable (not stored in any file), one request at a time, at least 1.1 s apart, no retries; every request is logged in data/raw/nissan/sec_requests.log (git-ignored). The earlier 2025-B lp file was meant to be a 640 KB range request; SEC ignored the Range header and sent all 186,757,595 bytes (HTTP 200), which made the full comparison possible; that copy was deleted afterwards."
+ ],
+ "couldnt_confirm": [
+  "The sp/mp pool files and the original 2025-A lp file (superseded by the amendment) were not downloaded, so their loan counts were not checked; the lp choice rests on the exact match of row count and balance with the 424B5.",
+  "Filing dates of Nissan 2023-B and 2024-B were not checked; 2024-A (first filing 2024-05-07) is taken as the only Nissan receivables deal with a pool filing in Jan-Jun 2024 because 2023-B carries a 2023 name and 2024-B is the next deal after 2024-A.",
+  "What 999.99 in paymentToIncomePercentage and vehicle_type_code '98' mean in Nissan's practice, and why 2025-B has no loan with subvented '0' (Nissan's EX-103 explanatory notes were not opened)."
+ ],
+ "generated_utc": "2026-11-15T19:16:49Z",
+ "deals_not_yet_parsed": []
+}

@@ -1,0 +1,72 @@
+{
+ "bytes": 275772124,
+ "codes": {
+  "credit_score_type": {
+   "Consumer Credit Bureau": 79201
+  },
+  "employment_verification_code": {
+   "2": 77944,
+   "3": 1257
+  },
+  "income_verification_code": {
+   "1": 302,
+   "2": 77642,
+   "3": 1257
+  },
+  "interest_rate_type_code": {
+   "1": 79201
+  },
+  "new_used_code": {
+   "1": 79033,
+   "2": 168
+  },
+  "subvented": {
+   "0": 1107,
+   "1": 48244,
+   "1,2": 23639,
+   "2": 6211
+  },
+  "vehicle_type_code": {
+   "1": 18351,
+   "2": 4229,
+   "3": 56621
+  },
+  "vehicle_value_source_code": {
+   "1": 79033,
+   "98": 168
+  }
+ },
+ "credit_score_by_type": {
+  "Consumer Credit Bureau": {
+   "max": 900.0,
+   "median": 779.0,
+   "min": 629.0,
+   "n": 79201
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 629.0,
+ "credit_score_outside_300_850": 10763,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_month_max": "2025-10",
+ "origination_month_min": "2022-08",
+ "origination_month_missing": 0,
+ "parquet_bytes": 2400977,
+ "repeated_elements": {
+  "modificationTypeCode": 9,
+  "subvented": 23639
+ },
+ "rows_parsed": 79201,
+ "rows_written": 79201,
+ "slug": "hyundai_2026-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2104134/000110465926009139/hca-autoloanex102_011620261.xml",
+ "sum_reporting_period_actual_end_balance": 2401542207.65,
+ "vehicle_make_counts": {
+  "GENESIS": 2268,
+  "HYUNDAI": 40472,
+  "KIA": 36461
+ },
+ "xml_file": "hca-autoloanex102_011620261.xml"
+}

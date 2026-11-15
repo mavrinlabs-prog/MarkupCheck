@@ -1,0 +1,10 @@
+{
+  "_about": "Partner mode, read by the page's own script when the address has ?partner=<key>. A partner can add its name, a rate and a link below the credit-union section; the server's result is identical with or without a partner, so no partner can change a number. Each partner's frame-ancestors domain would also need adding in web_security.py before it could embed the page.",
+  "example": {
+    "name": "Example Credit Union",
+    "name_es": "Example Credit Union",
+    "fictional": true,
+    "apply_url": "https://mapping.ncua.gov/",
+    "rate": "ncua_median"
+  }
+}

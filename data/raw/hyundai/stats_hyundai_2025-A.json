@@ -1,0 +1,98 @@
+{
+ "bytes": 295859906,
+ "codes": {
+  "credit_score_type": {
+   "Consumer Credit Bureau": 85093
+  },
+  "employment_verification_code": {
+   "2": 82178,
+   "3": 2915
+  },
+  "income_verification_code": {
+   "1": 317,
+   "2": 81870,
+   "3": 2906
+  },
+  "interest_rate_type_code": {
+   "1": 85093
+  },
+  "new_used_code": {
+   "1": 79240,
+   "2": 5853
+  },
+  "subvented": {
+   "0": 12264,
+   "1": 44518,
+   "1,2": 15760,
+   "2": 12551
+  },
+  "vehicle_type_code": {
+   "1": 23454,
+   "2": 3541,
+   "3": 58098
+  },
+  "vehicle_value_source_code": {
+   "1": 79240,
+   "98": 5853
+  }
+ },
+ "credit_score_by_type": {
+  "Consumer Credit Bureau": {
+   "max": 900.0,
+   "median": 774.0,
+   "min": 601.0,
+   "n": 85093
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 601.0,
+ "credit_score_outside_300_850": 9324,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_month_max": "2024-10",
+ "origination_month_min": "2020-01",
+ "origination_month_missing": 0,
+ "parquet_bytes": 2642651,
+ "repeated_elements": {
+  "modificationTypeCode": 6,
+  "subvented": 15760
+ },
+ "rows_parsed": 85093,
+ "rows_written": 85093,
+ "slug": "hyundai_2025-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2056104/000110465925016986/hca-autoloanex102_021020251m.xml",
+ "sum_reporting_period_actual_end_balance": 2192832689.02,
+ "vehicle_make_counts": {
+  "ACURA": 1,
+  "AUDI": 4,
+  "BMW": 7,
+  "BUICK": 6,
+  "CADILLAC": 1,
+  "CHEVROLET": 56,
+  "CHRYSLER": 6,
+  "DODGE": 34,
+  "FORD": 52,
+  "GENESIS": 3299,
+  "GMC": 17,
+  "HONDA": 32,
+  "HYUNDAI": 43566,
+  "INFINITI": 1,
+  "JAGUAR": 4,
+  "JEEP": 18,
+  "KIA": 37826,
+  "LEXUS": 2,
+  "LINCOLN": 1,
+  "MAZDA": 15,
+  "MERCEDES": 8,
+  "MINI": 2,
+  "MITSUBISHI": 9,
+  "NISSAN": 55,
+  "PORSCHE": 2,
+  "SUBARU": 5,
+  "TESLA": 4,
+  "TOYOTA": 50,
+  "VOLKSWAGEN": 10
+ },
+ "xml_file": "hca-autoloanex102_021020251m.xml"
+}

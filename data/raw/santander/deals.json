@@ -1,0 +1,50 @@
+{
+  "sp_santander_2024-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2024-1",
+    "deal_cik": "0002004812",
+    "accession": "0000950131-24-000006",
+    "filing_date": "2024-01-08",
+    "xml_file": "sdart241ex102_0105-1932sp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2004812/000095013124000006/sdart241ex102_0105-1932sp.xml"
+  },
+  "santander_2024-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2024-1",
+    "deal_cik": "0002004812",
+    "accession": "0000950131-24-000008",
+    "filing_date": "2024-01-08",
+    "xml_file": "sdart241ex102_0105-1902lp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2004812/000095013124000008/sdart241ex102_0105-1902lp.xml"
+  },
+  "sp_santander_2025-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2025-1",
+    "deal_cik": "0002049903",
+    "accession": "0000950131-25-000026",
+    "filing_date": "2025-01-08",
+    "xml_file": "sdart251ex102_0108-1618sp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2049903/000095013125000026/sdart251ex102_0108-1618sp.xml"
+  },
+  "santander_2025-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2025-1",
+    "deal_cik": "0002049903",
+    "accession": "0000950131-25-000028",
+    "filing_date": "2025-01-08",
+    "xml_file": "sdart251ex102_0108-1612lp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2049903/000095013125000028/sdart251ex102_0108-1612lp.xml"
+  },
+  "sp_santander_2026-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2026-1",
+    "deal_cik": "0002105961",
+    "accession": "0001193125-26-045529",
+    "filing_date": "2026-02-11",
+    "xml_file": "sdart261ex102_0210-1822sp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2105961/000119312526045529/sdart261ex102_0210-1822sp.xml"
+  },
+  "santander_2026-1": {
+    "deal": "Santander Drive Auto Receivables Trust 2026-1",
+    "deal_cik": "0002105961",
+    "accession": "0001193125-26-045549",
+    "filing_date": "2026-02-11",
+    "xml_file": "sdart261ex102_0210-1935lp.xml",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/2105961/000119312526045549/sdart261ex102_0210-1935lp.xml"
+  }
+}

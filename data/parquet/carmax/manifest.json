@@ -1,0 +1,101 @@
+{
+ "issuer": "carmax",
+ "user_agent": "MarkupCheck student research project",
+ "deals": [
+  {
+   "deal": "CarMax Auto Owner Trust 2024-1",
+   "deal_cik": "0002003263",
+   "filing_date": "2024-01-10",
+   "accession": "0001259380-24-000005",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2003263/000125938024000005/cart20241u.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2024-01-10 by CarMax Auto Funding LLC (CIK 0001259380), accession 0001259380-24-000005, the day the preliminary prospectus (424H 0001193125-24-005935 (2024-01-10)) was filed and before the final prospectus (424B5 0001193125-24-011298 (2024-01-19)); the trust's own first monthly ABS-EE came a month later. CarMax files two pool files for each deal that day, one per deal size offered in the 424H: 'cart20241b.xml' (accession 0001259380-24-000003, smallpool, if the notes total $1,200,000,000: pool $1,212,123,695.19, 63,012 receivables) and 'cart20241u.xml' (largepool, if the notes total $1,550,000,000). The final 424B5 sizes the deal at the larger scenario: pool $1,565,657,067.52, 81,506 receivables, which is the largepool file; its parsed row count equals that. The smallpool file is not used.",
+   "bytes": 260802679,
+   "rows_parsed": 81506,
+   "rows_written": 81506,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2017-12",
+   "origination_month_max": "2023-11",
+   "prospectus_loan_count_if_found": 81506
+  },
+  {
+   "deal": "CarMax Auto Owner Trust 2025-1",
+   "deal_cik": "0002049715",
+   "filing_date": "2025-01-08",
+   "accession": "0001259380-25-000004",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2049715/000125938025000004/cart20251u.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2025-01-08 by CarMax Auto Funding LLC (CIK 0001259380), accession 0001259380-25-000004, the day the preliminary prospectus (424H 0001193125-25-003425 (2025-01-08)) was filed and before the final prospectus (424B5 0001193125-25-007659 (2025-01-16)); the trust's own first monthly ABS-EE came a month later. CarMax files two pool files for each deal that day, one per deal size offered in the 424H: 'cart20251b.xml' (accession 0001259380-25-000002, smallpool, if the notes total $1,150,000,000: pool $1,161,616,814.52, 63,221 receivables) and 'cart20251u.xml' (largepool, if the notes total $1,500,000,000). The final 424B5 sizes the deal at the larger scenario: pool $1,515,152,457.31, 82,495 receivables, which is the largepool file; its parsed row count equals that. The smallpool file is not used.",
+   "bytes": 264008043,
+   "rows_parsed": 82495,
+   "rows_written": 82495,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-07",
+   "origination_month_max": "2024-11",
+   "prospectus_loan_count_if_found": 82495
+  },
+  {
+   "deal": "CarMax Auto Owner Trust 2026-1",
+   "deal_cik": "0002094950",
+   "filing_date": "2026-01-13",
+   "accession": "0001259380-26-000007",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2094950/000125938026000007/cart20261u.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2026-01-13 by CarMax Auto Funding LLC (CIK 0001259380), accession 0001259380-26-000007, the day the preliminary prospectus (424H 0001193125-26-013037 (2026-01-14)) was filed and before the final prospectus (424B5 0001193125-26-020885 (2026-01-23)); the trust's own first monthly ABS-EE came a month later. CarMax files two pool files for each deal that day, one per deal size offered in the 424H: 'cart20261b.xml' (accession 0001259380-26-000005, smallpool, if the notes total $1,000,000,000: pool $1,005,025,872.07, 63,782 receivables) and 'cart20261u.xml' (largepool, if the notes total $1,300,000,000). The final 424B5 sizes the deal at the larger scenario: pool $1,306,533,362.66, 83,338 receivables, which is the largepool file; its parsed row count equals that. The smallpool file is not used.",
+   "bytes": 266652248,
+   "rows_parsed": 83338,
+   "rows_written": 83338,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2019-06",
+   "origination_month_max": "2025-11",
+   "prospectus_loan_count_if_found": 83338
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 247339
+  },
+  "new_used_code": {
+   "1": 134,
+   "2": 247205
+  },
+  "credit_score_type": {
+   "Bureau": 247339
+  },
+  "interest_rate_type_code": {
+   "1": 247339
+  },
+  "vehicle_type_code": {
+   "1": 80315,
+   "2": 23540,
+   "3": 117077,
+   "98": 6913,
+   "99": 19494
+  },
+  "vehicle_value_source_code": {
+   "98": 247339
+  },
+  "income_verification_code": {
+   "2": 246499,
+   "3": 840
+  },
+  "employment_verification_code": {
+   "2": 247339
+  }
+ },
+ "spec_url": "https://www.sec.gov/submit-filings/technical-specifications",
+ "notes": [
+  "Pool filings are filed by CarMax Auto Funding LLC (CIK 0001259380) with the trust as co-registrant, the same day as the preliminary prospectus (424H) and before the 424B5 and the trust's first monthly ABS-EE. The 424H offers two deal sizes (for example 2024-1: notes of $1.2 billion with a $1,212,123,695.19 pool of 63,012 receivables, or $1.55 billion with a $1,565,657,067.52 pool of 81,506 receivables). Each deal has one EX-102 per size: 'cart<yyyy><n>b.xml' (smallpool) and 'cart<yyyy><n>u.xml' (largepool). In all three deals the final 424B5 uses the larger size, and the parsed largepool row counts equal the 424B5 receivable counts exactly (81,506; 82,495; 83,338). The smallpool files were not downloaded.",
+  "The ABS-EE cover pages state the pool dollar amount: 2024-1 small $1,212,123,695.19, large $1,565,657,067.52; 2025-1 small $1,161,616,814.52, large $1,515,152,457.31; 2026-1 small $1,005,025,872.07, large $1,306,533,362.66. Each matches the corresponding scenario in the 424H.",
+  "Parquet values are kept as written. apr_pct and pti_pct are the file values times 100, rounded to 6 decimals to remove float noise (0.0549 -> 5.49).",
+  "credit_score is the file value as a number. Values above 850 exist (maximum 900): CarMax reports bureau scores on the FICO Auto scale (the 424B5 says the maximum FICO score is 900), and for loans with a co-obligor the score is the average of obligor and co-obligor (EX-103 item 3(e)(2)). The string 'NONE' (obligor and co-obligor had no score, 987 loans in 2024-1) became NaN. Nothing was clipped or nulled otherwise; the main session decides.",
+  "Pools are seasoned: loans originated years before the pool date are included (2024-1 origination months 2017-12 to 2023-11, 2025-1 2018-07 to 2024-11, 2026-1 2019-06 to 2025-11). The share originated more than a year before the pool date is in TASKS_carmax.md. The main session should filter by origination_month before treating apr_pct as a current-market benchmark.",
+  "Code meanings stated by CarMax in its EX-103 (Asset Related Document): vehicle_type_code 98 = not a car, truck, SUV or motorcycle; vehicle_value_source_code 98 = sales price of the financed vehicle (vehicle value excludes taxes, fees, service plan and GAP); credit_score_type 'Bureau' = score from a national consumer reporting company, possibly FICO Auto Enhanced v8; income_verification_code 3 = obligor was asked for additional income verification; employment_verification_code 2 = not asked, or no direct independent third-party verification. original_loan_amount includes accessories, service plans, GAP, taxes and fees. original_term_months can be up to two months more than scheduled payments.",
+  "17 CFR 229.1125 (Schedule AL) defines the items; it says 'subvented' is yes/no and the other code fields are 'the code' from the EDGAR ABS XML specification. In the files, subvented is '0' for every loan; new_used_code '1' (new) / '2' (used) is consistent with the 424B5 (about 99.9% used).",
+  "Download method: cart20251u.xml and cart20241u.xml with curl and the user-approved sec.gov User-Agent from CLAUDE.md (which includes a contact and is not recorded in this file). cart20261u.xml was read earlier through the Claude desktop built-in browser (an in-page fetch before the approved User-Agent existed); its size matches the EDGAR directory listing exactly (266,652,248 bytes) and its row count equals the 424B5 count.",
+  "Stretch file perf_carmax_2024-1.parquet: 978,068 rows = 81,506 pool loans x 12 reporting periods (2024-01 to 2024-12) from the 12 monthly ABS-EE filings of CarMax Auto Owner Trust 2024-1 filed 2024-02-15 through 2025-01-15 (accessions 0002003263-24-000004, -000009, -000014, -000019, -000027, -000032, -000037, -000042, -000047, -000052, -000057 and 0002003263-25-000003); every monthly XML was deleted after parsing. In these 12 files paid-off loans stay listed (zero_balance_code '1' repeats in later months), so each file has 81,504-81,506 of the 81,506 pool loans; every perf asset_number is in the pool file. current_delinquency_status is a number (looks like days delinquent, up to 431) and is empty for loans with zero_balance_code '1'. zero_balance_code values seen: '1' (139,485 rows) and '4' (5,175 rows); their meanings were not confirmed against the spec."
+ ],
+ "couldnt_confirm": [
+  "Numeric code tables for vehicle_type_code (1, 2, 3, 98, 99), income_verification_code (2, 3), employment_verification_code, interest_rate_type_code (1) and subvented ('0'): they are in the EDGAR ABS XML technical specification package (https://www.sec.gov/files/absxml-31.zip), which I did not download or open. The spec page was read at https://www.sec.gov/submit-filings/technical-specifications; item definitions were read in 17 CFR 229.1125 (https://www.ecfr.gov/current/title-17/section-229.1125), which gives no numeric tables.",
+  "The smallpool EX-102 files were not downloaded or parsed; their pool amounts and receivable counts come from the cover pages and the 424H, not from the XML."
+ ],
+ "generated_utc": "2026-11-14T14:49:28Z",
+ "deals_not_yet_parsed": []
+}

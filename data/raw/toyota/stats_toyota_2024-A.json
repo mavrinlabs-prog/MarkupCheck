@@ -1,0 +1,103 @@
+{
+ "apr_max": 21.33,
+ "apr_median": 4.99,
+ "apr_min": 0.0,
+ "apr_zero_rows": 1159,
+ "balance_weighted": {
+  "beginning": {
+   "apr_pct": 5.3726,
+   "credit_score": 767.03,
+   "new_used_code_1_share_pct": 84.18
+  },
+  "end": {
+   "apr_pct": 5.3783,
+   "credit_score": 766.85,
+   "new_used_code_1_share_pct": 84.17
+  }
+ },
+ "bytes": 270125622,
+ "bytes_listed_by_edgar": 270125622,
+ "codes": {
+  "credit_score_type": {
+   "FICO Score 8 Auto": 71726
+  },
+  "employment_verification_code": {
+   "2": 71162,
+   "3": 564
+  },
+  "income_verification_code": {
+   "2": 68850,
+   "3": 2876
+  },
+  "interest_rate_type_code": {
+   "1": 71726
+  },
+  "new_used_code": {
+   "1": 58012,
+   "2": 13714
+  },
+  "subvented": {
+   "0": 18222,
+   "1": 44492,
+   "1,2": 4703,
+   "2": 4309
+  },
+  "vehicle_type_code": {
+   "1": 25732,
+   "2": 11262,
+   "3": 34732
+  },
+  "vehicle_value_source_code": {
+   "1": 58012,
+   "3": 4330,
+   "98": 9384
+  }
+ },
+ "credit_score_by_type": {
+  "FICO Score 8 Auto": {
+   "max": 900.0,
+   "median": 772.0,
+   "min": 620.0,
+   "numeric": 71726,
+   "rows": 71726
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 620.0,
+ "credit_score_outside_250_900": 0,
+ "credit_score_outside_300_850": 8362,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_after_2026_01": 0,
+ "origination_by_year": {
+  "2018": 2237,
+  "2019": 2443,
+  "2020": 944,
+  "2021": 4775,
+  "2022": 26370,
+  "2023": 34957
+ },
+ "origination_month_max": "2023-07",
+ "origination_month_min": "2018-02",
+ "origination_month_unparsed": {},
+ "parquet_bytes": 1947179,
+ "prospectus_loan_count": 71726,
+ "prospectus_pool_balance": "1908468799.65",
+ "pti_missing": 0,
+ "repeated_tags": {
+  "modificationTypeCode": 9,
+  "subvented": 4703
+ },
+ "reporting_periods": {
+  "12-01-2023 to 12-31-2023": 71726
+ },
+ "rows_equal_prospectus_count": true,
+ "rows_parsed": 71726,
+ "rows_written": 71726,
+ "slug": "toyota_2024-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2002262/000095013124000229/taot24aex102_0111-1650lp.xml",
+ "sum_beginning_balance": "1908468799.65000000",
+ "sum_end_balance": "1854293934.19000000",
+ "xml_file": "taot24aex102_0111-1650lp.xml"
+}

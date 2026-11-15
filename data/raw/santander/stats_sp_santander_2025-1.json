@@ -1,0 +1,46 @@
+{
+ "slug": "santander_2025-1",
+ "xml_bytes": 245100097,
+ "rows_parsed": 69690,
+ "rows_written": 69690,
+ "duplicate_asset_numbers_dropped": 0,
+ "rows_with_unparseable_origination_date": 0,
+ "origination_month_min": "2018-06",
+ "origination_month_max": "2024-12",
+ "code_values_seen": {
+  "subvented": {
+   "0": 68441,
+   "1": 1078,
+   "98": 171
+  },
+  "new_used_code": {
+   "2": 51824,
+   "1": 17866
+  },
+  "credit_score_type": {
+   "Bureau": 69690
+  },
+  "interest_rate_type_code": {
+   "1": 69690
+  },
+  "vehicle_type_code": {
+   "3": 35932,
+   "1": 23020,
+   "2": 10738
+  },
+  "vehicle_value_source_code": {
+   "98": 49910,
+   "1": 17866,
+   "3": 1914
+  },
+  "income_verification_code": {
+   "2": 66084,
+   "3": 3606
+  },
+  "employment_verification_code": {
+   "2": 64973,
+   "1": 4371,
+   "3": 346
+  }
+ }
+}

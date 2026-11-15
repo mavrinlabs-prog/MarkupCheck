@@ -1,0 +1,103 @@
+{
+ "apr_max": 24.0,
+ "apr_median": 4.99,
+ "apr_min": 0.0,
+ "apr_zero_rows": 787,
+ "balance_weighted": {
+  "beginning": {
+   "apr_pct": 5.3513,
+   "credit_score": 771.36,
+   "new_used_code_1_share_pct": 87.46
+  },
+  "end": {
+   "apr_pct": 5.3552,
+   "credit_score": 771.19,
+   "new_used_code_1_share_pct": 87.46
+  }
+ },
+ "bytes": 256339620,
+ "bytes_listed_by_edgar": 256339620,
+ "codes": {
+  "credit_score_type": {
+   "FICO Score 8 Auto": 68025
+  },
+  "employment_verification_code": {
+   "2": 67418,
+   "3": 607
+  },
+  "income_verification_code": {
+   "2": 64623,
+   "3": 3402
+  },
+  "interest_rate_type_code": {
+   "1": 68025
+  },
+  "new_used_code": {
+   "1": 56488,
+   "2": 11537
+  },
+  "subvented": {
+   "0": 14530,
+   "1": 45962,
+   "1,2": 5460,
+   "2": 2073
+  },
+  "vehicle_type_code": {
+   "1": 23206,
+   "2": 13491,
+   "3": 31328
+  },
+  "vehicle_value_source_code": {
+   "1": 56488,
+   "3": 4169,
+   "98": 7368
+  }
+ },
+ "credit_score_by_type": {
+  "FICO Score 8 Auto": {
+   "max": 900.0,
+   "median": 776.0,
+   "min": 620.0,
+   "numeric": 68025,
+   "rows": 68025
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 620.0,
+ "credit_score_outside_250_900": 0,
+ "credit_score_outside_300_850": 9434,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_after_2026_01": 0,
+ "origination_by_year": {
+  "2020": 1030,
+  "2021": 1680,
+  "2022": 1133,
+  "2023": 3054,
+  "2024": 12067,
+  "2025": 48358,
+  "2026": 703
+ },
+ "origination_month_max": "2026-01",
+ "origination_month_min": "2020-08",
+ "origination_month_unparsed": {},
+ "parquet_bytes": 1859410,
+ "prospectus_loan_count": 68025,
+ "prospectus_pool_balance": null,
+ "pti_missing": 0,
+ "repeated_tags": {
+  "subvented": 5460
+ },
+ "reporting_periods": {
+  "05-01-2026 to 05-31-2026": 68025
+ },
+ "rows_equal_prospectus_count": true,
+ "rows_parsed": 68025,
+ "rows_written": 68025,
+ "slug": "toyota_2026-C",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2099541/000119312526297081/taot26cex102_0623-1819lp.xml",
+ "sum_beginning_balance": "2066288446.67000000",
+ "sum_end_balance": "2023086017.89000000",
+ "xml_file": "taot26cex102_0623-1819lp.xml"
+}

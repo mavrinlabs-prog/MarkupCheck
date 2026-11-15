@@ -1,0 +1,99 @@
+{
+ "bytes": 237446705,
+ "codes": {
+  "credit_score_type": {
+   "Consumer Credit Bureau": 68239
+  },
+  "employment_verification_code": {
+   "2": 66547,
+   "3": 1692
+  },
+  "income_verification_code": {
+   "1": 251,
+   "2": 66303,
+   "3": 1685
+  },
+  "interest_rate_type_code": {
+   "1": 68239
+  },
+  "new_used_code": {
+   "1": 64937,
+   "2": 3302
+  },
+  "subvented": {
+   "0": 11861,
+   "1": 31805,
+   "1,2": 18433,
+   "2": 6140
+  },
+  "vehicle_type_code": {
+   "1": 22166,
+   "2": 3787,
+   "3": 42286
+  },
+  "vehicle_value_source_code": {
+   "1": 64937,
+   "98": 3302
+  }
+ },
+ "credit_score_by_type": {
+  "Consumer Credit Bureau": {
+   "max": 900.0,
+   "median": 775.0,
+   "min": 600.0,
+   "n": 68239
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 600.0,
+ "credit_score_outside_300_850": 6731,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_month_max": "2023-11",
+ "origination_month_min": "2018-05",
+ "origination_month_missing": 0,
+ "parquet_bytes": 2108385,
+ "repeated_elements": {
+  "modificationTypeCode": 5,
+  "subvented": 18433
+ },
+ "rows_parsed": 68239,
+ "rows_written": 68239,
+ "slug": "hyundai_2024-A",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2010834/000110465924031026/hca-autoloanex102_021420241u.xml",
+ "sum_reporting_period_actual_end_balance": 1818997656.42,
+ "vehicle_make_counts": {
+  "ACURA": 2,
+  "ALFA ROMEO": 1,
+  "BMW": 9,
+  "CADILLAC": 1,
+  "CHEVROLET": 31,
+  "CHRYSLER": 5,
+  "DODGE": 21,
+  "FORD": 29,
+  "GENESIS": 2244,
+  "GMC": 7,
+  "HONDA": 9,
+  "HYUNDAI": 40060,
+  "INFINITI": 3,
+  "JAGUAR": 1,
+  "JEEP": 23,
+  "KIA": 25714,
+  "LAND ROVER": 2,
+  "LEXUS": 3,
+  "MASERATI": 2,
+  "MAZDA": 5,
+  "MERCEDES": 8,
+  "MINI": 1,
+  "MITSUBISHI": 1,
+  "NISSAN": 19,
+  "POLESTAR": 1,
+  "SUBARU": 2,
+  "TESLA": 3,
+  "TOYOTA": 27,
+  "VOLKSWAGEN": 4,
+  "VOLVO": 1
+ },
+ "xml_file": "hca-autoloanex102_021420241u.xml"
+}

@@ -1,0 +1,122 @@
+{
+ "issuer": "ford",
+ "user_agent": "MarkupCheck student research project",
+ "deals": [
+  {
+   "deal": "Ford Credit Auto Owner Trust 2024-A",
+   "deal_cik": "0002014176",
+   "filing_date": "2024-03-08",
+   "accession": "0001129987-24-000006",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2014176/000112998724000006/autoloaninitial1153lp.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2024-03-08 by Ford Credit Auto Receivables Two LLC (CIK 0001129987), accession 0001129987-24-000006, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002014176), before the preliminary prospectus (424H 0001104659-24-032931, 2024-03-11) and the final prospectus (424B2 0001104659-24-035482, 2024-03-18). The cover document is 'fcaot2024-atrust_initialab.htm' and the EX-102 is 'autoloaninitial1153lp.xml'; the 424B2 says the initial asset-level data was filed on Form ABS-EE by the date of the prospectus. The same day the depositor filed a second pool ABS-EE for the smaller deal size, accession 0001129987-24-000004 with 'autoloaninitial1153sp.xml' (134,918,556 bytes, not downloaded); this large-pool file is the one whose count matches the 424B2. The 424B2 gives 46,551 receivables and an initial pool balance of $1,696,683,364.30; the parsed file has the same number of records.",
+   "bytes": 161652051,
+   "rows_parsed": 46551,
+   "rows_written": 46551,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2017-03",
+   "origination_month_max": "2024-02",
+   "prospectus_loan_count_if_found": 46551
+  },
+  {
+   "deal": "Ford Credit Auto Owner Trust 2025-A",
+   "deal_cik": "0002057342",
+   "filing_date": "2025-03-12",
+   "accession": "0001129987-25-000004",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2057342/000112998725000004/autoloaninitial1183lp.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2025-03-12 by Ford Credit Auto Receivables Two LLC (CIK 0001129987), accession 0001129987-25-000004, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002057342), before the preliminary prospectus (424H 0001104659-25-023376, 2025-03-13) and the final prospectus (424B2 0001104659-25-026212, 2025-03-20). The cover document is 'fcaot2025-atrust_initialab.htm' and the EX-102 is 'autoloaninitial1183lp.xml'; the 424B2 says the initial asset-level data was filed on Form ABS-EE by the date of the prospectus. The same day the depositor filed a second pool ABS-EE for the smaller deal size, accession 0001129987-25-000006 with 'autoloaninitial1183sp.xml' (132,595,488 bytes, not downloaded); this large-pool file is the one whose count matches the 424B2. The 424B2 gives 45,722 receivables and an initial pool balance of $1,668,378,947.84; the parsed file has the same number of records.",
+   "bytes": 159083183,
+   "rows_parsed": 45722,
+   "rows_written": 45722,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-04",
+   "origination_month_max": "2025-02",
+   "prospectus_loan_count_if_found": 45722
+  },
+  {
+   "deal": "Ford Credit Auto Owner Trust 2025-C",
+   "deal_cik": "0002092555",
+   "filing_date": "2025-11-12",
+   "accession": "0001129987-25-000019",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2092555/000112998725000019/autoloaninitial1209.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2025-11-12 by Ford Credit Auto Receivables Two LLC (CIK 0001129987), accession 0001129987-25-000019, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002092555), before the preliminary prospectus (424H 0001104659-25-111290, 2025-11-13) and the final prospectus (424B2 0001104659-25-114588, 2025-11-20). The cover document is 'fcaot2025-ctrust_initialab.htm' and the EX-102 is 'autoloaninitial1209.xml'; the 424B2 says the initial asset-level data was filed on Form ABS-EE by the date of the prospectus. This deal has a single pool ABS-EE (no small/large pool pair). The 424B2 gives 29,520 receivables and an initial pool balance of $1,096,614,974.63; the parsed file has the same number of records.",
+   "bytes": 102688400,
+   "rows_parsed": 29520,
+   "rows_written": 29520,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-11",
+   "origination_month_max": "2025-10",
+   "prospectus_loan_count_if_found": 29520
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 17771,
+   "1": 33767,
+   "1|2": 61551,
+   "2": 8704
+  },
+  "new_used_code": {
+   "1": 110653,
+   "2": 11140
+  },
+  "credit_score_type": {
+   "Commercial Bureau": 22077,
+   "Consumer Bureau": 99716
+  },
+  "interest_rate_type_code": {
+   "1": 121793
+  },
+  "vehicle_type_code": {
+   "1": 4980,
+   "2": 58057,
+   "3": 58756
+  },
+  "vehicle_value_source_code": {
+   "1": 110900,
+   "98": 10893
+  },
+  "income_verification_code": {
+   "1": 2,
+   "2": 95569,
+   "3": 4120,
+   "4": 12,
+   "5": 13,
+   "None": 22077
+  },
+  "employment_verification_code": {
+   "1": 3,
+   "2": 95568,
+   "3": 4145,
+   "None": 22077
+  }
+ },
+ "subvented_each_code_seen": {
+  "0": 17771,
+  "1": 95318,
+  "2": 70255
+ },
+ "spec_url": "https://www.sec.gov/files/absxml-31.zip (EDGAR ABS XML Technical Specification v3.1, listed at https://www.sec.gov/submit-filings/technical-specifications; code meanings read from the annotations of eis_ABS_AutoLoanAssetData.xsd in the copy the Ally session unpacked at data/raw/ally/spec_absxml31/)",
+ "notes": [
+  "Deal choice: the depositor Ford Credit Auto Receivables Two LLC (CIK 0001129987) files each deal's initial pool ABS-EE with the trust as co-registrant, one day before the preliminary prospectus (424H). Its submissions JSON lists pool ABS-EE filings on 2024-03-08 (2024-A), 2024-06-12 (2024-B), 2024-09-10 (2024-C), 2024-11-12 (2024-D), 2025-03-12 (2025-A), 2025-09-17 (2025-B), 2025-11-12 (2025-C) and 2026-03-11 (2026-A). Chosen: 2024-A (Jan-Jun 2024 window), 2025-A (the only deal in the Jan-Jun 2025 window) and 2025-C (the latest deal filed Oct 2025 - Feb 28 2026; 2026-A was filed 2026-03-11, after the cutoff). All are Ford Credit Auto Owner Trust retail loan deals; Ford's lease trusts (Ford Credit Auto Lease Trust, depositor Ford Credit Auto Lease Two LLC) were not used.",
+  "Ford files its final prospectus as a 424B2, not a 424B5. Receivable counts from the 424B2: 2024-A 46,551 (accession 0001104659-24-035482), 2025-A 45,722 (0001104659-25-026212), 2025-C 29,520 (0001104659-25-114588). For 2024-A and 2025-A the depositor filed two pool ABS-EEs the same day, one per offered deal size ('autoloaninitial<n>sp.xml' small pool and 'autoloaninitial<n>lp.xml' large pool); the large-pool files were parsed and their record counts equal the 424B2 counts. 2025-C has one pool file. The small-pool files were not downloaded.",
+  "Checks against the 424B2 (all exact, all three deals): rows parsed = receivable count; the sum of reportingPeriodActualEndBalanceAmount = initial pool balance to the cent ($1,696,683,364.30 / $1,668,378,947.84 / $1,096,614,974.63); the balance-weighted share of loans whose subvented values include '1' = 'Subvened-APR receivables' (76.54% / 75.19% / 68.93%); the balance-weighted share with new_used_code '1' = 'New vehicle' (92.68% / 94.25% / 93.70%). The balance column is not in the Parquet; these sums came from the XML (stats_<slug>.json has the balance sums).",
+  "subvented can repeat inside one loan (the XSD gives maxOccurs=unbounded and Ford writes both '1' and '2' for many loans). The parser keeps every value in file order joined by '|', so code_values_seen.subvented counts combinations such as '1|2'; subvented_each_code_seen counts single codes. Codes (XSD): 0 No, 1 Yes - Rate Subvention, 2 Yes - Cash Rebate, 98 Yes - Other. Ford's EX-103 (Asset Related Document): '1' = subvened-APR contract as described in the prospectus; '2' = the obligor received a cash rebate applied as a down payment.",
+  "credit_score_type is 'Consumer Bureau' or 'Commercial Bureau'. 'Consumer Bureau' scores are FICO Auto 8 scores (the 424B2 says Ford Credit uses FICO 8 auto scores, which range from 250 to 900): their counts in the bands >749, 700-749, 650-699, 600-649 and <600 equal the 424B2 'Distribution by FICO Score' table exactly in all three deals (2024-A: 23,137 / 6,570 / 4,962 / 2,730 / 1,283). Consumer scores run 424-900 (medians 772-774); 4,762 / 4,618 / 3,123 rows are above 850, which is normal on the 250-900 scale. 'Commercial Bureau' rows are the commercial-use receivables (424B2 'Commercial' row: 7,288 / 9,169 / 5,619; file: 7,285 / 9,173 / 5,619). Their scores are on a different, unstated scale (1 to 670, median 65-67, about 70% below 300) and must not be mixed with consumer FICO scores; the main session should keep credit_score_type == 'Consumer Bureau' when it needs a FICO score.",
+  "The string 'No Score' became NaN: 793 / 737 / 523 rows (Consumer Bureau 584 / 480 / 347, Commercial Bureau 209 / 257 / 176). The 424B2 'No FICO score' row has 581 / 484 / 347.",
+  "apr_pct is exactly 0 for 8,132 / 8,624 / 5,563 rows (17-19%); these are manufacturer-subvented 0% contracts. apr_pct maximum 24.99 / 25.14 / 20.89. interest_rate_type_code is '1' (fixed) for every row.",
+  "Pools are seasoned. Origination months: 2024-A 2017-03 to 2024-02 (57.1% originated in 2023, 12.7% in 2024); 2025-A 2018-04 to 2025-02 (51.0% in 2024, 5.7% in 2025); 2025-C 2018-11 to 2025-10 (39.8% in 2025, 29.9% in 2024). No loan was originated after 2026-01.",
+  "Ford EX-103 (ardinitretail2025cfinal.xml, read for 2025-C): original loan amount = amount financed; original interest rate = APR; original loan term counts a partial month as a month (so 61, 62, 73, 74 appear for 60- and 72-month contracts); new_used_code '1' includes most courtesy and demonstrator vehicles; vehicle_type_code '2' = light truck, '3' = utility; vehicle_value_source_code '98' is used for used vehicles even when Kelley Blue Book was consulted; income verification, employment verification and payment-to-income are omitted for commercial receivables whose primary obligor is a business entity (pti_pct is NaN for 7,657 / 9,528 / 5,866 rows) and PTI is also omitted when stated income is negligible.",
+  "vehicle_make is 'FORD' or 'LINC' (Lincoln) only; new_used_code '1' 41,890 / 41,886 / 26,877 rows and '2' 4,661 / 3,836 / 2,643.",
+  "Download method: parse_ford.py fetch, one request at a time with a 1-second pause, User-Agent from the SEC_UA environment variable (the CLAUDE.md string, which includes a contact and is not recorded in project files). Every XML size equals the size in the filing's index.json. Requests are logged in data/raw/ford/sec_requests.log (git-ignored).",
+  "data/raw/ford/sec/ holds the downloaded submissions JSON, filing index JSONs, the three 424B2 HTML files (about 14.6 MB) and the 2025-C EX-103. .gitignore excludes only *.xml and *.log here, so the HTML and JSON files are not ignored; the main session decides whether to commit them."
+ ],
+ "couldnt_confirm": [
+  "Why the file's credit_score_type split differs from the 424B2 commercial / no-FICO rows by 3 loans in 2024-A and 4 loans in 2025-A (it matches exactly in 2025-C). I compared counts only; the 424B2 does not list loans.",
+  "The scale of 'Commercial Bureau' scores. Neither the 424B2 nor the 2025-C EX-103 describes it; the 424B2 says commercial-use obligors that are businesses are evaluated with commercial credit bureau information.",
+  "The small-pool XML files (2024-A, 2025-A) were not downloaded, so their record counts are not known; the large-pool files match the 424B2.",
+  "I did not fetch each trust's own submissions list to see its first monthly ABS-EE. 'First pool filing' rests on the filing date (before the 424H and 424B2), the file names ('initialab', 'autoloaninitial') and the 424B2 statement that the initial asset-level data was filed on Form ABS-EE by the date of the prospectus.",
+  "EX-103 meanings were read only for 2025-C; the 2024-A and 2025-A EX-103 files were not downloaded."
+ ],
+ "generated_utc": "2026-11-15T19:16:25Z",
+ "deals_not_yet_parsed": []
+}

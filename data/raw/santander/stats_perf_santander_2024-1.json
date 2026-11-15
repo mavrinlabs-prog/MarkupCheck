@@ -1,0 +1,134 @@
+[
+ {
+  "accession": "0000950131-24-000575",
+  "filing_date": "2024-02-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 253897071,
+  "rows": 70947,
+  "reporting_period_end": [
+   "2024-01"
+  ],
+  "seconds": 23
+ },
+ {
+  "accession": "0000950131-24-000990",
+  "filing_date": "2024-03-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 251375096,
+  "rows": 70197,
+  "reporting_period_end": [
+   "2024-02"
+  ],
+  "seconds": 19
+ },
+ {
+  "accession": "0000950131-24-001433",
+  "filing_date": "2024-04-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 248381937,
+  "rows": 69338,
+  "reporting_period_end": [
+   "2024-03"
+  ],
+  "seconds": 21
+ },
+ {
+  "accession": "0000950131-24-001970",
+  "filing_date": "2024-05-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 244603185,
+  "rows": 68258,
+  "reporting_period_end": [
+   "2024-04"
+  ],
+  "seconds": 26
+ },
+ {
+  "accession": "0000950131-24-002506",
+  "filing_date": "2024-06-17",
+  "file": "sdart241ex102.xml",
+  "bytes": 235725024,
+  "rows": 66971,
+  "reporting_period_end": [
+   "2024-05"
+  ],
+  "seconds": 25
+ },
+ {
+  "accession": "0000950131-24-002869",
+  "filing_date": "2024-07-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 234719202,
+  "rows": 65453,
+  "reporting_period_end": [
+   "2024-06"
+  ],
+  "seconds": 19
+ },
+ {
+  "accession": "0000950131-24-003331",
+  "filing_date": "2024-08-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 227742918,
+  "rows": 64218,
+  "reporting_period_end": [
+   "2024-07"
+  ],
+  "seconds": 16
+ },
+ {
+  "accession": "0000950131-24-003706",
+  "filing_date": "2024-09-16",
+  "file": "sdart241ex102.xml",
+  "bytes": 230155842,
+  "rows": 63046,
+  "reporting_period_end": [
+   "2024-08"
+  ],
+  "seconds": 15
+ },
+ {
+  "accession": "0000950131-24-004125",
+  "filing_date": "2024-10-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 222393615,
+  "rows": 61828,
+  "reporting_period_end": [
+   "2024-09"
+  ],
+  "seconds": 19
+ },
+ {
+  "accession": "0000950131-24-004544",
+  "filing_date": "2024-11-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 218578013,
+  "rows": 60777,
+  "reporting_period_end": [
+   "2024-10"
+  ],
+  "seconds": 20
+ },
+ {
+  "accession": "0000950131-24-004928",
+  "filing_date": "2024-12-16",
+  "file": "sdart241ex102.xml",
+  "bytes": 214562379,
+  "rows": 59645,
+  "reporting_period_end": [
+   "2024-11"
+  ],
+  "seconds": 19
+ },
+ {
+  "accession": "0000950131-25-000212",
+  "filing_date": "2025-01-15",
+  "file": "sdart241ex102.xml",
+  "bytes": 213228775,
+  "rows": 58482,
+  "reporting_period_end": [
+   "2024-12"
+  ],
+  "seconds": 16
+ }
+]

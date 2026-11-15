@@ -1,0 +1,206 @@
+{
+ "rule": "- Calibration window: forward months 2026-02 to 2026-05. Evaluation window: 2026-06 to 2026-08, never used to set\n  anything. The models themselves are never refitted.\n- Methods: \"frozen\" (as shipped); \"width\" (recompute the conformal width on the window); \"shift+width\" (first move\n  the typical price by the window's median miss, then recompute the width).\n- A method is adopted for the app's same-lender CarMax view only if, on the evaluation window, its coverage is\n  between 78% and 82% and its typical-price error is no worse than frozen. If both pass, the simpler one (\"width\").\n- Also a monthly routine: each month from 2026-04 on is scored after recalibrating on the two months before it.",
+ "loans": 113200,
+ "market": {
+  "frozen": {
+   "loans": 41941,
+   "model_mae": 1.7737019162321819,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.657208936362986,
+   "mean_width": 4.977202479737843,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.652262516789403,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.08495267161011898,
+   "share_well_above": 0.04556400658067285,
+   "share_below_range": 0.2578383920268949,
+   "mean_residual": -0.23995300431572059
+  },
+  "width": {
+   "loans": 41941,
+   "model_mae": 1.7737019162321819,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.7534393552848049,
+   "mean_width": 5.506756068761723,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.7147422537168264,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.08495267161011898,
+   "share_well_above": 0.04556400658067285,
+   "share_below_range": 0.17290956343434824,
+   "mean_residual": -0.23995300431572059,
+   "shift_points": 0.0,
+   "qhat": 0.6186381134199457,
+   "passes": false
+  },
+  "shift+width": {
+   "loans": 41941,
+   "model_mae": 1.6585588502302393,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.7425907822894066,
+   "mean_width": 4.5115167930967335,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.6848223796952434,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.08495267161011898,
+   "share_well_above": 0.04556400658067285,
+   "share_below_range": 0.11473260055792661,
+   "mean_residual": 0.5104386427674292,
+   "shift_points": -0.7503916470831498,
+   "qhat": 0.12101847558745105,
+   "passes": false
+  },
+  "adopt": null,
+  "monthly_routine": [
+   {
+    "month": "2026-04",
+    "loans": 17723,
+    "frozen_coverage": 0.6972295886700897,
+    "monthly_coverage": 0.7611013936692433,
+    "frozen_mae": 1.685991249586472,
+    "monthly_mae": 1.4806614161220055
+   },
+   {
+    "month": "2026-05",
+    "loans": 19509,
+    "frozen_coverage": 0.6091547490901635,
+    "monthly_coverage": 0.7435029986160234,
+    "frozen_mae": 1.8205955905611702,
+    "monthly_mae": 1.6204438566324795
+   },
+   {
+    "month": "2026-06",
+    "loans": 16311,
+    "frozen_coverage": 0.6347250321868677,
+    "monthly_coverage": 0.7629207283428361,
+    "frozen_mae": 1.791839558690751,
+    "monthly_mae": 1.6374924716906831
+   },
+   {
+    "month": "2026-07",
+    "loans": 15881,
+    "frozen_coverage": 0.6742648447830741,
+    "monthly_coverage": 0.7880486115483911,
+    "frozen_mae": 1.779073551083002,
+    "monthly_mae": 1.7049086200534715
+   },
+   {
+    "month": "2026-08",
+    "loans": 9749,
+    "frozen_coverage": 0.667042773617807,
+    "monthly_coverage": 0.8083906041645297,
+    "frozen_mae": 1.734605596690938,
+    "monthly_mae": 1.6281028568228937
+   }
+  ],
+  "monthly_routine_pooled": {
+   "months": "2026-04 to 2026-08",
+   "loans": 79173,
+   "frozen_coverage": 0.6543266012403218,
+   "monthly_coverage": 0.768368004243871,
+   "frozen_mae": 1.7656228052666043,
+   "monthly_mae": 1.610551194585978
+  }
+ },
+ "same_lender": {
+  "frozen": {
+   "loans": 41941,
+   "model_mae": 1.6762782168036596,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.5957893230967312,
+   "mean_width": 4.0355816248233625,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.5936269742022139,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.10583915500345724,
+   "share_well_above": 0.06943086717054911,
+   "share_below_range": 0.29837152189981164,
+   "mean_residual": -0.18494811245153245
+  },
+  "width": {
+   "loans": 41941,
+   "model_mae": 1.6762782168036596,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.7676736367754703,
+   "mean_width": 4.970531469726119,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.7188643416238247,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.10583915500345724,
+   "share_well_above": 0.06943086717054911,
+   "share_below_range": 0.15645788130945854,
+   "mean_residual": -0.18494811245153245,
+   "shift_points": 0.0,
+   "qhat": 0.7273101646864091,
+   "passes": false
+  },
+  "shift+width": {
+   "loans": 41941,
+   "model_mae": 1.6010325629870326,
+   "b1_mae": 2.510529399214791,
+   "coverage": 0.7519134021601774,
+   "mean_width": 4.304929543456009,
+   "prime_used_loans": 21591,
+   "coverage_prime_used": 0.6998749478949562,
+   "b1_coverage": 0.6476955723516368,
+   "share_high": 0.10583915500345724,
+   "share_well_above": 0.06943086717054911,
+   "share_below_range": 0.1038363415273837,
+   "mean_residual": 0.4267672843065972,
+   "shift_points": -0.6117153967581297,
+   "qhat": 0.39450920155135405,
+   "passes": false
+  },
+  "adopt": null,
+  "monthly_routine": [
+   {
+    "month": "2026-04",
+    "loans": 17723,
+    "frozen_coverage": 0.6333013598149297,
+    "monthly_coverage": 0.7721040455904756,
+    "frozen_mae": 1.5793116428418648,
+    "monthly_mae": 1.4271394067644327
+   },
+   {
+    "month": "2026-05",
+    "loans": 19509,
+    "frozen_coverage": 0.5477984519965144,
+    "monthly_coverage": 0.735352914039674,
+    "frozen_mae": 1.7178567787174932,
+    "monthly_mae": 1.5551985647101854
+   },
+   {
+    "month": "2026-06",
+    "loans": 16311,
+    "frozen_coverage": 0.5782600698914843,
+    "monthly_coverage": 0.7739562258598491,
+    "frozen_mae": 1.6855713245144721,
+    "monthly_mae": 1.5743112425232924
+   },
+   {
+    "month": "2026-07",
+    "loans": 15881,
+    "frozen_coverage": 0.6091555947358479,
+    "monthly_coverage": 0.7952270008185882,
+    "frozen_mae": 1.6790421253989067,
+    "monthly_mae": 1.638615539818611
+   },
+   {
+    "month": "2026-08",
+    "loans": 9749,
+    "frozen_coverage": 0.6033439327110472,
+    "monthly_coverage": 0.8027489998974254,
+    "frozen_mae": 1.6562275949683767,
+    "monthly_mae": 1.5920353654987642
+   }
+  ],
+  "monthly_routine_pooled": {
+   "months": "2026-04 to 2026-08",
+   "loans": 79173,
+   "frozen_coverage": 0.592361032170058,
+   "monthly_coverage": 0.7718414105818903,
+   "frozen_mae": 1.664817460915315,
+   "monthly_mae": 1.551738059034283
+  }
+ }
+}

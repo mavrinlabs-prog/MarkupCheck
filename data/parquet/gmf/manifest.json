@@ -1,0 +1,121 @@
+{
+ "issuer": "gmf",
+ "user_agent": "MarkupCheck student research project",
+ "deals": [
+  {
+   "deal": "GM Financial Consumer Automobile Receivables Trust 2024-1",
+   "deal_cik": "0002003007",
+   "filing_date": "2024-01-02",
+   "accession": "0001347185-24-000003",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2003007/000134718524000003/exh1024600112023lp.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2024-01-02 by AFS SenSub Corp. (CIK 0001347185), accession 0001347185-24-000003, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002003007), before the preliminary prospectus (424H 0001193125-24-002483, 2024-01-04) and the final prospectus (424B5 0001193125-24-006679, 2024-01-11), which says the initial asset-level data was filed on Form ABS-EE on or prior to the date of the prospectus. The cover document is 'absee_4600x112023xlp.htm' and the EX-102 is 'exh1024600112023lp.xml'. The same day the depositor filed a second pool ABS-EE for the smaller deal size, accession 0001347185-24-000005 with 'exh1024600112023sp.xml' (169,670,851 bytes, not downloaded). The 424B5 gives 48,285 contracts (36,191 new, 12,094 used) and an aggregate principal balance of $1,657,333,024.92 at the cutoff date 2023-11-30; the parsed file has the same number of records, so it is the pool the deal was priced on.",
+   "bytes": 195809253,
+   "rows_parsed": 48285,
+   "rows_written": 48285,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2017-12",
+   "origination_month_max": "2023-08",
+   "prospectus_loan_count_if_found": 48285
+  },
+  {
+   "deal": "GM Financial Consumer Automobile Receivables Trust 2025-1",
+   "deal_cik": "0002047316",
+   "filing_date": "2025-01-03",
+   "accession": "0001347185-25-000003",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2047316/000134718525000003/exh1024740112024_lp.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2025-01-03 by AFS SenSub Corp. (CIK 0001347185), accession 0001347185-25-000003, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002047316), before the preliminary prospectus (424H 0001193125-25-002125, 2025-01-06) and the final prospectus (424B5 0001193125-25-005364, 2025-01-13), which says the initial asset-level data was filed on Form ABS-EE on or prior to the date of the prospectus. The cover document is 'absee_4740x112024xlp.htm' and the EX-102 is 'exh1024740112024_lp.xml'. The same day the depositor filed a second pool ABS-EE for the smaller deal size, accession 0001347185-25-000005 with 'exh1024740112024_sp.xml' (170,878,836 bytes, not downloaded). The 424B5 gives 50,723 contracts (36,642 new, 14,081 used) and an aggregate principal balance of $1,644,919,577.13 at the cutoff date 2024-12-03; the parsed file has the same number of records, so it is the pool the deal was priced on.",
+   "bytes": 205716878,
+   "rows_parsed": 50723,
+   "rows_written": 50723,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-09",
+   "origination_month_max": "2024-08",
+   "prospectus_loan_count_if_found": 50723
+  },
+  {
+   "deal": "GM Financial Consumer Automobile Receivables Trust 2026-1",
+   "deal_cik": "0002099048",
+   "filing_date": "2026-01-02",
+   "accession": "0001347185-26-000003",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2099048/000134718526000003/exh1024860112025_mp.xml",
+   "why_this_is_the_first_pool_filing": "Initial asset-level data: filed 2026-01-02 by AFS SenSub Corp. (CIK 0001347185), accession 0001347185-26-000003, with the trust as co-registrant (EDGAR serves the filing under the trust's CIK 0002099048), before the preliminary prospectus (424H 0001193125-26-002340, 2026-01-05) and the final prospectus (424B5 0001193125-26-010639, 2026-01-12), which says the initial asset-level data was filed on Form ABS-EE on or prior to the date of the prospectus. The cover document is 'absee_4860x112025xmp.htm' and the EX-102 is 'exh1024860112025_mp.xml'. The same day the depositor filed a second pool ABS-EE for the smaller deal size, accession 0001347185-26-000005 with 'exh1024860112025_sp.xml' (111,313,281 bytes, not downloaded). The 424B5 gives 33,198 contracts (24,944 new, 8,254 used) and an aggregate principal balance of $1,317,621,312.63 at the cutoff date 2025-12-08; the parsed file has the same number of records, so it is the pool the deal was priced on.",
+   "bytes": 139190118,
+   "rows_parsed": 33198,
+   "rows_written": 33198,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2020-03",
+   "origination_month_max": "2025-08",
+   "prospectus_loan_count_if_found": 33198
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 36586,
+   "1": 41712,
+   "1|2": 24424,
+   "2": 4307,
+   "2|1": 25177
+  },
+  "new_used_code": {
+   "1": 97777,
+   "2": 34429
+  },
+  "credit_score_type": {
+   "Credit Bureau Score": 131510,
+   "None": 696
+  },
+  "interest_rate_type_code": {
+   "1": 132206
+  },
+  "vehicle_type_code": {
+   "1": 9124,
+   "2": 54436,
+   "3": 68640,
+   "99": 6
+  },
+  "vehicle_value_source_code": {
+   "1": 98271,
+   "3": 3480,
+   "98": 30455
+  },
+  "income_verification_code": {
+   "2": 131093,
+   "3": 1112,
+   "1": 1
+  },
+  "employment_verification_code": {
+   "1": 14,
+   "2": 131369,
+   "3": 823
+  }
+ },
+ "subvented_each_code_seen": {
+  "0": 36586,
+  "1": 91313,
+  "2": 53908
+ },
+ "spec_url": "https://www.sec.gov/files/absxml-31.zip (EDGAR ABS XML Technical Specification v3.1, listed at https://www.sec.gov/submit-filings/technical-specifications; code meanings read from the annotations of eis_ABS_AutoLoanAssetData.xsd in the copy the Ally session unpacked at data/raw/ally/spec_absxml31/)",
+ "notes": [
+  "Deal choice: GM Financial's prime retail loan trusts (GM Financial Consumer Automobile Receivables Trust, 'GMCAR') use the depositor AFS SenSub Corp. (CIK 0001347185), which also files AmeriCredit (subprime) deals; GM Financial's lease trusts use a different depositor and were not used. From the depositor's submissions JSON the pool ABS-EE filings run about one per quarter; chosen: 2024-1 (filed 2024-01-02), 2025-1 (2025-01-03) and 2026-1 (2026-01-02, the latest pool filing in Oct 2025 - Feb 28 2026; the next one was filed 2026-04-02). Each chosen accession's index.json was fetched under the GMCAR trust's own CIK (2003007, 2047316, 2099048), and each 424B5 is titled 'GM Financial Consumer Automobile Receivables Trust <deal>', so none of them is an AmeriCredit deal.",
+  "For each deal the depositor filed two pool ABS-EEs the same day, one per offered deal size: a small pool ('sp') and a larger pool ('lp' in 2024-1 and 2025-1, 'mp' in 2026-1). The larger files were parsed; their record counts equal the 424B5 contract counts (48,285 / 50,723 / 33,198). The small-pool files were not downloaded.",
+  "Checks against the 424B5: rows parsed = contract count in all three deals; new/used row counts equal the 424B5 composition table exactly (2024-1 36,191 new / 12,094 used; 2025-1 36,642 / 14,081; 2026-1 24,944 / 8,254), which confirms new_used_code '1' = New. The sum of reportingPeriodActualEndBalanceAmount equals the 424B5 aggregate principal balance to the cent for 2024-1 ($1,657,333,024.92, cutoff 2023-11-30) but not for 2025-1 ($1,648,810,962.97 vs $1,644,919,577.13, cutoff 2024-12-03) or 2026-1 ($1,324,212,761.16 vs $1,317,621,312.63, cutoff 2025-12-08): GM Financial's EX-103 says the file reports balances as of the most recent calendar month-end, while the prospectus uses the mid-month cutoff date.",
+  "credit_score_type is 'Credit Bureau Score' or 'None'. The 424B5 defines the credit bureau score as 'A FICO Auto Score provided by credit reporting agencies' (TransUnion, Equifax or Experian by the obligor's location). Every 'Credit Bureau Score' row is numeric: range 428-900, medians 781-786; 5,508 / 6,217 / 4,034 rows are above 850 (normal on the FICO Auto 250-900 scale), none below 300. 'None' rows have the score 'None', stored as NaN: 238 / 266 / 192 rows. The 424B5's 'Weighted Average Custom Score' (344 / 340 / 339) is GM Financial's proprietary score and is not in the file.",
+  "The file's scores do not reproduce the 424B5 score table exactly. Weighted by end balance, the file gives an average of 776.96 / 774.79 / 771.91 against the 424B5's weighted-average credit bureau score of 783 / 781 / 779, and 0.37% / 0.52% / 0.74% of balance below 600 where the 424B5 shows 0.00%. The 424B5 warns that FICO Auto Scores in the prospectus may not match the asset-level data because they are calculated differently. Scores were kept as written.",
+  "subvented can repeat inside one loan (the XSD gives maxOccurs=unbounded) and GM Financial writes both orders ('1' then '2', and '2' then '1'). The parser keeps every value in file order joined by '|', so code_values_seen.subvented has both '1|2' and '2|1'; subvented_each_code_seen counts single codes. Codes (XSD): 0 No, 1 Yes - Rate Subvention, 2 Yes - Cash Rebate, 98 Yes - Other. GM Financial's EX-103 says the subvention designation is validated after origination and could differ in later monthly files. The 424B5 does not state a subvened share, so the code meaning was not checked against it.",
+  "apr_pct is exactly 0 for 2,764 / 1,114 / 2,068 rows; maximum 19.6 / 20 / 20, matching the 424B5 APR ranges (0.00% to 19.60% / 20.00% / 20.00%). interest_rate_type_code is '1' (fixed) for every row.",
+  "Pools are seasoned and the newest loans are a few months older than the cutoff. Origination months: 2024-1 2017-12 to 2023-08 (59.9% in 2023, 28.9% in 2022); 2025-1 2018-09 to 2024-08 (52.8% in 2024, 34.4% in 2023); 2026-1 2020-03 to 2025-08 (89.2% in 2025). No loan was originated after 2026-01.",
+  "GM Financial EX-103 (exh103loanv2.xml, read for 2026-1): original loan term counts a partial month as a month (a 60-month contract can show 62); vehicle_type_code 1 = sedans, hatchbacks, wagons, coupes; 2 = vans, minivans, light pickups; 3 = SUVs and crossovers; 99 = not available; vehicle_value_source_code '98' = NADA guides or source not available; payment-to-income uses the combined income of applicant and co-applicant. pti_pct has no missing values.",
+  "Makes are mostly GM brands (CHEVROLET, GMC, BUICK, CADILLAC) plus some other makes, mostly on used vehicles (e.g. FORD 638 and TOYOTA 424 rows in 2024-1). asset_number is written as '<trust CIK> - <sequence>' and is kept as written.",
+  "Download method: parse_gmf.py fetch, one request at a time with a 1-second pause, User-Agent from the SEC_UA environment variable (the CLAUDE.md string, which includes a contact and is not recorded in project files). Every XML size equals the size in the filing's index.json. Requests are logged in data/raw/gmf/sec_requests.log (git-ignored).",
+  "data/raw/gmf/sec/ holds the downloaded submissions JSON, filing index JSONs, the three 424B5 HTML files (about 10.2 MB) and the 2026-1 EX-103. .gitignore excludes only *.xml and *.log here, so the HTML and JSON files are not ignored; the main session decides whether to commit them."
+ ],
+ "couldnt_confirm": [
+  "Why the file's credit scores average about 6-7 points lower than the 424B5's weighted-average credit bureau score even in 2024-1, where balances match to the cent. One guess is that the prospectus uses a different obligor's or a later score, but neither the 424B5 nor the EX-103 says so.",
+  "The meaning of subvented '2' (cash rebate) and the share of rate-subvented loans could not be checked against the 424B5, which gives no subvened share.",
+  "The small-pool XML files were not downloaded, so their record counts are not known; the larger-pool files match the 424B5.",
+  "I did not fetch each trust's own submissions list to see its first monthly ABS-EE. 'First pool filing' rests on the filing date (before the 424H and 424B5) and the 424B5 statement that the initial asset-level data was filed on Form ABS-EE on or prior to the date of the prospectus.",
+  "EX-103 meanings were read only for 2026-1; the 2024-1 and 2025-1 EX-103 files (same name, exh103loanv2.xml, same 11,445-byte size in the index) were not downloaded."
+ ],
+ "generated_utc": "2026-11-15T19:16:25Z",
+ "deals_not_yet_parsed": []
+}

@@ -1,0 +1,4 @@
+credit_score,new_or_used,model_year,vehicle_price,amount_financed,term_months,apr,lender
+660,used,2019,17500,18500,72,15.9,
+760,used,2022,24000,25000,60,15.0,
+700,new,2026,32000,30000,60,7.5,Ally

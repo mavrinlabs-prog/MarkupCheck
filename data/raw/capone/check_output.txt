@@ -1,0 +1,36 @@
+
+== data/parquet/capone/capone_2024-1.parquet  (49,532 rows, Capital One Prime Auto Receivables Trust 2024-1)
+  [PASS] column names and order match CONTRACT  -- 
+  [PASS] column types match CONTRACT  -- 
+  [PASS] rows equal the 424B5 receivable count  -- parquet 49,532, 424B5 49,532
+  [PASS] rows equal manifest rows_written  -- manifest 49,532
+  [PASS] sum of ending balances equals the 424B5 pool balance  -- file $1,116,124,822.45, 424B5 $1,116,124,822.45, difference 0.00
+  [PASS] every row's reportingPeriodEndingDate is the cut-off date  -- {'09-30-2024': 49532}
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month parses as YYYY-MM  -- 0 bad; range 2023-03 to 2024-02
+  [PASS] no loan originated after Jan 2026  -- 0 rows
+  [PASS] share of rows with a numeric credit_score  -- 100.0000% (49,532 of 49,532)
+  [PASS] credit_score for type 'FICO' within the 424B5 FICO range 700-885  -- n 49,532, min 700, median 787, max 885
+  [PASS] apr_pct within the 424B5 contract-rate range 1.99-12.99  -- min 1.99, median 7.7, max 12.99
+  [PASS] new-vehicle share by balance equals the 424B5  -- file 28.57%, 424B5 28.57%
+  [PASS] pti_pct is in percent (0-100)  -- min 0.05, median 5.53, max 20.94, NaN 0
+  origination months: 12 distinct; rows per year {'2023': 40524, '2024': 9008}
+
+== data/parquet/capone/capone_2025-1.parquet  (72,469 rows, Capital One Prime Auto Receivables Trust 2025-1)
+  [PASS] column names and order match CONTRACT  -- 
+  [PASS] column types match CONTRACT  -- 
+  [PASS] rows equal the 424B5 receivable count  -- parquet 72,469, 424B5 72,469
+  [PASS] rows equal manifest rows_written  -- manifest 72,469
+  [PASS] sum of ending balances equals the 424B5 pool balance  -- file $1,456,229,893.76, 424B5 $1,456,229,893.76, difference 0.00
+  [PASS] every row's reportingPeriodEndingDate is the cut-off date  -- {'09-30-2025': 72469}
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month parses as YYYY-MM  -- 0 bad; range 2024-03 to 2025-02
+  [PASS] no loan originated after Jan 2026  -- 0 rows
+  [PASS] share of rows with a numeric credit_score  -- 100.0000% (72,469 of 72,469)
+  [PASS] credit_score for type 'FICO' within the 424B5 FICO range 700-884  -- n 72,469, min 700, median 793, max 884
+  [PASS] apr_pct within the 424B5 contract-rate range 1.9-12.99  -- min 1.9, median 7.35, max 12.99
+  [PASS] new-vehicle share by balance equals the 424B5  -- file 26.46%, 424B5 26.46%
+  [PASS] pti_pct is in percent (0-100)  -- min 0.03, median 4.95, max 21.25, NaN 0
+  origination months: 12 distinct; rows per year {'2024': 60588, '2025': 11881}
+
+2 file(s) checked, 0 check(s) failed

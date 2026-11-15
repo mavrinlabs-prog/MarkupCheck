@@ -1,0 +1,66 @@
+{
+ "bytes": 329951704,
+ "codes": {
+  "credit_score_type": {
+   "Credit Bureau": 92413
+  },
+  "employment_verification_code": {
+   "2": 92112,
+   "3": 301
+  },
+  "income_verification_code": {
+   "2": 92062,
+   "3": 8,
+   "4": 343
+  },
+  "interest_rate_type_code": {
+   "1": 92413
+  },
+  "new_used_code": {
+   "1": 77213,
+   "2": 15200
+  },
+  "subvented": {
+   "0": 26973,
+   "1": 65440
+  },
+  "vehicle_type_code": {
+   "1": 33220,
+   "2": 3510,
+   "3": 55683
+  },
+  "vehicle_value_source_code": {
+   "1": 77213,
+   "98": 15200
+  }
+ },
+ "credit_score_by_type": {
+  "Credit Bureau": {
+   "max": 900.0,
+   "median": 766.0,
+   "min": 418.0,
+   "n": 92413
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 418.0,
+ "credit_score_outside_300_850": 9175,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "numeric_credit_score_share": 1.0,
+ "origination_month_max": "2023-10",
+ "origination_month_min": "2017-12",
+ "origination_month_missing": 0,
+ "parquet_bytes": 2728151,
+ "repeated_elements": {},
+ "rows_parsed": 92413,
+ "rows_written": 92413,
+ "slug": "honda_2024-1",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2008953/000095013124000414/harot241ex102_0206-1655lp.xml",
+ "sum_reporting_period_actual_end_balance": 2159245264.72,
+ "vehicle_make_counts": {
+  "ACURA": 8659,
+  "HONDA": 83754
+ },
+ "xml_file": "harot241ex102_0206-1655lp.xml"
+}

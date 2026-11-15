@@ -1,0 +1,48 @@
+{
+ "bytes": 169066439,
+ "codes": {
+  "credit_score_type": {
+   "Bureau": 52812
+  },
+  "employment_verification_code": {
+   "2": 52812
+  },
+  "income_verification_code": {
+   "2": 52702,
+   "3": 110
+  },
+  "interest_rate_type_code": {
+   "1": 52812
+  },
+  "new_used_code": {
+   "1": 1,
+   "2": 52811
+  },
+  "subvented": {
+   "0": 52812
+  },
+  "vehicle_type_code": {
+   "1": 15929,
+   "2": 5949,
+   "3": 29445,
+   "98": 1275,
+   "99": 214
+  },
+  "vehicle_value_source_code": {
+   "98": 52812
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_min": 650.0,
+ "credit_score_outside_300_850": 4298,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {},
+ "origination_month_max": "2026-02",
+ "origination_month_min": "2019-08",
+ "parquet_bytes": 1857523,
+ "rows_parsed": 52812,
+ "rows_written": 52812,
+ "slug": "carmax_2026-2",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2117307/000125938026000017/cart20262u.xml",
+ "xml_file": "cart20262u.xml"
+}

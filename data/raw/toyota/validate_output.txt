@@ -1,0 +1,61 @@
+
+== data/parquet/toyota/toyota_2024-A.parquet  (71,726 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'toyota'
+  [PASS] deal_cik is 10 digits  -- ['0002002262']
+  [PASS] rows == manifest rows_written  -- parquet 71,726, manifest 71,726
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 71,726, 424B5 71,726
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2018-02 .. 2023-07
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 4.99, max 21.33; 1159 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO Score 8 Auto'  -- rows 71,726, numeric 71,726, min 620.0, median 772.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 8362 rows outside (8362 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 7.57, max 83.01, NaN 0, rows == 999.99: 0
+
+== data/parquet/toyota/toyota_2025-A.parquet  (69,132 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'toyota'
+  [PASS] deal_cik is 10 digits  -- ['0002047571']
+  [PASS] rows == manifest rows_written  -- parquet 69,132, manifest 69,132
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 69,132, 424B5 69,132
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2019-02 .. 2024-07
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 5.49, max 23.22; 934 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO Score 8 Auto'  -- rows 69,132, numeric 69,132, min 620.0, median 775.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 8793 rows outside (8793 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 7.85, max 93.63, NaN 0, rows == 999.99: 0
+
+== data/parquet/toyota/toyota_2026-A.parquet  (65,867 rows)
+  [PASS] column names and order match CONTRACT
+  [PASS] column types match CONTRACT
+  [PASS] issuer == 'toyota'
+  [PASS] deal_cik is 10 digits  -- ['0002099539']
+  [PASS] rows == manifest rows_written  -- parquet 65,867, manifest 65,867
+  [PASS] rows == 424B5 'Number of Receivables'  -- parquet 65,867, 424B5 65,867
+  [PASS] no duplicate asset_number  -- 0 duplicates
+  [PASS] origination_month is YYYY-MM  -- 0 bad; range 2020-02 .. 2025-07
+  [PASS] no loan originated after 2026-01  -- 0 rows
+  [PASS] apr_pct within [0, 40]  -- min 0.0, median 5.65, max 23.29; 686 rows exactly 0
+  [INFO] share of rows with a numeric credit_score  -- 100.0000%
+  [INFO] credit_score for type 'FICO Score 8 Auto'  -- rows 65,867, numeric 65,867, min 620.0, median 776.0, max 900.0
+  [PASS] credit_score within 250-900 (FICO Auto scale) or NaN  -- 0 rows outside
+  [INFO-FAIL] credit_score within 300-850 (brief wording)  -- 8954 rows outside (8954 above 850, 0 below 300)
+  [PASS] pti_pct is on a percent scale (median between 1 and 50)  -- median 7.73, max 98.74, NaN 0, rows == 999.99: 0
+
+code_values_seen[credit_score_type] = {'FICO Score 8 Auto': 206725}
+
+code_values_seen[subvented] = {'0': 46151, '1': 134232, '1,2': 13119, '2': 13223}
+
+code_values_seen[new_used_code] = {'1': 174948, '2': 31777}
+
+code_values_seen[interest_rate_type_code] = {'1': 206725}
+
+3 file(s) checked, 0 hard check(s) failed

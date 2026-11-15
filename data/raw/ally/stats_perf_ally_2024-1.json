@@ -1,0 +1,194 @@
+[
+ {
+  "month_expected": "2024-02",
+  "accession": "0002010413-24-000014",
+  "xml": "ex102feb2024aart20241_1.xml",
+  "bytes": 205787931,
+  "rows": 59162,
+  "periods_in_file": [
+   "2024-02"
+  ],
+  "zero_balance_codes": {
+   "<none>": 58205,
+   "1": 956,
+   "3": 1
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-03",
+  "accession": "0002010413-24-000015",
+  "xml": "ex102mar2024aart20241_1.xml",
+  "bytes": 204275453,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-03"
+  ],
+  "zero_balance_codes": {
+   "<none>": 57065,
+   "1": 2095,
+   "4": 1
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-04",
+  "accession": "0002010413-24-000022",
+  "xml": "ex102apr2024aart20241_1.xml",
+  "bytes": 202467494,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-04"
+  ],
+  "zero_balance_codes": {
+   "<none>": 55879,
+   "1": 3276,
+   "4": 6
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-05",
+  "accession": "0002010413-24-000028",
+  "xml": "ex102may2024aart20241_1.xml",
+  "bytes": 200595046,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-05"
+  ],
+  "zero_balance_codes": {
+   "<none>": 54534,
+   "1": 4597,
+   "4": 30
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-06",
+  "accession": "0002010413-24-000034",
+  "xml": "ex102jun2024aart20241_1.xml",
+  "bytes": 198439677,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-06"
+  ],
+  "zero_balance_codes": {
+   "<none>": 53275,
+   "1": 5829,
+   "4": 57
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-07",
+  "accession": "0002010413-24-000039",
+  "xml": "ex102jul2024aart20241_1.xml",
+  "bytes": 196464975,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-07"
+  ],
+  "zero_balance_codes": {
+   "<none>": 51840,
+   "1": 7231,
+   "4": 90
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-08",
+  "accession": "0002010413-24-000046",
+  "xml": "ex102aug2024aart20241_1.xml",
+  "bytes": 194204488,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-08"
+  ],
+  "zero_balance_codes": {
+   "<none>": 50294,
+   "1": 8728,
+   "4": 139
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-09",
+  "accession": "0002010413-24-000052",
+  "xml": "ex102sep2024aart20241_1.xml",
+  "bytes": 191736331,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-09"
+  ],
+  "zero_balance_codes": {
+   "<none>": 48791,
+   "1": 10188,
+   "4": 182
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-10",
+  "accession": "0002010413-24-000057",
+  "xml": "ex102oct2024aart20241_1.xml",
+  "bytes": 189361651,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-10"
+  ],
+  "zero_balance_codes": {
+   "<none>": 47249,
+   "1": 11689,
+   "4": 223
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-11",
+  "accession": "0002010413-24-000063",
+  "xml": "ex102nov2024aart20241_1.xml",
+  "bytes": 186890207,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-11"
+  ],
+  "zero_balance_codes": {
+   "<none>": 45781,
+   "1": 13108,
+   "4": 272
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2024-12",
+  "accession": "0002010413-25-000004",
+  "xml": "ex102dec2024aart20241_1.xml",
+  "bytes": 184584277,
+  "rows": 59161,
+  "periods_in_file": [
+   "2024-12"
+  ],
+  "zero_balance_codes": {
+   "<none>": 44323,
+   "1": 14533,
+   "4": 305
+  },
+  "xml_deleted": true
+ },
+ {
+  "month_expected": "2025-01",
+  "accession": "0002010413-25-000009",
+  "xml": "ex102jan2025aart20241_1.xml",
+  "bytes": 182271531,
+  "rows": 59161,
+  "periods_in_file": [
+   "2025-01"
+  ],
+  "zero_balance_codes": {
+   "<none>": 42744,
+   "1": 16051,
+   "4": 366
+  },
+  "xml_deleted": true
+ }
+]

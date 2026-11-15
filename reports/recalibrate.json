@@ -1,0 +1,80 @@
+{
+ "rule": "a lender's recalibration is written to app/model/meta.json (views.same_lender.recalibrated) only if, in step 1,\nthe routine's pooled coverage is between 78% and 82%, its typical-price error is no worse than the frozen model's, and\nthe two newest months hold at least 2,000 loans. The 78-82% band is the one src/eval_recalibration.py fixed before any\nrecalibration was run. An earlier version of this script used a wider 75-85% band, chosen after seeing that script's\nresults; CarMax passed it at 77.2%. Because that band was not set in advance, we went back to the one that was, so\ntoday no lender is recalibrated and the app shows the newer-loans warning instead. The app then uses it when the buyer names that lender. Every number is written to reports/recalibrate.json.",
+ "lenders": {
+  "carmax": {
+   "months": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08"
+   ],
+   "routine": [
+    {
+     "month": "2026-04",
+     "loans": 17723,
+     "frozen_coverage": 0.6333013598149297,
+     "routine_coverage": 0.7721040455904756,
+     "frozen_mae": 1.5793116428418648,
+     "routine_mae": 1.4271394067644327
+    },
+    {
+     "month": "2026-05",
+     "loans": 19509,
+     "frozen_coverage": 0.5477984519965144,
+     "routine_coverage": 0.735352914039674,
+     "frozen_mae": 1.7178567787174932,
+     "routine_mae": 1.5551985647101854
+    },
+    {
+     "month": "2026-06",
+     "loans": 16311,
+     "frozen_coverage": 0.5782600698914843,
+     "routine_coverage": 0.7739562258598491,
+     "frozen_mae": 1.6855713245144721,
+     "routine_mae": 1.5743112425232924
+    },
+    {
+     "month": "2026-07",
+     "loans": 15881,
+     "frozen_coverage": 0.6091555947358479,
+     "routine_coverage": 0.7952270008185882,
+     "frozen_mae": 1.6790421253989067,
+     "routine_mae": 1.638615539818611
+    },
+    {
+     "month": "2026-08",
+     "loans": 9749,
+     "frozen_coverage": 0.6033439327110472,
+     "routine_coverage": 0.8027489998974254,
+     "frozen_mae": 1.6562275949683767,
+     "routine_mae": 1.5920353654987642
+    }
+   ],
+   "pooled": {
+    "frozen_coverage": 0.592361032170058,
+    "routine_coverage": 0.7718414105818903,
+    "frozen_mae": 1.664817460915315,
+    "routine_mae": 1.551738059034283
+   },
+   "passes": false,
+   "now": {
+    "shift_points": -0.4494329015808043,
+    "qhat": 0.6440756896714692,
+    "months": [
+     "2026-07",
+     "2026-08"
+    ],
+    "loans": 25630,
+    "coverage_expected": 0.7718414105818903
+   }
+  },
+  "capone": {
+   "months": [],
+   "passes": false,
+   "reason": "0 loans in 0 newer month(s); the routine needs 3"
+  }
+ }
+}

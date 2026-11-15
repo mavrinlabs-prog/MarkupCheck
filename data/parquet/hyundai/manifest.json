@@ -1,0 +1,180 @@
+{
+ "issuer": "hyundai",
+ "user_agent": "MarkupCheck student research project",
+ "deals": [
+  {
+   "deal": "Hyundai Auto Receivables Trust 2024-A",
+   "deal_cik": "0002010834",
+   "filing_date": "2024-03-05",
+   "accession": "0001104659-24-031026",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2010834/000110465924031026/hca-autoloanex102_021420241u.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2024-03-05 by Hyundai ABS Funding, LLC (depositor, CIK 0001260125) for the trust, accession 0001104659-24-031026, before the preliminary prospectus (424H 0001104659-24-031300 (2024-03-06)) and the final prospectus (424B5 0001104659-24-033905 (2024-03-13)); the trust's submissions list on data.sec.gov shows only an ABS-15G before these filings. The pool is as of the cut-off date (close of business 2024-02-05). Hyundai files one pool ABS-EE per deal size offered in the 424H: Base Transaction 'hca-autoloanex102_021520241b.xml' (accession 0001104659-24-031005, 179,436,615 bytes; 424H: notes $1,245,070,000, pool $1,370,393,333.99, 51,568 receivables); and Upsize Transaction 'hca-autoloanex102_021420241u.xml' (this filing, 237,446,705 bytes; 424H: notes $1,647,010,000, pool $1,812,800,084.97, 68,239 receivables). The 424B5 states the pool as $1,812,800,084.97 and 68,239 receivables, which is the Upsize Transaction file; see rows_parsed and prospectus_loan_count_if_found. The other scenario files were not downloaded.",
+   "bytes": 237446705,
+   "rows_parsed": 68239,
+   "rows_written": 68239,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2018-05",
+   "origination_month_max": "2023-11",
+   "prospectus_loan_count_if_found": 68239,
+   "sum_reporting_period_actual_end_balance": 1818997656.42,
+   "vehicle_make_counts": {
+    "ACURA": 2,
+    "ALFA ROMEO": 1,
+    "BMW": 9,
+    "CADILLAC": 1,
+    "CHEVROLET": 31,
+    "CHRYSLER": 5,
+    "DODGE": 21,
+    "FORD": 29,
+    "GENESIS": 2244,
+    "GMC": 7,
+    "HONDA": 9,
+    "HYUNDAI": 40060,
+    "INFINITI": 3,
+    "JAGUAR": 1,
+    "JEEP": 23,
+    "KIA": 25714,
+    "LAND ROVER": 2,
+    "LEXUS": 3,
+    "MASERATI": 2,
+    "MAZDA": 5,
+    "MERCEDES": 8,
+    "MINI": 1,
+    "MITSUBISHI": 1,
+    "NISSAN": 19,
+    "POLESTAR": 1,
+    "SUBARU": 2,
+    "TESLA": 3,
+    "TOYOTA": 27,
+    "VOLKSWAGEN": 4,
+    "VOLVO": 1
+   }
+  },
+  {
+   "deal": "Hyundai Auto Receivables Trust 2025-A",
+   "deal_cik": "0002056104",
+   "filing_date": "2025-02-25",
+   "accession": "0001104659-25-016986",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2056104/000110465925016986/hca-autoloanex102_021020251m.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2025-02-25 by Hyundai ABS Funding, LLC (depositor, CIK 0001260125) for the trust, accession 0001104659-25-016986, before the preliminary prospectus (424H 0001104659-25-017888 (2025-02-27)) and the final prospectus (424B5 0001104659-25-021310 (2025-03-06)); the trust's submissions list on data.sec.gov shows only an ABS-15G before these filings. The pool is as of the cut-off date (close of business 2025-02-03). Hyundai files one pool ABS-EE per deal size offered in the 424H: Base Transaction 'hca-autoloanex102_021020251b.xml' (accession 0001104659-25-016964, 221,575,459 bytes; 424H: notes $1,501,510,000, pool $1,638,428,161.37, 63,727 receivables); Upsize Transaction 'hca-autoloanex102_021020251u.xml' (accession 0001104659-25-016985, 258,490,417 bytes; 424H: notes $1,751,760,000, pool $1,911,492,868.08, 74,345 receivables); and Maximum Transaction 'hca-autoloanex102_021020251m.xml' (this filing, 295,859,906 bytes; 424H: notes $2,005,250,000, pool $2,188,286,865.59, 85,093 receivables). The 424B5 states the pool as $2,188,286,865.59 and 85,093 receivables, which is the Maximum Transaction file; see rows_parsed and prospectus_loan_count_if_found. The other scenario files were not downloaded.",
+   "bytes": 295859906,
+   "rows_parsed": 85093,
+   "rows_written": 85093,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2020-01",
+   "origination_month_max": "2024-10",
+   "prospectus_loan_count_if_found": 85093,
+   "sum_reporting_period_actual_end_balance": 2192832689.02,
+   "vehicle_make_counts": {
+    "ACURA": 1,
+    "AUDI": 4,
+    "BMW": 7,
+    "BUICK": 6,
+    "CADILLAC": 1,
+    "CHEVROLET": 56,
+    "CHRYSLER": 6,
+    "DODGE": 34,
+    "FORD": 52,
+    "GENESIS": 3299,
+    "GMC": 17,
+    "HONDA": 32,
+    "HYUNDAI": 43566,
+    "INFINITI": 1,
+    "JAGUAR": 4,
+    "JEEP": 18,
+    "KIA": 37826,
+    "LEXUS": 2,
+    "LINCOLN": 1,
+    "MAZDA": 15,
+    "MERCEDES": 8,
+    "MINI": 2,
+    "MITSUBISHI": 9,
+    "NISSAN": 55,
+    "PORSCHE": 2,
+    "SUBARU": 5,
+    "TESLA": 4,
+    "TOYOTA": 50,
+    "VOLKSWAGEN": 10
+   }
+  },
+  {
+   "deal": "Hyundai Auto Receivables Trust 2026-A",
+   "deal_cik": "0002104134",
+   "filing_date": "2026-02-02",
+   "accession": "0001104659-26-009139",
+   "source_url": "https://www.sec.gov/Archives/edgar/data/2104134/000110465926009139/hca-autoloanex102_011620261.xml",
+   "why_this_is_the_first_pool_filing": "Filed 2026-02-02 by Hyundai ABS Funding, LLC (depositor, CIK 0001260125) for the trust, accession 0001104659-26-009139, before the preliminary prospectus (424H 0001104659-26-010086 (2026-02-04)) and the final prospectus (424B5 0001104659-26-014212 (2026-02-12)); the trust's submissions list on data.sec.gov shows only an ABS-15G before these filings. The pool is as of the cut-off date (close of business 2026-01-06). Hyundai files one pool ABS-EE per deal size offered in the 424H: Base Transaction 'hca-autoloanex102_011620261.xml' (accession 0001104659-26-009127, 199,848,847 bytes; 424H: notes $1,595,110,000, pool $1,734,904,585.03, 57,396 receivables); Upsize Transaction 'hca-autoloanex102_011620261.xml' (accession 0001104659-26-009138, 237,414,369 bytes; 424H: notes $1,894,110,000, pool $2,060,199,191.42, 68,185 receivables); and Maximum Transaction 'hca-autoloanex102_011620261.xml' (this filing, 275,772,124 bytes; 424H: notes $2,199,700,000, pool $2,392,354,765.71, 79,201 receivables). The 424B5 states the pool as $2,392,354,765.71 and 79,201 receivables, which is the Maximum Transaction file; see rows_parsed and prospectus_loan_count_if_found. The other scenario files were not downloaded.",
+   "bytes": 275772124,
+   "rows_parsed": 79201,
+   "rows_written": 79201,
+   "duplicate_asset_numbers_dropped": 0,
+   "origination_month_min": "2022-08",
+   "origination_month_max": "2025-10",
+   "prospectus_loan_count_if_found": 79201,
+   "sum_reporting_period_actual_end_balance": 2401542207.65,
+   "vehicle_make_counts": {
+    "GENESIS": 2268,
+    "HYUNDAI": 40472,
+    "KIA": 36461
+   }
+  }
+ ],
+ "code_values_seen": {
+  "subvented": {
+   "0": 25232,
+   "1": 124567,
+   "1,2": 57832,
+   "2": 24902
+  },
+  "new_used_code": {
+   "1": 223210,
+   "2": 9323
+  },
+  "credit_score_type": {
+   "Consumer Credit Bureau": 232533
+  },
+  "interest_rate_type_code": {
+   "1": 232533
+  },
+  "vehicle_type_code": {
+   "1": 63971,
+   "2": 11557,
+   "3": 157005
+  },
+  "vehicle_value_source_code": {
+   "1": 223210,
+   "98": 9323
+  },
+  "income_verification_code": {
+   "1": 870,
+   "2": 225815,
+   "3": 5848
+  },
+  "employment_verification_code": {
+   "2": 226669,
+   "3": 5864
+  }
+ },
+ "spec_url": "https://www.sec.gov/files/absxml-31.zip",
+ "notes": [
+  "Deals: Hyundai Auto Receivables Trust 2024-A, 2025-A and 2026-A (prime retail loans bought by Hyundai Capital America, HCA). One per window the brief asked for: pool ABS-EE filed 2024-03-05, 2025-02-25 and 2026-02-02. Each is the first deal of its year; Hyundai also issued 2024-B (424B5 2024-07-18, outside the Jan-Jun 2024 window), 2025-B (424B5 2025-06-05) in the 2025 window, 2025-D (424B5 2025-11-07) in the Oct 2025 - Feb 2026 window, and 2026-B/C/D after Feb 2026 (not used). Hyundai Auto Lease Securitization Trusts (leases) were not considered. Found with EDGAR full-text search for 424B5 filings naming 'Hyundai Auto Receivables Trust' (2023-10-01 to 2026-11-15) and each trust's data.sec.gov submissions list.",
+  "KIA AND GENESIS ARE IN THE POOLS AND WERE KEPT. vehicle_make counts: 2024-A HYUNDAI 40,060, KIA 25,714, GENESIS 2,244, 221 other makes; 2025-A HYUNDAI 43,566, KIA 37,826, GENESIS 3,299, 402 other makes; 2026-A HYUNDAI 40,472, KIA 36,461, GENESIS 2,268, no other makes. Every other-make loan is a used vehicle. The 424B5 pool table has Hyundai and Kia columns whose receivable counts (40,060 / 25,714; 43,566 / 37,826; 40,472 / 36,461) equal the parsed HYUNDAI and KIA make counts. The 424B5 describes HCA as buying contracts from Hyundai, Kia, Genesis and other dealers. Per-make counts are in each deal's vehicle_make_counts below.",
+  "Pool filings are filed under the trust's CIK by Hyundai ABS Funding, LLC (depositor, CIK 0001260125) one or two days before the preliminary prospectus (424H). Each deal has one pool ABS-EE per deal size the 424H offers; the cover pages say 'Schedule AL for Base Transaction', 'Upsize Transaction' or 'Maximum Transaction' (2024-A has only Base and Upsize). The 424H gives each size's pool balance and receivable count; the 424B5 gives one, equal to Upsize for 2024-A (68,239) and Maximum for 2025-A (85,093) and 2026-A (79,201). The parsed row counts equal those 424B5 counts exactly. The other scenario files were not downloaded. All three 2026-A scenario files share the file name hca-autoloanex102_011620261.xml; only the accession differs.",
+  "The sum of reportingPeriodActualEndBalanceAmount does not equal the 424B5 pool balance: $1,818,997,656.42 vs $1,812,800,084.97 (2024-A), $2,192,832,689.02 vs $2,188,286,865.59 (2025-A), $2,401,542,207.65 vs $2,392,354,765.71 (2026-A). In each file the first loan's reporting period ends before the cut-off date (2024-01-31 vs 2024-02-05; 2025-01-31 vs 2025-02-03; 2025-12-31 vs 2026-01-06), so the file balances may predate payments made up to the cut-off; not confirmed.",
+  "Parquet values are kept as written. apr_pct and pti_pct are the file values times 100, rounded to 6 decimals to remove float noise. 'subvented' repeats inside an asset (XSD maxOccurs=unbounded) in 18,433 / 15,760 / 23,639 loans; every value is kept, comma-joined in document order ('1,2' = rate subvention and cash rebate), the convention data/raw/santander uses. 'modificationTypeCode' also repeats in 5 / 6 / 9 loans; it is not a CONTRACT column.",
+  "Exact 0.00% APRs: 6,049 (2024-A, 8.9%), 9,122 (2025-A, 10.7%) and 4,966 (2026-A, 6.3%) loans, almost all with subvented '1' or '1,2' (manufacturer rate subvention). The 424B5 APR range starts at 0.00% in every deal. Kept as written (CONTRACT: no filtering here).",
+  "APR range vs the 424B5 'APR (range)' (total pool): 2026-A file 0.00-14.99% equals the 424B5. 2024-A file max is 18.00% vs 14.95% and 2025-A 18.45% vs 14.95%: only 3 loans (2024-A) and 5 loans (2025-A) have an original APR above 14.95%, and in each the file's current rate (reportingPeriodInterestRatePercentage) is lower (at most 14.9%), so the 424B5 range appears to describe current rates. apr_pct keeps the original rate as CONTRACT says.",
+  "credit_score_type is 'Consumer Credit Bureau' for every loan and credit_score is numeric for every loan (no NaN); min 600 / 601 / 629, max 900. The 424B5 says HCA obtains a credit bureau report including the FICO score and also uses proprietary scorecards; its pool table gives a weighted-average FICO and a 90% range (2026-A total pool: 675 to 867), not a full min-max. Values above 850 are on the FICO auto scale and were kept.",
+  "Code meanings from the EDGAR ABS XML Technical Specification v3.1 schema (eis_ABS_AutoLoanAssetData.xsd, read from the copy in data/raw/ally/spec_absxml31, unzipped from the spec_url): subvented 0 No, 1 Yes - Rate Subvention, 2 Yes - Cash Rebate, 98 Yes - Other; new_used_code 1 New, 2 Used; interest_rate_type_code 1 Fixed, 2 Adjustable, 98 Other; vehicle_type_code 1 Car, 2 Truck, 3 SUV, 4 Motorcycle, 98 Other, 99 Unknown; vehicle_value_source_code 1 Invoice Price, 2 MSRP, 3 Kelly Blue Book, 98 Other; income_verification_code 1 not stated/not verified, 2 stated/not verified, 3 stated and verified below level 4; employment_verification_code 2 stated/not verified, 3 stated, level 3 verified.",
+  "In these files new_used_code '1' (new) is 95.2% / 93.1% / 99.8% of loans; interest_rate_type_code is '1' (fixed) for every loan; vehicle_value_source_code is '1' (invoice) exactly for new vehicles and '98' (other) exactly for used ones. original_term_months runs to 86 while the 424B5 gives 24 to 84 scheduled payments.",
+  "Pools are seasoned: origination months run 2018-05..2023-11 (2024-A), 2020-01..2024-10 (2025-A) and 2022-08..2025-10 (2026-A); 14.9% / 60.5% / 34.0% of loans were originated more than 12 months before the filing month (data/raw/hyundai/validate.py). Filter by origination_month before treating apr_pct as a current-market benchmark. No loan was originated after 2026-01.",
+  "Download method: data/raw/hyundai/sec_fetch.py, one request at a time with a 1-second pause and the sec.gov User-Agent approved in CLAUDE.md (read from CLAUDE.md, not copied here); every request is logged in data/raw/hyundai/sec_requests.log (git-ignored). Each XML's size equals EDGAR's index.json listing (237,446,705; 295,859,906; 275,772,124 bytes)."
+ ],
+ "couldnt_confirm": [
+  "Why the summed loan balances in the file exceed the 424B5 pool balance by $4.5-9.2 million per deal (see notes); the receivable counts match exactly.",
+  "Hyundai's EX-103 (Asset Related Document) files were not downloaded, so Hyundai's own explanations of fields were not read; meanings above come from the generic XSD.",
+  "Which FICO version 'Consumer Credit Bureau' scores are; the 900 maximum points to an auto-industry FICO scale, not confirmed. The 424B5 does not print a full score range, so the file's min and max could not be compared with it."
+ ],
+ "generated_utc": "2026-11-15T19:18:54Z",
+ "deals_not_yet_parsed": []
+}

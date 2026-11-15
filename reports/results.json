@@ -1,0 +1,3033 @@
+{
+  "n_loans_parsed": 1978371,
+  "n_loans_used": 554021,
+  "drops": [
+    {
+      "step": "all loans parsed",
+      "rows_removed": 0,
+      "rows_left": 1978371
+    },
+    {
+      "step": "duplicate (deal, asset_number) removed",
+      "rows_removed": 0,
+      "rows_left": 1978371
+    },
+    {
+      "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+      "rows_removed": 988695,
+      "rows_left": 989676
+    },
+    {
+      "step": "fixed-rate loans only",
+      "rows_removed": 0,
+      "rows_left": 989676
+    },
+    {
+      "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+      "rows_removed": 23218,
+      "rows_left": 966458
+    },
+    {
+      "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+      "rows_removed": 39024,
+      "rows_left": 927434
+    },
+    {
+      "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+      "rows_removed": 372024,
+      "rows_left": 555410
+    },
+    {
+      "step": "APR above 0% and at most 40%",
+      "rows_removed": 426,
+      "rows_left": 554984
+    },
+    {
+      "step": "new (1) or used (2) code",
+      "rows_removed": 0,
+      "rows_left": 554984
+    },
+    {
+      "step": "term 12\u201396 months",
+      "rows_removed": 0,
+      "rows_left": 554984
+    },
+    {
+      "step": "loan amount and vehicle value above $1,000",
+      "rows_removed": 5,
+      "rows_left": 554979
+    },
+    {
+      "step": "loan-to-value 0.2\u20133.0",
+      "rows_removed": 958,
+      "rows_left": 554021
+    },
+    {
+      "step": "origination month has a Treasury benchmark",
+      "rows_removed": 0,
+      "rows_left": 554021
+    },
+    {
+      "step": "vehicle model year plausible (1990 to origination year + 1)",
+      "rows_removed": 0,
+      "rows_left": 554021
+    }
+  ],
+  "split": {
+    "train": [
+      "2023-01",
+      "2024-11",
+      23
+    ],
+    "cal": [
+      "2024-12",
+      "2025-07",
+      8
+    ],
+    "test": [
+      "2025-08",
+      "2026-01",
+      6
+    ]
+  },
+  "n_by_set": {
+    "train": 352935,
+    "test": 112657,
+    "cal_flag": 44227,
+    "cal_width": 44202
+  },
+  "qhat": 0.353861318908006,
+  "metrics_test": [
+    {
+      "method": "B0 one range for everyone",
+      "MAE_points": 6.3865891040678315,
+      "pinball_10": 0.8556608087908741,
+      "pinball_50": 3.1932945520339158,
+      "pinball_90": 1.501545938178358,
+      "coverage_of_80pct_range": 0.716262637918638,
+      "mean_width_points": 14.757605263157897
+    },
+    {
+      "method": "B1 credit tier x new/used",
+      "MAE_points": 3.4989281529669642,
+      "pinball_10": 0.6196446400081934,
+      "pinball_50": 1.7494640764834821,
+      "pinball_90": 0.8945079848817469,
+      "coverage_of_80pct_range": 0.7801290643280044,
+      "mean_width_points": 9.73921539456841
+    },
+    {
+      "method": "Model, before calibration",
+      "MAE_points": 2.532654508314098,
+      "pinball_10": 0.5011722162863154,
+      "pinball_50": 1.266327254157049,
+      "pinball_90": 0.5965881871066315,
+      "coverage_of_80pct_range": 0.7331279902713547,
+      "mean_width_points": 7.425296241107385
+    },
+    {
+      "method": "Model + conformal calibration",
+      "MAE_points": 2.532654508314098,
+      "pinball_10": 0.4972446959821715,
+      "pinball_50": 1.266327254157049,
+      "pinball_90": 0.5930764010044793,
+      "coverage_of_80pct_range": 0.8167357554346378,
+      "mean_width_points": 8.133018878923396
+    }
+  ],
+  "pit": [
+    {
+      "percentile p": 10,
+      "share at or below p \u2014 model raw": 0.14716351402931022,
+      "share \u2014 model corrected": 0.0,
+      "share \u2014 B1 rule": 0.07931153856395963
+    },
+    {
+      "percentile p": 25,
+      "share at or below p \u2014 model raw": 0.290918451583124,
+      "share \u2014 model corrected": 0.1858650594281758,
+      "share \u2014 B1 rule": 0.22090060981563506
+    },
+    {
+      "percentile p": 50,
+      "share at or below p \u2014 model raw": 0.5128487355423986,
+      "share \u2014 model corrected": 0.4181275908287989,
+      "share \u2014 B1 rule": 0.4572818377908164
+    },
+    {
+      "percentile p": 75,
+      "share at or below p \u2014 model raw": 0.7374419698731548,
+      "share \u2014 model corrected": 0.6754218557213488,
+      "share \u2014 B1 rule": 0.6991398670300114
+    },
+    {
+      "percentile p": 90,
+      "share at or below p \u2014 model raw": 0.8802915043006648,
+      "share \u2014 model corrected": 0.8483449763441242,
+      "share \u2014 B1 rule": 0.8594583558944406
+    }
+  ],
+  "pit_error": {
+    "share at or below p \u2014 model raw": 0.026639445396202648,
+    "share \u2014 model corrected": 0.07444810353551046,
+    "share \u2014 B1 rule": 0.036781558181027386
+  },
+  "delta": 1.08,
+  "delta_b1": 1.73,
+  "injection": [
+    {
+      "method": "B1 rule: well above tier range",
+      "markup_points": 1.0,
+      "precision": 0.12255899104963384,
+      "recall": 0.10865644724977457,
+      "recall_new": 0.03012166405023548,
+      "untouched_loans_flagged": 0.08454867429454006
+    },
+    {
+      "method": "B1 rule: well above tier range",
+      "markup_points": 2.0,
+      "precision": 0.16405038759689922,
+      "recall": 0.15266005410279532,
+      "recall_new": 0.07800235478806908,
+      "untouched_loans_flagged": 0.08454867429454006
+    },
+    {
+      "method": "B1 rule: well above tier range",
+      "markup_points": 2.5,
+      "precision": 0.1891155183757872,
+      "recall": 0.18142470694319207,
+      "recall_new": 0.10930141287284144,
+      "untouched_loans_flagged": 0.08454867429454006
+    },
+    {
+      "method": "Model: 'high' (above range)",
+      "markup_points": 1.0,
+      "precision": 0.1476075959864002,
+      "recall": 0.16050495942290352,
+      "recall_new": 0.06974420463629097,
+      "untouched_loans_flagged": 0.10084593056800731
+    },
+    {
+      "method": "Model: 'high' (above range)",
+      "markup_points": 2.0,
+      "precision": 0.23141917152684313,
+      "recall": 0.27908025247971147,
+      "recall_new": 0.20113908872901679,
+      "untouched_loans_flagged": 0.10084593056800731
+    },
+    {
+      "method": "Model: 'high' (above range)",
+      "markup_points": 2.5,
+      "precision": 0.2747477598250194,
+      "recall": 0.35112714156898106,
+      "recall_new": 0.2809752198241407,
+      "untouched_loans_flagged": 0.10084593056800731
+    },
+    {
+      "method": "Model: 'well above' (range + delta)",
+      "markup_points": 1.0,
+      "precision": 0.15678029734194324,
+      "recall": 0.09413886384129846,
+      "recall_new": 0.045147799638817605,
+      "untouched_loans_flagged": 0.05489228365747357
+    },
+    {
+      "method": "Model: 'well above' (range + delta)",
+      "markup_points": 2.0,
+      "precision": 0.23323774409395057,
+      "recall": 0.15401262398557258,
+      "recall_new": 0.10825967113392262,
+      "untouched_loans_flagged": 0.05489228365747357
+    },
+    {
+      "method": "Model: 'well above' (range + delta)",
+      "markup_points": 2.5,
+      "precision": 0.2890605216510509,
+      "recall": 0.20586113615870152,
+      "recall_new": 0.16291227069670183,
+      "untouched_loans_flagged": 0.05489228365747357
+    }
+  ],
+  "injection_by_group_2pts": [
+    {
+      "tier": "deep subprime",
+      "new_or_used": "new",
+      "loans": 500,
+      "injected": 41,
+      "precision": 0.18181818181818182,
+      "recall": 0.04878048780487805,
+      "recall_new": 0.0
+    },
+    {
+      "tier": "deep subprime",
+      "new_or_used": "used",
+      "loans": 2570,
+      "injected": 233,
+      "precision": 0.23809523809523808,
+      "recall": 0.12875536480686695,
+      "recall_new": 0.10964912280701754
+    },
+    {
+      "tier": "subprime",
+      "new_or_used": "new",
+      "loans": 4654,
+      "injected": 443,
+      "precision": 0.2620320855614973,
+      "recall": 0.11060948081264109,
+      "recall_new": 0.09216589861751152
+    },
+    {
+      "tier": "subprime",
+      "new_or_used": "used",
+      "loans": 22289,
+      "injected": 2260,
+      "precision": 0.2643478260869565,
+      "recall": 0.13451327433628318,
+      "recall_new": 0.09820193637621023
+    },
+    {
+      "tier": "near-prime",
+      "new_or_used": "new",
+      "loans": 2866,
+      "injected": 281,
+      "precision": 0.1829787234042553,
+      "recall": 0.15302491103202848,
+      "recall_new": 0.0916030534351145
+    },
+    {
+      "tier": "near-prime",
+      "new_or_used": "used",
+      "loans": 14688,
+      "injected": 1453,
+      "precision": 0.18416090509113764,
+      "recall": 0.20165175498967652,
+      "recall_new": 0.11314984709480122
+    },
+    {
+      "tier": "prime",
+      "new_or_used": "new",
+      "loans": 4582,
+      "injected": 428,
+      "precision": 0.27070063694267515,
+      "recall": 0.1985981308411215,
+      "recall_new": 0.16747572815533981
+    },
+    {
+      "tier": "prime",
+      "new_or_used": "used",
+      "loans": 37048,
+      "injected": 3607,
+      "precision": 0.21285809460359761,
+      "recall": 0.17715553091211533,
+      "recall_new": 0.11745465358311032
+    },
+    {
+      "tier": "super-prime",
+      "new_or_used": "new",
+      "loans": 2382,
+      "injected": 253,
+      "precision": 0.6666666666666666,
+      "recall": 0.18972332015810275,
+      "recall_new": 0.1865079365079365
+    },
+    {
+      "tier": "super-prime",
+      "new_or_used": "used",
+      "loans": 21078,
+      "injected": 2091,
+      "precision": 0.33858267716535434,
+      "recall": 0.10282161645145864,
+      "recall_new": 0.0866601752677702
+    }
+  ],
+  "fairness_issuer": [
+    {
+      "issuer": "ford",
+      "loans": 392,
+      "gap_vs_average_points": -1.334890573722237,
+      "ci_low": -1.5721085288349919,
+      "ci_high": -1.0754057642392807
+    },
+    {
+      "issuer": "honda",
+      "loans": 4584,
+      "gap_vs_average_points": -1.1845798235042104,
+      "ci_low": -1.2410059349317855,
+      "ci_high": -1.12292336584014
+    },
+    {
+      "issuer": "carmax",
+      "loans": 42221,
+      "gap_vs_average_points": -0.7155685243738693,
+      "ci_low": -0.7353632328914468,
+      "ci_high": -0.6943591838056474
+    },
+    {
+      "issuer": "ally",
+      "loans": 11626,
+      "gap_vs_average_points": -0.42055124254752785,
+      "ci_low": -0.45572475493105413,
+      "ci_high": -0.3845911713397804
+    },
+    {
+      "issuer": "gmf",
+      "loans": 2028,
+      "gap_vs_average_points": 0.0956844221858032,
+      "ci_low": 0.0036382026852421756,
+      "ci_high": 0.18796822368443522
+    },
+    {
+      "issuer": "hyundai",
+      "loans": 210,
+      "gap_vs_average_points": 0.5154477703640822,
+      "ci_low": 0.292120253912866,
+      "ci_high": 0.748390358540923
+    },
+    {
+      "issuer": "santander",
+      "loans": 51596,
+      "gap_vs_average_points": 0.7898373205155408,
+      "ci_low": 0.753732625219219,
+      "ci_high": 0.8259725298386035
+    }
+  ],
+  "fairness_state": [
+    {
+      "state": "CT",
+      "loans": 1076,
+      "gap_vs_average_points": -1.1134613383747234,
+      "ci_low": -1.3129738391584553,
+      "ci_high": -0.9137189272065871
+    },
+    {
+      "state": "MA",
+      "loans": 1638,
+      "gap_vs_average_points": -1.0343032211635732,
+      "ci_low": -1.1868165620384432,
+      "ci_high": -0.8807299057242548
+    },
+    {
+      "state": "ME",
+      "loans": 306,
+      "gap_vs_average_points": -0.9780240071037358,
+      "ci_low": -1.347435735170984,
+      "ci_high": -0.6177533555503035
+    },
+    {
+      "state": "MN",
+      "loans": 741,
+      "gap_vs_average_points": -0.9093851794258893,
+      "ci_low": -1.092896672364887,
+      "ci_high": -0.7099258635458876
+    },
+    {
+      "state": "CO",
+      "loans": 1927,
+      "gap_vs_average_points": -0.8069015812283324,
+      "ci_low": -0.9260290046569619,
+      "ci_high": -0.6948280568334876
+    },
+    {
+      "state": "MD",
+      "loans": 1904,
+      "gap_vs_average_points": -0.7449386612868907,
+      "ci_low": -0.8565165011537061,
+      "ci_high": -0.629238587266721
+    },
+    {
+      "state": "TX",
+      "loans": 13568,
+      "gap_vs_average_points": -0.5554579078117752,
+      "ci_low": -0.6047117827691406,
+      "ci_high": -0.5050457813064162
+    },
+    {
+      "state": "WA",
+      "loans": 1217,
+      "gap_vs_average_points": -0.5542691339249736,
+      "ci_low": -0.7075244911926926,
+      "ci_high": -0.4022561124313228
+    },
+    {
+      "state": "NE",
+      "loans": 474,
+      "gap_vs_average_points": -0.52632790634904,
+      "ci_low": -0.761848286385437,
+      "ci_high": -0.24930017236443364
+    },
+    {
+      "state": "PA",
+      "loans": 1352,
+      "gap_vs_average_points": -0.455060111041107,
+      "ci_low": -0.5606130775083442,
+      "ci_high": -0.34173579241870555
+    },
+    {
+      "state": "FL",
+      "loans": 11075,
+      "gap_vs_average_points": -0.4288966166272624,
+      "ci_low": -0.49804966596050704,
+      "ci_high": -0.3622323141343541
+    },
+    {
+      "state": "NC",
+      "loans": 5721,
+      "gap_vs_average_points": -0.42054747808064086,
+      "ci_low": -0.5010386538333476,
+      "ci_high": -0.33614845105745295
+    },
+    {
+      "state": "DE",
+      "loans": 412,
+      "gap_vs_average_points": -0.35608624368119557,
+      "ci_low": -0.726320196582913,
+      "ci_high": -0.008353054930814618
+    },
+    {
+      "state": "OR",
+      "loans": 954,
+      "gap_vs_average_points": -0.30489605756931626,
+      "ci_low": -0.5172187352318688,
+      "ci_high": -0.09790716622778889
+    },
+    {
+      "state": "UT",
+      "loans": 480,
+      "gap_vs_average_points": -0.2912100786476509,
+      "ci_low": -0.5780042676415125,
+      "ci_high": -0.009121731046630277
+    },
+    {
+      "state": "OK",
+      "loans": 1195,
+      "gap_vs_average_points": -0.28535236329503677,
+      "ci_low": -0.45508559024062567,
+      "ci_high": -0.10569288241128633
+    },
+    {
+      "state": "VA",
+      "loans": 4385,
+      "gap_vs_average_points": -0.2434910294812967,
+      "ci_low": -0.3475428488393875,
+      "ci_high": -0.14920670546183062
+    },
+    {
+      "state": "IA",
+      "loans": 628,
+      "gap_vs_average_points": -0.13344411450541666,
+      "ci_low": -0.40712568550368694,
+      "ci_high": 0.1297660115581314
+    },
+    {
+      "state": "ID",
+      "loans": 325,
+      "gap_vs_average_points": -0.13156369433998005,
+      "ci_low": -0.48712052542792805,
+      "ci_high": 0.25467110576672314
+    },
+    {
+      "state": "KY",
+      "loans": 1584,
+      "gap_vs_average_points": -0.08007502870257593,
+      "ci_low": -0.22965691980929082,
+      "ci_high": 0.07264040566001029
+    },
+    {
+      "state": "CA",
+      "loans": 13841,
+      "gap_vs_average_points": -0.0341324699622636,
+      "ci_low": -0.08774016462346423,
+      "ci_high": 0.02775636584968799
+    },
+    {
+      "state": "KS",
+      "loans": 907,
+      "gap_vs_average_points": 0.009341623283747769,
+      "ci_low": -0.2140415917012966,
+      "ci_high": 0.23554292177630187
+    },
+    {
+      "state": "AR",
+      "loans": 1049,
+      "gap_vs_average_points": 0.028404677043145643,
+      "ci_low": -0.18514023550165448,
+      "ci_high": 0.24307272750478925
+    },
+    {
+      "state": "IN",
+      "loans": 2060,
+      "gap_vs_average_points": 0.04204365923609066,
+      "ci_low": -0.10056117549517996,
+      "ci_high": 0.19582869428281657
+    },
+    {
+      "state": "OH",
+      "loans": 3687,
+      "gap_vs_average_points": 0.09432017500407974,
+      "ci_low": -0.025952249226836588,
+      "ci_high": 0.20524638606171286
+    },
+    {
+      "state": "NV",
+      "loans": 1794,
+      "gap_vs_average_points": 0.1664921501804637,
+      "ci_low": 0.015767436430152992,
+      "ci_high": 0.3571332442109434
+    },
+    {
+      "state": "AZ",
+      "loans": 2276,
+      "gap_vs_average_points": 0.2431252974373338,
+      "ci_low": 0.09364176622456155,
+      "ci_high": 0.4222437838444574
+    },
+    {
+      "state": "TN",
+      "loans": 3520,
+      "gap_vs_average_points": 0.3205207304327179,
+      "ci_low": 0.21895695941940396,
+      "ci_high": 0.4320771483972058
+    },
+    {
+      "state": "MI",
+      "loans": 1362,
+      "gap_vs_average_points": 0.3271026114496769,
+      "ci_low": 0.13490962423122632,
+      "ci_high": 0.5260415156409904
+    },
+    {
+      "state": "WV",
+      "loans": 729,
+      "gap_vs_average_points": 0.38043181295200346,
+      "ci_low": 0.11806522952527787,
+      "ci_high": 0.6105920677240774
+    },
+    {
+      "state": "HI",
+      "loans": 329,
+      "gap_vs_average_points": 0.40209953070315885,
+      "ci_low": 0.06379947610140424,
+      "ci_high": 0.7560678064970129
+    },
+    {
+      "state": "LA",
+      "loans": 1758,
+      "gap_vs_average_points": 0.45877772092564495,
+      "ci_low": 0.27712856137979036,
+      "ci_high": 0.6460046373355718
+    },
+    {
+      "state": "NJ",
+      "loans": 2894,
+      "gap_vs_average_points": 0.49693637868427676,
+      "ci_low": 0.3435761530442246,
+      "ci_high": 0.645669816702214
+    },
+    {
+      "state": "WI",
+      "loans": 1027,
+      "gap_vs_average_points": 0.5267789815965523,
+      "ci_low": 0.2905621337534272,
+      "ci_high": 0.7707027416093205
+    },
+    {
+      "state": "NY",
+      "loans": 3112,
+      "gap_vs_average_points": 0.5514433166387976,
+      "ci_low": 0.4238590950464546,
+      "ci_high": 0.6833603371022633
+    },
+    {
+      "state": "SC",
+      "loans": 3490,
+      "gap_vs_average_points": 0.5572310900607517,
+      "ci_low": 0.44039071725579815,
+      "ci_high": 0.6855218715129833
+    },
+    {
+      "state": "NH",
+      "loans": 489,
+      "gap_vs_average_points": 0.5833818178409725,
+      "ci_low": 0.159951246361842,
+      "ci_high": 0.9744589724314675
+    },
+    {
+      "state": "IL",
+      "loans": 4251,
+      "gap_vs_average_points": 0.6217742652751185,
+      "ci_low": 0.5003505425808331,
+      "ci_high": 0.7439766501293467
+    },
+    {
+      "state": "NM",
+      "loans": 1099,
+      "gap_vs_average_points": 0.6789652553905058,
+      "ci_low": 0.45422475385519956,
+      "ci_high": 0.8934356500057118
+    },
+    {
+      "state": "MS",
+      "loans": 1270,
+      "gap_vs_average_points": 0.9119080292081979,
+      "ci_low": 0.7132703537837873,
+      "ci_high": 1.126001577034911
+    },
+    {
+      "state": "GA",
+      "loans": 5452,
+      "gap_vs_average_points": 0.9888899337043774,
+      "ci_low": 0.8896578411746537,
+      "ci_high": 1.0867516798286774
+    },
+    {
+      "state": "MO",
+      "loans": 1881,
+      "gap_vs_average_points": 1.0450480601941061,
+      "ci_low": 0.8844951121158912,
+      "ci_high": 1.2456984208151436
+    },
+    {
+      "state": "AL",
+      "loans": 2109,
+      "gap_vs_average_points": 1.507291169648512,
+      "ci_low": 1.3333616337730074,
+      "ci_high": 1.7203260560314013
+    }
+  ],
+  "reliability_by_tier": [
+    {
+      "tier": "deep subprime",
+      "new_or_used": "new",
+      "loans": 500,
+      "model_coverage": 0.764,
+      "model_mean_width": 10.350214676812392,
+      "B1_coverage": 0.754,
+      "B1_mean_width": 14.915960389610394,
+      "model_MAE": 3.302054918833769,
+      "B1_MAE": 4.440735878787878
+    },
+    {
+      "tier": "deep subprime",
+      "new_or_used": "used",
+      "loans": 2570,
+      "model_coverage": 0.7249027237354085,
+      "model_mean_width": 12.190937970875384,
+      "B1_coverage": 0.7077821011673152,
+      "B1_mean_width": 14.637032467532466,
+      "model_MAE": 4.189414456567403,
+      "B1_MAE": 5.209017517307595
+    },
+    {
+      "tier": "subprime",
+      "new_or_used": "new",
+      "loans": 4654,
+      "model_coverage": 0.8648474430597336,
+      "model_mean_width": 11.25580527443932,
+      "B1_coverage": 0.8397077782552643,
+      "B1_mean_width": 13.83725598086124,
+      "model_MAE": 3.0582535389645202,
+      "B1_MAE": 3.937056508668241
+    },
+    {
+      "tier": "subprime",
+      "new_or_used": "used",
+      "loans": 22289,
+      "model_coverage": 0.8250257974785768,
+      "model_mean_width": 12.199451940390206,
+      "B1_coverage": 0.8416259141280452,
+      "B1_mean_width": 14.41988972431078,
+      "model_MAE": 3.548623540648601,
+      "B1_MAE": 4.205596448202883
+    },
+    {
+      "tier": "near-prime",
+      "new_or_used": "new",
+      "loans": 2866,
+      "model_coverage": 0.8136775994417307,
+      "model_mean_width": 10.089769951962369,
+      "B1_coverage": 0.7184228890439637,
+      "B1_mean_width": 11.80735281385282,
+      "model_MAE": 3.0507128424321843,
+      "B1_MAE": 5.007398087141981
+    },
+    {
+      "tier": "near-prime",
+      "new_or_used": "used",
+      "loans": 14688,
+      "model_coverage": 0.7731481481481481,
+      "model_mean_width": 10.922740193831938,
+      "B1_coverage": 0.7459831154684096,
+      "B1_mean_width": 12.700909523809525,
+      "model_MAE": 3.631087555115937,
+      "B1_MAE": 4.9033164697276215
+    },
+    {
+      "tier": "prime",
+      "new_or_used": "new",
+      "loans": 4582,
+      "model_coverage": 0.8509384548232213,
+      "model_mean_width": 5.469897682472607,
+      "B1_coverage": 0.7295940637276298,
+      "B1_mean_width": 5.918242791762017,
+      "model_MAE": 1.8060303045086339,
+      "B1_MAE": 2.9916832070155945
+    },
+    {
+      "tier": "prime",
+      "new_or_used": "used",
+      "loans": 37048,
+      "model_coverage": 0.7626322608507882,
+      "model_mean_width": 6.860286833170192,
+      "B1_coverage": 0.7046264305765494,
+      "B1_mean_width": 8.927545454545456,
+      "model_MAE": 2.354803202285077,
+      "B1_MAE": 3.7244188411009564
+    },
+    {
+      "tier": "super-prime",
+      "new_or_used": "new",
+      "loans": 2382,
+      "model_coverage": 0.9206549118387909,
+      "model_mean_width": 3.4625886647995507,
+      "B1_coverage": 0.7732997481108312,
+      "B1_mean_width": 3.098999999999998,
+      "model_MAE": 0.9442578213910224,
+      "B1_MAE": 1.0862208337422443
+    },
+    {
+      "tier": "super-prime",
+      "new_or_used": "used",
+      "loans": 21078,
+      "model_coverage": 0.916500616756808,
+      "model_mean_width": 3.7297767932185386,
+      "B1_coverage": 0.8880349179239017,
+      "B1_mean_width": 3.8274210526315775,
+      "model_MAE": 0.9361939094062838,
+      "B1_MAE": 1.226916728999564
+    }
+  ],
+  "mean_residual_test_A": 0.5307873770972277,
+  "qhatB": 0.2598352422350305,
+  "deltaB": 0.61,
+  "selection_cal": [
+    {
+      "model": "A: whole market",
+      "MAE_points": 1.6657166627588147,
+      "pinball_50": 0.8328583313794073,
+      "coverage_of_80pct_range": 0.8034232482420242,
+      "mean_width_points": 5.450310148275567,
+      "recall_new_2pt_above_range": 0.2454212454212454,
+      "precision_2pt_above_range": 0.36086585018513245
+    },
+    {
+      "model": "B: same lender",
+      "MAE_points": 1.4988800314479784,
+      "pinball_50": 0.7494400157239892,
+      "coverage_of_80pct_range": 0.8015465665769779,
+      "mean_width_points": 4.878103398814255,
+      "recall_new_2pt_above_range": 0.32706676307543986,
+      "precision_2pt_above_range": 0.46370370370370373
+    }
+  ],
+  "compare_A_B": [
+    {
+      "model": "A: whole market",
+      "MAE_points": 2.532654508314098,
+      "coverage_of_80pct_range": 0.8167357554346378,
+      "mean_width_points": 8.133018878923396,
+      "qhat": 0.353861318908006,
+      "delta": 1.08,
+      "untouched_loans_flagged_well_above": 0.05489228365747357,
+      "precision_2pt_well_above": 0.23323774409395057,
+      "recall_2pt_well_above": 0.15401262398557258,
+      "recall_new_2pt_well_above": 0.10825967113392262
+    },
+    {
+      "model": "B: same lender",
+      "MAE_points": 2.3524572697521924,
+      "coverage_of_80pct_range": 0.7934526926866506,
+      "mean_width_points": 7.776076422045763,
+      "qhat": 0.2598352422350305,
+      "delta": 0.61,
+      "untouched_loans_flagged_well_above": 0.054732506635184676,
+      "precision_2pt_well_above": 0.3100717644147488,
+      "recall_2pt_well_above": 0.2259693417493237,
+      "recall_new_2pt_well_above": 0.1824761904761905
+    }
+  ],
+  "recall_by_tier_A_B": [
+    {
+      "model": "A: whole market",
+      "tier": "deep subprime",
+      "recall_2pt": 0.11678832116788321,
+      "recall_new_2pt": 0.09363295880149813,
+      "precision_2pt": 0.23357664233576642
+    },
+    {
+      "model": "B: same lender",
+      "tier": "deep subprime",
+      "recall_2pt": 0.14963503649635038,
+      "recall_new_2pt": 0.12075471698113208,
+      "precision_2pt": 0.24260355029585798
+    },
+    {
+      "model": "A: whole market",
+      "tier": "subprime",
+      "recall_2pt": 0.13059563448020717,
+      "recall_new_2pt": 0.09719554360353438,
+      "precision_2pt": 0.26402393418100223
+    },
+    {
+      "model": "B: same lender",
+      "tier": "subprime",
+      "recall_2pt": 0.145763965963744,
+      "recall_new_2pt": 0.10849420849420849,
+      "precision_2pt": 0.257516339869281
+    },
+    {
+      "model": "A: whole market",
+      "tier": "near-prime",
+      "recall_2pt": 0.19377162629757785,
+      "recall_new_2pt": 0.10955414012738854,
+      "precision_2pt": 0.18400876232201532
+    },
+    {
+      "model": "B: same lender",
+      "tier": "near-prime",
+      "recall_2pt": 0.19607843137254902,
+      "recall_new_2pt": 0.11153601019757807,
+      "precision_2pt": 0.18826135105204872
+    },
+    {
+      "model": "A: whole market",
+      "tier": "prime",
+      "recall_2pt": 0.17942998760842627,
+      "recall_new_2pt": 0.12291390728476821,
+      "precision_2pt": 0.218335343787696
+    },
+    {
+      "model": "B: same lender",
+      "tier": "prime",
+      "recall_2pt": 0.21263940520446098,
+      "recall_new_2pt": 0.16019032513877876,
+      "precision_2pt": 0.2667910447761194
+    },
+    {
+      "model": "A: whole market",
+      "tier": "super-prime",
+      "recall_2pt": 0.11220136518771331,
+      "recall_new_2pt": 0.09757155247181266,
+      "precision_2pt": 0.371994342291372
+    },
+    {
+      "model": "B: same lender",
+      "tier": "super-prime",
+      "recall_2pt": 0.3724402730375427,
+      "recall_new_2pt": 0.3584823375490624,
+      "precision_2pt": 0.6414401175606171
+    }
+  ],
+  "state_both": [
+    {
+      "state": "MA",
+      "loans": 1638,
+      "gap_whole_market": -1.0343032211635732,
+      "gap_same_lender": -1.0465847075484023,
+      "ci_low_B": -1.1968207325547784,
+      "ci_high_B": -0.9012622117690288
+    },
+    {
+      "state": "CT",
+      "loans": 1076,
+      "gap_whole_market": -1.1134613383747234,
+      "gap_same_lender": -1.0059979896344187,
+      "ci_low_B": -1.1982463555334888,
+      "ci_high_B": -0.8210495328863088
+    },
+    {
+      "state": "ME",
+      "loans": 306,
+      "gap_whole_market": -0.9780240071037358,
+      "gap_same_lender": -0.9960128921976859,
+      "ci_low_B": -1.3951741374393154,
+      "ci_high_B": -0.6589273101629338
+    },
+    {
+      "state": "MN",
+      "loans": 741,
+      "gap_whole_market": -0.9093851794258893,
+      "gap_same_lender": -0.8245798585815527,
+      "ci_low_B": -0.9980740771515002,
+      "ci_high_B": -0.6594182951471312
+    },
+    {
+      "state": "TX",
+      "loans": 13568,
+      "gap_whole_market": -0.5554579078117752,
+      "gap_same_lender": -0.664020727848043,
+      "ci_low_B": -0.7090142985789938,
+      "ci_high_B": -0.6210384349742788
+    },
+    {
+      "state": "CO",
+      "loans": 1927,
+      "gap_whole_market": -0.8069015812283324,
+      "gap_same_lender": -0.6151799603136541,
+      "ci_low_B": -0.7313789136802178,
+      "ci_high_B": -0.507832709937649
+    },
+    {
+      "state": "NE",
+      "loans": 474,
+      "gap_whole_market": -0.52632790634904,
+      "gap_same_lender": -0.58429672834571,
+      "ci_low_B": -0.8254346410200244,
+      "ci_high_B": -0.33861557088159633
+    },
+    {
+      "state": "FL",
+      "loans": 11075,
+      "gap_whole_market": -0.4288966166272624,
+      "gap_same_lender": -0.5514260141268097,
+      "ci_low_B": -0.6144642862021839,
+      "ci_high_B": -0.4885832946963428
+    },
+    {
+      "state": "OK",
+      "loans": 1195,
+      "gap_whole_market": -0.28535236329503677,
+      "gap_same_lender": -0.49433001018035894,
+      "ci_low_B": -0.6634889695193058,
+      "ci_high_B": -0.31162884499775123
+    },
+    {
+      "state": "NC",
+      "loans": 5721,
+      "gap_whole_market": -0.42054747808064086,
+      "gap_same_lender": -0.4519416564298291,
+      "ci_low_B": -0.5266757659580094,
+      "ci_high_B": -0.3758246390259311
+    },
+    {
+      "state": "PA",
+      "loans": 1352,
+      "gap_whole_market": -0.455060111041107,
+      "gap_same_lender": -0.4345927375342317,
+      "ci_low_B": -0.5257830364893193,
+      "ci_high_B": -0.3335218550370008
+    },
+    {
+      "state": "MD",
+      "loans": 1904,
+      "gap_whole_market": -0.7449386612868907,
+      "gap_same_lender": -0.41264684198815543,
+      "ci_low_B": -0.5111709036121973,
+      "ci_high_B": -0.3111604215618217
+    },
+    {
+      "state": "AR",
+      "loans": 1049,
+      "gap_whole_market": 0.028404677043145643,
+      "gap_same_lender": -0.3564694921171085,
+      "ci_low_B": -0.5380096356817595,
+      "ci_high_B": -0.1496014778621923
+    },
+    {
+      "state": "IA",
+      "loans": 628,
+      "gap_whole_market": -0.13344411450541666,
+      "gap_same_lender": -0.28736168030609327,
+      "ci_low_B": -0.5483136552598615,
+      "ci_high_B": -0.031474607789354875
+    },
+    {
+      "state": "DE",
+      "loans": 412,
+      "gap_whole_market": -0.35608624368119557,
+      "gap_same_lender": -0.26935404197047547,
+      "ci_low_B": -0.6238989682511732,
+      "ci_high_B": 0.09126401983572507
+    },
+    {
+      "state": "KY",
+      "loans": 1584,
+      "gap_whole_market": -0.08007502870257593,
+      "gap_same_lender": -0.1918501263586894,
+      "ci_low_B": -0.3380985943467459,
+      "ci_high_B": -0.058441620420799076
+    },
+    {
+      "state": "WA",
+      "loans": 1217,
+      "gap_whole_market": -0.5542691339249736,
+      "gap_same_lender": -0.17937303584425646,
+      "ci_low_B": -0.3290940709315068,
+      "ci_high_B": -0.033526346901600945
+    },
+    {
+      "state": "OR",
+      "loans": 954,
+      "gap_whole_market": -0.30489605756931626,
+      "gap_same_lender": -0.13964678841548395,
+      "ci_low_B": -0.34785212576221414,
+      "ci_high_B": 0.055590601357369596
+    },
+    {
+      "state": "OH",
+      "loans": 3687,
+      "gap_whole_market": 0.09432017500407974,
+      "gap_same_lender": -0.10173630076037284,
+      "ci_low_B": -0.20666603212129459,
+      "ci_high_B": 0.0008979162695413323
+    },
+    {
+      "state": "VA",
+      "loans": 4385,
+      "gap_whole_market": -0.2434910294812967,
+      "gap_same_lender": -0.04327267958906124,
+      "ci_low_B": -0.14066241667263008,
+      "ci_high_B": 0.04302540847632502
+    },
+    {
+      "state": "HI",
+      "loans": 329,
+      "gap_whole_market": 0.40209953070315885,
+      "gap_same_lender": -0.04196999402154322,
+      "ci_low_B": -0.3699357030617113,
+      "ci_high_B": 0.29698623222135695
+    },
+    {
+      "state": "UT",
+      "loans": 480,
+      "gap_whole_market": -0.2912100786476509,
+      "gap_same_lender": -0.03336917172869558,
+      "ci_low_B": -0.30394542538648484,
+      "ci_high_B": 0.24887238012519675
+    },
+    {
+      "state": "IN",
+      "loans": 2060,
+      "gap_whole_market": 0.04204365923609066,
+      "gap_same_lender": 0.010336055763103563,
+      "ci_low_B": -0.1217863212860504,
+      "ci_high_B": 0.14617774709427972
+    },
+    {
+      "state": "ID",
+      "loans": 325,
+      "gap_whole_market": -0.13156369433998005,
+      "gap_same_lender": 0.040128729157865084,
+      "ci_low_B": -0.2646296377418478,
+      "ci_high_B": 0.3645895919287929
+    },
+    {
+      "state": "WV",
+      "loans": 729,
+      "gap_whole_market": 0.38043181295200346,
+      "gap_same_lender": 0.049779864033376225,
+      "ci_low_B": -0.18757446334950695,
+      "ci_high_B": 0.2801924050757635
+    },
+    {
+      "state": "KS",
+      "loans": 907,
+      "gap_whole_market": 0.009341623283747769,
+      "gap_same_lender": 0.07476290031825475,
+      "ci_low_B": -0.1388842470747863,
+      "ci_high_B": 0.27853018760684634
+    },
+    {
+      "state": "MI",
+      "loans": 1362,
+      "gap_whole_market": 0.3271026114496769,
+      "gap_same_lender": 0.07849438232447598,
+      "ci_low_B": -0.0922259177088301,
+      "ci_high_B": 0.2404775111764728
+    },
+    {
+      "state": "CA",
+      "loans": 13841,
+      "gap_whole_market": -0.0341324699622636,
+      "gap_same_lender": 0.16711237180220245,
+      "ci_low_B": 0.11427609415082551,
+      "ci_high_B": 0.2247331534900484
+    },
+    {
+      "state": "AZ",
+      "loans": 2276,
+      "gap_whole_market": 0.2431252974373338,
+      "gap_same_lender": 0.18635637949254308,
+      "ci_low_B": 0.04742739716026523,
+      "ci_high_B": 0.3570869583012421
+    },
+    {
+      "state": "NV",
+      "loans": 1794,
+      "gap_whole_market": 0.1664921501804637,
+      "gap_same_lender": 0.33643477397997495,
+      "ci_low_B": 0.18848386378158632,
+      "ci_high_B": 0.5239884471828105
+    },
+    {
+      "state": "NH",
+      "loans": 489,
+      "gap_whole_market": 0.5833818178409725,
+      "gap_same_lender": 0.37495847252967257,
+      "ci_low_B": -0.0522605084594539,
+      "ci_high_B": 0.7816233426725843
+    },
+    {
+      "state": "LA",
+      "loans": 1758,
+      "gap_whole_market": 0.45877772092564495,
+      "gap_same_lender": 0.39392113487686137,
+      "ci_low_B": 0.22600007687047402,
+      "ci_high_B": 0.5598029559097841
+    },
+    {
+      "state": "NY",
+      "loans": 3112,
+      "gap_whole_market": 0.5514433166387976,
+      "gap_same_lender": 0.4186889546104345,
+      "ci_low_B": 0.29454125116337493,
+      "ci_high_B": 0.5500229640736214
+    },
+    {
+      "state": "NJ",
+      "loans": 2894,
+      "gap_whole_market": 0.49693637868427676,
+      "gap_same_lender": 0.45282151592557235,
+      "ci_low_B": 0.31383280187064366,
+      "ci_high_B": 0.6117053196247806
+    },
+    {
+      "state": "TN",
+      "loans": 3520,
+      "gap_whole_market": 0.3205207304327179,
+      "gap_same_lender": 0.4559114562871966,
+      "ci_low_B": 0.35684574574649186,
+      "ci_high_B": 0.5665344259517133
+    },
+    {
+      "state": "SC",
+      "loans": 3490,
+      "gap_whole_market": 0.5572310900607517,
+      "gap_same_lender": 0.5358840666108071,
+      "ci_low_B": 0.421299812529282,
+      "ci_high_B": 0.6648802528980675
+    },
+    {
+      "state": "WI",
+      "loans": 1027,
+      "gap_whole_market": 0.5267789815965523,
+      "gap_same_lender": 0.6500540657989426,
+      "ci_low_B": 0.4294041484880627,
+      "ci_high_B": 0.8725738726351324
+    },
+    {
+      "state": "IL",
+      "loans": 4251,
+      "gap_whole_market": 0.6217742652751185,
+      "gap_same_lender": 0.7001695946194766,
+      "ci_low_B": 0.5963190787373778,
+      "ci_high_B": 0.811255689360169
+    },
+    {
+      "state": "NM",
+      "loans": 1099,
+      "gap_whole_market": 0.6789652553905058,
+      "gap_same_lender": 0.7492865589520301,
+      "ci_low_B": 0.5384115818599295,
+      "ci_high_B": 0.965079090510276
+    },
+    {
+      "state": "MO",
+      "loans": 1881,
+      "gap_whole_market": 1.0450480601941061,
+      "gap_same_lender": 0.8241222424736168,
+      "ci_low_B": 0.663690266494513,
+      "ci_high_B": 1.0224232722044335
+    },
+    {
+      "state": "MS",
+      "loans": 1270,
+      "gap_whole_market": 0.9119080292081979,
+      "gap_same_lender": 0.837121034934754,
+      "ci_low_B": 0.6565216860645966,
+      "ci_high_B": 1.017643555709408
+    },
+    {
+      "state": "GA",
+      "loans": 5452,
+      "gap_whole_market": 0.9888899337043774,
+      "gap_same_lender": 1.0330321021886077,
+      "ci_low_B": 0.9379823485616128,
+      "ci_high_B": 1.1258732812451218
+    },
+    {
+      "state": "AL",
+      "loans": 2109,
+      "gap_whole_market": 1.507291169648512,
+      "gap_same_lender": 1.4587377040834186,
+      "ci_low_B": 1.2861976113448326,
+      "ci_high_B": 1.6435337041369367
+    }
+  ],
+  "robust_by_month": [
+    {
+      "month": "2025-08",
+      "loans": 18345,
+      "model_MAE": 1.733565028700314,
+      "same_lender_MAE": 1.545892218879213,
+      "B1_rule_MAE": 2.378489161781159,
+      "model_coverage": 0.8166802943581357,
+      "santander_share": 0.06181520850367948
+    },
+    {
+      "month": "2025-09",
+      "loans": 19391,
+      "model_MAE": 1.6391273178786547,
+      "same_lender_MAE": 1.5507754322273817,
+      "B1_rule_MAE": 2.380825935152014,
+      "model_coverage": 0.8382754886287453,
+      "santander_share": 0.06069826208034655
+    },
+    {
+      "month": "2025-10",
+      "loans": 27766,
+      "model_MAE": 2.4864211290109606,
+      "same_lender_MAE": 2.316445789988671,
+      "B1_rule_MAE": 3.4619344083087404,
+      "model_coverage": 0.8201037239789671,
+      "santander_share": 0.4395303608730102
+    },
+    {
+      "month": "2025-11",
+      "loans": 23102,
+      "model_MAE": 2.8425548383493764,
+      "same_lender_MAE": 2.6389601593677083,
+      "B1_rule_MAE": 3.854396690879575,
+      "model_coverage": 0.8156869535105186,
+      "santander_share": 0.6135399532508008
+    },
+    {
+      "month": "2025-12",
+      "loans": 15452,
+      "model_MAE": 3.5293908773923146,
+      "same_lender_MAE": 3.294905900386041,
+      "B1_rule_MAE": 4.772287965482093,
+      "model_coverage": 0.8020968159461558,
+      "santander_share": 0.9269350245922858
+    },
+    {
+      "month": "2026-01",
+      "loans": 8601,
+      "model_MAE": 3.7776853725749824,
+      "same_lender_MAE": 3.533742831939203,
+      "B1_rule_MAE": 5.286482126608709,
+      "model_coverage": 0.7865364492500871,
+      "santander_share": 0.9980234856412045
+    }
+  ],
+  "robust_by_lender": [
+    {
+      "lender": "ally",
+      "loans": 11626,
+      "model_MAE": 1.4515763783412707,
+      "same_lender_MAE": 1.333187066078707,
+      "B1_rule_MAE": 1.682151538884275,
+      "model_coverage": 0.8644417684500258
+    },
+    {
+      "lender": "carmax",
+      "loans": 42221,
+      "model_MAE": 1.5456764836176293,
+      "same_lender_MAE": 1.4634681394303586,
+      "B1_rule_MAE": 2.3251395690435746,
+      "model_coverage": 0.8312924847824542
+    },
+    {
+      "lender": "ford",
+      "loans": 392,
+      "model_MAE": 1.9398194866994167,
+      "same_lender_MAE": 2.0163223954253184,
+      "B1_rule_MAE": 2.372928123009286,
+      "model_coverage": 0.7423469387755102
+    },
+    {
+      "lender": "gmf",
+      "loans": 2028,
+      "model_MAE": 1.647995771114804,
+      "same_lender_MAE": 1.3835122214604612,
+      "B1_rule_MAE": 2.2701177372728485,
+      "model_coverage": 0.8141025641025641
+    },
+    {
+      "lender": "honda",
+      "loans": 4584,
+      "model_MAE": 1.4714465292753767,
+      "same_lender_MAE": 1.139793855771871,
+      "B1_rule_MAE": 1.9512350759668284,
+      "model_coverage": 0.8669284467713787
+    },
+    {
+      "lender": "hyundai",
+      "loans": 210,
+      "model_MAE": 1.6405620265752714,
+      "same_lender_MAE": 1.163263111819294,
+      "B1_rule_MAE": 1.292201071943929,
+      "model_coverage": 0.7857142857142857
+    },
+    {
+      "lender": "santander",
+      "loans": 51596,
+      "model_MAE": 3.7210840292917995,
+      "same_lender_MAE": 3.4628032413536642,
+      "B1_rule_MAE": 5.072147588657896,
+      "model_coverage": 0.7904101093107992
+    }
+  ],
+  "months_model_beats_B1": 6,
+  "months_same_lender_beats_model": 6,
+  "n_test_months": 6,
+  "paired_bootstrap": [
+    {
+      "difference": "B1 rule error minus model error",
+      "points": 0.9662736446528684,
+      "ci_low": 0.9530319062550764,
+      "ci_high": 0.9795403313201573
+    },
+    {
+      "difference": "model error minus same-lender model error",
+      "points": 0.18019723856190736,
+      "ci_low": 0.17367895440067518,
+      "ci_high": 0.18633924327553972
+    }
+  ],
+  "injection_50_seeds": [
+    {
+      "measure": "precision",
+      "mean": 0.24339624115869346,
+      "low_2.5pct": 0.2357923104075744,
+      "high_97.5pct": 0.25142081609835853
+    },
+    {
+      "measure": "recall",
+      "mean": 0.1590409207151361,
+      "low_2.5pct": 0.1540283525089241,
+      "high_97.5pct": 0.16308529002675384
+    },
+    {
+      "measure": "recall_new",
+      "mean": 0.11027354473006382,
+      "low_2.5pct": 0.1056332322339001,
+      "high_97.5pct": 0.11467303673374843
+    }
+  ],
+  "matched_false_alarm": [
+    {
+      "false_alarm_rate": 0.01,
+      "method": "B1 rule",
+      "recall_new_2pt": 0.006456306265345094,
+      "precision_2pt": 0.13712374581939799
+    },
+    {
+      "false_alarm_rate": 0.01,
+      "method": "Model (whole market)",
+      "recall_new_2pt": 0.018761384335154827,
+      "precision_2pt": 0.23705926481620404
+    },
+    {
+      "false_alarm_rate": 0.01,
+      "method": "Same-lender model",
+      "recall_new_2pt": 0.02841012566017119,
+      "precision_2pt": 0.2918693537178596
+    },
+    {
+      "false_alarm_rate": 0.02,
+      "method": "B1 rule",
+      "recall_new_2pt": 0.021208226221079693,
+      "precision_2pt": 0.17263581488933602
+    },
+    {
+      "false_alarm_rate": 0.02,
+      "method": "Model (whole market)",
+      "recall_new_2pt": 0.034856985192679116,
+      "precision_2pt": 0.2263577668059248
+    },
+    {
+      "false_alarm_rate": 0.02,
+      "method": "Same-lender model",
+      "recall_new_2pt": 0.05808708459909785,
+      "precision_2pt": 0.2974003466204506
+    },
+    {
+      "false_alarm_rate": 0.05,
+      "method": "B1 rule",
+      "recall_new_2pt": 0.04501182033096927,
+      "precision_2pt": 0.16224623444662736
+    },
+    {
+      "false_alarm_rate": 0.05,
+      "method": "Model (whole market)",
+      "recall_new_2pt": 0.09761408824086347,
+      "precision_2pt": 0.23394357743097238
+    },
+    {
+      "false_alarm_rate": 0.05,
+      "method": "Same-lender model",
+      "recall_new_2pt": 0.16125972301271105,
+      "precision_2pt": 0.30655938906313923
+    },
+    {
+      "false_alarm_rate": 0.0549,
+      "method": "B1 rule",
+      "recall_new_2pt": 0.04860648720631599,
+      "precision_2pt": 0.16248506571087215
+    },
+    {
+      "false_alarm_rate": 0.0549,
+      "method": "Model (whole market)",
+      "recall_new_2pt": 0.10825967113392262,
+      "precision_2pt": 0.23320589841616604
+    },
+    {
+      "false_alarm_rate": 0.0549,
+      "method": "Same-lender model",
+      "recall_new_2pt": 0.18317774814250334,
+      "precision_2pt": 0.31018746916625556
+    },
+    {
+      "false_alarm_rate": 0.1,
+      "method": "B1 rule",
+      "recall_new_2pt": 0.10331072995612285,
+      "precision_2pt": 0.17055523941142997
+    },
+    {
+      "false_alarm_rate": 0.1,
+      "method": "Model (whole market)",
+      "recall_new_2pt": 0.19932128954985529,
+      "precision_2pt": 0.2313202141295333
+    },
+    {
+      "false_alarm_rate": 0.1,
+      "method": "Same-lender model",
+      "recall_new_2pt": 0.2876424715056989,
+      "precision_2pt": 0.2803507035282472
+    }
+  ],
+  "model_false_alarm_test": 0.05489228365747357,
+  "precision_by_prevalence": [
+    {
+      "share_of_loans_marked_up": 0.02,
+      "precision_2pt": 0.05415858010971041
+    },
+    {
+      "share_of_loans_marked_up": 0.05,
+      "precision_2pt": 0.1286691704287547
+    },
+    {
+      "share_of_loans_marked_up": 0.1,
+      "precision_2pt": 0.23765796705342782
+    },
+    {
+      "share_of_loans_marked_up": 0.3,
+      "precision_2pt": 0.5459608709651989
+    }
+  ],
+  "linear_baseline": [
+    {
+      "method": "Linear quantile (same 6 inputs), 30,000 training loans",
+      "MAE_points": 3.244887252284628,
+      "coverage_of_80pct_range": 0.7901417577247752,
+      "mean_width_points": 9.613742454483443
+    },
+    {
+      "method": "Trees (same 6 inputs), 30,000 training loans",
+      "MAE_points": 2.561606254157299,
+      "coverage_of_80pct_range": 0.8071846401022573,
+      "mean_width_points": 8.011880062508672
+    },
+    {
+      "method": "Trees, all training loans (the app's model)",
+      "MAE_points": 2.532654508314098,
+      "coverage_of_80pct_range": 0.8167357554346378,
+      "mean_width_points": 8.133018878923396
+    }
+  ],
+  "state_multiple_testing": [
+    {
+      "view": "whole market",
+      "states_tested": 43,
+      "expected_by_chance": 2.1,
+      "significant_raw": 33,
+      "significant_after_holm": 29,
+      "dropped_by_holm": "DE, HI, NH, WV",
+      "AL_and_CT_remain": true
+    },
+    {
+      "view": "same lender",
+      "states_tested": 43,
+      "expected_by_chance": 2.1,
+      "significant_raw": 31,
+      "significant_after_holm": 27,
+      "dropped_by_holm": "AZ, IA, KY, WA",
+      "AL_and_CT_remain": true
+    }
+  ],
+  "treasury_passthrough": {
+    "apr_points_per_treasury_point": 0.11457451059443396,
+    "ci_low": -0.5031110962156311,
+    "ci_high": 0.6823111541210641,
+    "group_months": 814,
+    "months": 37
+  },
+  "injection_toyota_caps": {
+    "caps_points": {
+      "term_60_months_or_less": 1.25,
+      "term_over_60_months": 1.0
+    },
+    "source": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-and-doj-reach-resolution-with-toyota-motor-credit-to-address-loan-pricing-policies-with-discriminatory-effects/",
+    "share_test_loans_term_60_or_less": 0.15879173065144642,
+    "by_method": [
+      {
+        "method": "B1 rule: well above tier range",
+        "markup": "Toyota-order cap (1.25 or 1.00)",
+        "precision": 0.12496196368800082,
+        "recall": 0.11109107303877366,
+        "recall_new": 0.032770800627943485,
+        "untouched_loans_flagged": 0.08454867429454006
+      },
+      {
+        "method": "B1 rule: well above tier range",
+        "markup": "+2.0",
+        "precision": 0.16405038759689922,
+        "recall": 0.15266005410279532,
+        "recall_new": 0.07800235478806908,
+        "untouched_loans_flagged": 0.08454867429454006
+      },
+      {
+        "method": "Model: 'high' (above range)",
+        "markup": "Toyota-order cap (1.25 or 1.00)",
+        "precision": 0.15203761755485892,
+        "recall": 0.1661857529305681,
+        "recall_new": 0.07603916866506795,
+        "untouched_loans_flagged": 0.10084593056800731
+      },
+      {
+        "method": "Model: 'high' (above range)",
+        "markup": "+2.0",
+        "precision": 0.23141917152684313,
+        "recall": 0.27908025247971147,
+        "recall_new": 0.20113908872901679,
+        "untouched_loans_flagged": 0.10084593056800731
+      },
+      {
+        "method": "Model: 'well above' (range + delta)",
+        "markup": "Toyota-order cap (1.25 or 1.00)",
+        "precision": 0.1600598354525056,
+        "recall": 0.09648331830477908,
+        "recall_new": 0.047619047619047616,
+        "untouched_loans_flagged": 0.05489228365747357
+      },
+      {
+        "method": "Model: 'well above' (range + delta)",
+        "markup": "+2.0",
+        "precision": 0.23323774409395057,
+        "recall": 0.15401262398557258,
+        "recall_new": 0.10825967113392262,
+        "untouched_loans_flagged": 0.05489228365747357
+      },
+      {
+        "method": "Same-lender model: 'well above' (range + delta)",
+        "markup": "Toyota-order cap (1.25 or 1.00)",
+        "precision": 0.18060249816311535,
+        "recall": 0.11082055906221822,
+        "recall_new": 0.06085714285714286,
+        "untouched_loans_flagged": 0.054732506635184676
+      },
+      {
+        "method": "Same-lender model: 'well above' (range + delta)",
+        "markup": "+2.0",
+        "precision": 0.3100717644147488,
+        "recall": 0.2259693417493237,
+        "recall_new": 0.1824761904761905,
+        "untouched_loans_flagged": 0.054732506635184676
+      }
+    ],
+    "matched_false_alarm": [
+      {
+        "false_alarm_rate": 0.0549,
+        "method": "B1 rule",
+        "recall_new_caps": 0.01778750118900409,
+        "precision_caps": 0.11989956057752668,
+        "recall_new_2pt": 0.04860648720631599,
+        "precision_2pt": 0.16248506571087215
+      },
+      {
+        "false_alarm_rate": 0.0549,
+        "method": "Model (whole market)",
+        "recall_new_caps": 0.047619047619047616,
+        "precision_caps": 0.16003589590188452,
+        "recall_new_2pt": 0.10825967113392262,
+        "precision_2pt": 0.23320589841616604
+      },
+      {
+        "false_alarm_rate": 0.0549,
+        "method": "Same-lender model",
+        "recall_new_caps": 0.06067822442369975,
+        "precision_caps": 0.18015244796247434,
+        "recall_new_2pt": 0.18317774814250334,
+        "precision_2pt": 0.31018746916625556
+      }
+    ],
+    "model_well_above_by_term": [
+      {
+        "term": "60 months or less (+1.25)",
+        "loans": 17889,
+        "injected": 1776,
+        "precision": 0.1579754601226994,
+        "recall": 0.11599099099099099,
+        "recall_new": 0.0626865671641791
+      },
+      {
+        "term": "over 60 months (+1.00)",
+        "loans": 94768,
+        "injected": 9314,
+        "precision": 0.1605649507526482,
+        "recall": 0.09276358170496027,
+        "recall_new": 0.044765995930364004
+      }
+    ],
+    "model_well_above_50_seeds": [
+      {
+        "measure": "precision",
+        "mean": 0.16563010323188163,
+        "low_2.5pct": 0.15743582241754,
+        "high_97.5pct": 0.17250867218525215
+      },
+      {
+        "measure": "recall",
+        "mean": 0.09813889438739844,
+        "low_2.5pct": 0.09328564226273116,
+        "high_97.5pct": 0.10183103842887989
+      },
+      {
+        "measure": "recall_new",
+        "mean": 0.045840297254688814,
+        "low_2.5pct": 0.04302561390998526,
+        "high_97.5pct": 0.04845770707037689
+      }
+    ]
+  },
+  "failures": [
+    {
+      "issuer": "santander",
+      "origination_month": "2025-12",
+      "credit_score": 746.0,
+      "is_used": 1,
+      "vehicle_age": 2,
+      "amount_financed": 25846.03,
+      "ltv": 1.339,
+      "term_months": 75,
+      "apr_pct": 29.99,
+      "resid": 19.199,
+      "likely_reason": "price driven by something the data doesn't show (e.g. the dealer, a co-signer, or the buyer's full credit file)"
+    },
+    {
+      "issuer": "santander",
+      "origination_month": "2025-11",
+      "credit_score": 735.0,
+      "is_used": 1,
+      "vehicle_age": 4,
+      "amount_financed": 29757.5,
+      "ltv": 1.223,
+      "term_months": 75,
+      "apr_pct": 29.99,
+      "resid": 18.982,
+      "likely_reason": "price driven by something the data doesn't show (e.g. the dealer, a co-signer, or the buyer's full credit file)"
+    },
+    {
+      "issuer": "santander",
+      "origination_month": "2025-10",
+      "credit_score": 723.0,
+      "is_used": 0,
+      "vehicle_age": 0,
+      "amount_financed": 27676.26,
+      "ltv": 1.054,
+      "term_months": 72,
+      "apr_pct": 29.07,
+      "resid": 18.763,
+      "likely_reason": "price driven by something the data doesn't show (e.g. the dealer, a co-signer, or the buyer's full credit file)"
+    },
+    {
+      "issuer": "santander",
+      "origination_month": "2025-12",
+      "credit_score": 699.0,
+      "is_used": 1,
+      "vehicle_age": 7,
+      "amount_financed": 17845.0,
+      "ltv": 0.912,
+      "term_months": 60,
+      "apr_pct": 29.99,
+      "resid": 18.399,
+      "likely_reason": "price driven by something the data doesn't show (e.g. the dealer, a co-signer, or the buyer's full credit file)"
+    },
+    {
+      "issuer": "santander",
+      "origination_month": "2025-10",
+      "credit_score": 710.0,
+      "is_used": 1,
+      "vehicle_age": 4,
+      "amount_financed": 24362.06,
+      "ltv": 1.309,
+      "term_months": 75,
+      "apr_pct": 29.99,
+      "resid": 17.815,
+      "likely_reason": "price driven by something the data doesn't show (e.g. the dealer, a co-signer, or the buyer's full credit file)"
+    }
+  ],
+  "importance": [
+    {
+      "feature": "credit_score",
+      "MAE increase when shuffled (points)": 2.8406862199284375
+    },
+    {
+      "feature": "ltv",
+      "MAE increase when shuffled (points)": 0.9301220196492668
+    },
+    {
+      "feature": "term_months",
+      "MAE increase when shuffled (points)": 0.5012928632852989
+    },
+    {
+      "feature": "amount_financed",
+      "MAE increase when shuffled (points)": 0.18361114297151496
+    },
+    {
+      "feature": "vehicle_age",
+      "MAE increase when shuffled (points)": 0.12795779554369952
+    },
+    {
+      "feature": "is_used",
+      "MAE increase when shuffled (points)": 0.032696745785163815
+    }
+  ],
+  "repayment_test": {
+    "by_group": [
+      {
+        "group": "all lenders",
+        "high_priced_loans": 13342,
+        "bad_rate_high": 0.23946934492579824,
+        "ci_high": "0.231-0.246",
+        "other_loans": 110797,
+        "bad_rate_other": 0.14182694477287291,
+        "ci_other": "0.140-0.144"
+      },
+      {
+        "group": "ally",
+        "high_priced_loans": 2986,
+        "bad_rate_high": 0.06296048225050234,
+        "ci_high": "0.054-0.072",
+        "other_loans": 18959,
+        "bad_rate_other": 0.031172530196740333,
+        "ci_other": "0.029-0.034"
+      },
+      {
+        "group": "carmax",
+        "high_priced_loans": 4040,
+        "bad_rate_high": 0.0858910891089109,
+        "ci_high": "0.077-0.095",
+        "other_loans": 53818,
+        "bad_rate_other": 0.07151882269872534,
+        "ci_other": "0.069-0.074"
+      },
+      {
+        "group": "santander",
+        "high_priced_loans": 6316,
+        "bad_rate_high": 0.42115262824572514,
+        "ci_high": "0.410-0.433",
+        "other_loans": 38020,
+        "bad_rate_other": 0.2965281430825881,
+        "ci_other": "0.292-0.301"
+      }
+    ],
+    "n_matched": 124139,
+    "months_observed_median": 12.0,
+    "pooled_gap": 0.09764240015292533,
+    "lender_weighted_gap": 0.0568273336499663,
+    "missing_status_share_by_lender": {
+      "ally": 0.11766603327356244,
+      "carmax": 0.1426127835692406,
+      "santander": 0.054444530006673854
+    },
+    "without_missing_status": {
+      "loans_kept": 84406,
+      "bad_rate_high": 0.3127247419092913,
+      "bad_rate_other": 0.1757471795210134
+    },
+    "by_tier_term": [
+      {
+        "tier": "deep subprime",
+        "term_bucket": "(0, 60]",
+        "size_other": 180,
+        "size_high": 19,
+        "mean_other": 0.4166666666666667,
+        "mean_high": 0.3684210526315789
+      },
+      {
+        "tier": "deep subprime",
+        "term_bucket": "(60, 72]",
+        "size_other": 1285,
+        "size_high": 163,
+        "mean_other": 0.488715953307393,
+        "mean_high": 0.5644171779141104
+      },
+      {
+        "tier": "deep subprime",
+        "term_bucket": "(72, 96]",
+        "size_other": 204,
+        "size_high": 34,
+        "mean_other": 0.45588235294117646,
+        "mean_high": 0.4411764705882353
+      },
+      {
+        "tier": "subprime",
+        "term_bucket": "(0, 60]",
+        "size_other": 2216,
+        "size_high": 291,
+        "mean_other": 0.33844765342960287,
+        "mean_high": 0.49140893470790376
+      },
+      {
+        "tier": "subprime",
+        "term_bucket": "(60, 72]",
+        "size_other": 15720,
+        "size_high": 1931,
+        "mean_other": 0.35483460559796437,
+        "mean_high": 0.4904194717762817
+      },
+      {
+        "tier": "subprime",
+        "term_bucket": "(72, 96]",
+        "size_other": 3671,
+        "size_high": 453,
+        "mean_other": 0.303459547807137,
+        "mean_high": 0.48123620309050774
+      },
+      {
+        "tier": "near-prime",
+        "term_bucket": "(0, 60]",
+        "size_other": 3003,
+        "size_high": 363,
+        "mean_other": 0.1798201798201798,
+        "mean_high": 0.29201101928374656
+      },
+      {
+        "tier": "near-prime",
+        "term_bucket": "(60, 72]",
+        "size_other": 16609,
+        "size_high": 1954,
+        "mean_other": 0.22162682882774398,
+        "mean_high": 0.3925281473899693
+      },
+      {
+        "tier": "near-prime",
+        "term_bucket": "(72, 96]",
+        "size_other": 4662,
+        "size_high": 562,
+        "mean_other": 0.18597168597168598,
+        "mean_high": 0.31316725978647686
+      },
+      {
+        "tier": "prime",
+        "term_bucket": "(0, 60]",
+        "size_other": 8049,
+        "size_high": 933,
+        "mean_other": 0.02981736861721953,
+        "mean_high": 0.08360128617363344
+      },
+      {
+        "tier": "prime",
+        "term_bucket": "(60, 72]",
+        "size_other": 20175,
+        "size_high": 2400,
+        "mean_other": 0.06374225526641883,
+        "mean_high": 0.15333333333333332
+      },
+      {
+        "tier": "prime",
+        "term_bucket": "(72, 96]",
+        "size_other": 14586,
+        "size_high": 1727,
+        "mean_other": 0.05135061017413958,
+        "mean_high": 0.11870295309785756
+      },
+      {
+        "tier": "super-prime",
+        "term_bucket": "(0, 60]",
+        "size_other": 6473,
+        "size_high": 819,
+        "mean_other": 0.0020083423451259077,
+        "mean_high": 0.008547008547008548
+      },
+      {
+        "tier": "super-prime",
+        "term_bucket": "(60, 72]",
+        "size_other": 9312,
+        "size_high": 1138,
+        "mean_other": 0.0053694158075601375,
+        "mean_high": 0.037785588752196834
+      },
+      {
+        "tier": "super-prime",
+        "term_bucket": "(72, 96]",
+        "size_other": 4652,
+        "size_high": 555,
+        "mean_other": 0.010748065348237317,
+        "mean_high": 0.04144144144144144
+      }
+    ]
+  },
+  "jordan": {
+    "stub": false,
+    "view": "whole market",
+    "range_low_pct": 13.27,
+    "range_high_pct": 24.75,
+    "typical_pct": 17.8,
+    "percentile": 30.1,
+    "flag": "typical",
+    "range_coverage_pct": 77.3,
+    "monthly_payment_offer": 400.28,
+    "monthly_payment_typical": 419.87,
+    "extra_cost_usd": -1410.34,
+    "reasons": [
+      "Your credit score of 660 raises the typical rate by about 3.2 points compared with a typical credit score of 719.",
+      "A car 7 years old raises the typical rate by about 0.7 points compared with a typical 3-year-old car.",
+      "Borrowing $18,500 raises the typical rate by about 0.4 points compared with borrowing a typical $25,382."
+    ],
+    "same_lender": null,
+    "market": null,
+    "weak_spots": [
+      "The data has no race, sex or age and no dealer details, so the tool can show how far a price is from similar loans, but not why.",
+      "Credit unions and banks that don't sell their loans into public bonds appear only as national averages, not loan by loan."
+    ],
+    "data_note": "Compared with 554,021 loans from 28 SEC-filed bond deals (Ally, American Honda Finance, Capital One, CarMax Auto Finance, Ford Credit, GM Financial, Hyundai Capital America, Nissan Motor Acceptance, Santander Consumer, Toyota Financial Services), originated 2023-01 to 2026-01. Prices are compared after removing the 5-year Treasury rate; your offer uses the 2026-10 average of 4.93%.",
+    "data_months": {
+      "newest_loans": "2026-01",
+      "rate_benchmark": "2026-10"
+    },
+    "recalibrated": null,
+    "rule_of_thumb": {
+      "tier": "near-prime",
+      "new_or_used": "used",
+      "typical_pct": 17.23,
+      "range_low_pct": 12.74,
+      "range_high_pct": 25.44,
+      "test": {
+        "rule_mae": 3.5,
+        "model_mae": 2.53,
+        "rule_coverage_pct": 78.0,
+        "model_coverage_pct": 81.7,
+        "rule_width": 9.74,
+        "model_width": 8.13
+      }
+    },
+    "fresh_rates": {
+      "new_or_used": "used",
+      "as_of": "2026-06-30",
+      "n": 4136,
+      "median_pct": 6.28,
+      "p25_pct": 5.49,
+      "p75_pct": 7.29,
+      "g19": []
+    },
+    "forward_test": {
+      "lender": "CarMax",
+      "loans": 113200,
+      "months": "February to August 2026",
+      "model_mae": 1.72,
+      "rule_mae": 2.45,
+      "coverage_pct": 68.8,
+      "below_pct": 23.9
+    },
+    "lenders": [
+      {
+        "key": "carmax",
+        "lender": "CarMax Auto Finance",
+        "yours": false,
+        "n_loans": 168938,
+        "typical_pct": 16.57,
+        "range_low_pct": 13.49,
+        "range_high_pct": 19.6,
+        "percentile": 33.0,
+        "flag": "typical"
+      },
+      {
+        "key": "ally",
+        "lender": "Ally",
+        "yours": false,
+        "n_loans": 65372,
+        "typical_pct": 13.84,
+        "range_low_pct": 11.19,
+        "range_high_pct": 19.44,
+        "percentile": 72.8,
+        "flag": "typical"
+      },
+      {
+        "key": "santander",
+        "lender": "Santander Consumer",
+        "yours": false,
+        "n_loans": 157201,
+        "typical_pct": 20.08,
+        "range_low_pct": 13.68,
+        "range_high_pct": 26.48,
+        "percentile": 21.4,
+        "flag": "typical"
+      },
+      {
+        "key": "toyota",
+        "lender": "Toyota Financial Services",
+        "yours": false,
+        "n_loans": 24992,
+        "typical_pct": 13.89,
+        "range_low_pct": 12.02,
+        "range_high_pct": 16.53,
+        "percentile": 87.4,
+        "flag": "typical"
+      },
+      {
+        "key": "honda",
+        "lender": "American Honda Finance",
+        "yours": false,
+        "n_loans": 44888,
+        "typical_pct": 11.6,
+        "range_low_pct": 7.79,
+        "range_high_pct": 16.1,
+        "percentile": 90.2,
+        "flag": "typical"
+      },
+      {
+        "key": "hyundai",
+        "lender": "Hyundai Capital America",
+        "yours": false,
+        "n_loans": 13334,
+        "typical_pct": 13.31,
+        "range_low_pct": 11.03,
+        "range_high_pct": 15.66,
+        "percentile": 92.2,
+        "flag": "high"
+      },
+      {
+        "key": "nissan",
+        "lender": "Nissan Motor Acceptance",
+        "yours": false,
+        "n_loans": 3265,
+        "typical_pct": 12.1,
+        "range_low_pct": 10.0,
+        "range_high_pct": 15.13,
+        "percentile": 94.5,
+        "flag": "likely marked up"
+      },
+      {
+        "key": "ford",
+        "lender": "Ford Credit",
+        "yours": false,
+        "n_loans": 4158,
+        "typical_pct": 15.71,
+        "range_low_pct": 11.54,
+        "range_high_pct": 19.01,
+        "percentile": 52.8,
+        "flag": "typical"
+      },
+      {
+        "key": "gmf",
+        "lender": "GM Financial",
+        "yours": false,
+        "n_loans": 24400,
+        "typical_pct": 14.43,
+        "range_low_pct": 11.1,
+        "range_high_pct": 17.07,
+        "percentile": 76.8,
+        "flag": "typical"
+      },
+      {
+        "key": "capone",
+        "lender": "Capital One",
+        "yours": false,
+        "n_loans": 47473,
+        "typical_pct": 11.0,
+        "range_low_pct": 9.04,
+        "range_high_pct": 14.79,
+        "percentile": 97.5,
+        "flag": "likely marked up"
+      }
+    ],
+    "checks": [
+      {
+        "name": "score_lower",
+        "question": "If the score your lender used is 30 points lower (630)",
+        "typical_pct": 19.3,
+        "range_low_pct": 14.27,
+        "range_high_pct": 26.61,
+        "percentile": 20.8,
+        "flag": "typical",
+        "same_flag": true
+      },
+      {
+        "name": "score_higher",
+        "question": "If the score your lender used is 30 points higher (690)",
+        "typical_pct": 16.55,
+        "range_low_pct": 11.67,
+        "range_high_pct": 22.67,
+        "percentile": 41.3,
+        "flag": "typical",
+        "same_flag": true
+      },
+      {
+        "name": "rates_unchanged",
+        "question": "If car-loan rates haven't moved since January 2026 (we assume they followed the 5-year Treasury, 3.78% then and 4.93% in October 2026)",
+        "typical_pct": 16.66,
+        "range_low_pct": 12.13,
+        "range_high_pct": 23.61,
+        "percentile": 39.2,
+        "flag": "typical",
+        "same_flag": true
+      }
+    ],
+    "evidence": {
+      "n_similar": 49732,
+      "n_loans": 554021,
+      "rare": []
+    },
+    "risk": {
+      "months": 12.0,
+      "rows": [
+        {
+          "lender": "CarMax Auto Finance",
+          "yours": false,
+          "bad_rate_high": 0.0858910891089109,
+          "bad_rate_other": 0.07151882269872534
+        },
+        {
+          "lender": "Ally",
+          "yours": false,
+          "bad_rate_high": 0.06296048225050234,
+          "bad_rate_other": 0.031172530196740333
+        },
+        {
+          "lender": "Santander Consumer",
+          "yours": false,
+          "bad_rate_high": 0.42115262824572514,
+          "bad_rate_other": 0.2965281430825881
+        }
+      ]
+    },
+    "credit_union": {
+      "new_or_used": "used",
+      "term_months": 48,
+      "credit_union_pct": 5.53,
+      "bank_pct": 7.73,
+      "rate_date": "December 26, 2025",
+      "source_url": "https://ncua.gov/analysis/cuso-economic-data/credit-union-bank-rates/credit-union-and-bank-rates-2025-q4"
+    },
+    "quantiles": [
+      [
+        0.05,
+        11.88
+      ],
+      [
+        0.1,
+        13.63
+      ],
+      [
+        0.15,
+        14.55
+      ],
+      [
+        0.2,
+        15.0
+      ],
+      [
+        0.25,
+        15.67
+      ],
+      [
+        0.3,
+        15.88
+      ],
+      [
+        0.35,
+        16.49
+      ],
+      [
+        0.4,
+        17.14
+      ],
+      [
+        0.45,
+        17.4
+      ],
+      [
+        0.5,
+        17.8
+      ],
+      [
+        0.55,
+        17.96
+      ],
+      [
+        0.6,
+        18.42
+      ],
+      [
+        0.65,
+        19.43
+      ],
+      [
+        0.7,
+        20.0
+      ],
+      [
+        0.75,
+        20.57
+      ],
+      [
+        0.8,
+        20.83
+      ],
+      [
+        0.85,
+        23.18
+      ],
+      [
+        0.9,
+        24.4
+      ],
+      [
+        0.95,
+        25.95
+      ]
+    ],
+    "waterfall": {
+      "start_pct": 11.91,
+      "end_pct": 17.8,
+      "steps": [
+        [
+          "Credit score 660",
+          3.2428
+        ],
+        [
+          "Car 7 years old",
+          0.7295
+        ],
+        [
+          "Borrowing $18,500",
+          0.3526
+        ],
+        [
+          "Loan 106% of car value",
+          0.1042
+        ]
+      ]
+    }
+  },
+  "jordan_santander": {
+    "stub": false,
+    "view": "same lender: Santander Consumer",
+    "range_low_pct": 13.68,
+    "range_high_pct": 26.48,
+    "typical_pct": 20.08,
+    "percentile": 21.4,
+    "flag": "typical",
+    "range_coverage_pct": 79.2,
+    "monthly_payment_offer": 400.28,
+    "monthly_payment_typical": 444.02,
+    "extra_cost_usd": -3149.19,
+    "reasons": [
+      "Your credit score of 660 raises the typical rate by about 2.6 points compared with a typical credit score of 719.",
+      "A car 7 years old raises the typical rate by about 0.8 points compared with a typical 3-year-old car.",
+      "Borrowing 106% of the car's value raises the typical rate by about 0.7 points compared with a typical 101% of the car's value."
+    ],
+    "same_lender": {
+      "lender": "Santander Consumer",
+      "typical_pct": 20.08,
+      "difference_pts": 2.28,
+      "n_loans": 157201
+    },
+    "market": {
+      "typical_pct": 17.8,
+      "range_low_pct": 13.27,
+      "range_high_pct": 24.75,
+      "percentile": 30.1,
+      "flag": "typical"
+    },
+    "weak_spots": [
+      "The data has no race, sex or age and no dealer details, so the tool can show how far a price is from similar loans, but not why.",
+      "Credit unions and banks that don't sell their loans into public bonds appear only as national averages, not loan by loan."
+    ],
+    "data_note": "Compared with 554,021 loans from 28 SEC-filed bond deals (Ally, American Honda Finance, Capital One, CarMax Auto Finance, Ford Credit, GM Financial, Hyundai Capital America, Nissan Motor Acceptance, Santander Consumer, Toyota Financial Services), originated 2023-01 to 2026-01. Prices are compared after removing the 5-year Treasury rate; your offer uses the 2026-10 average of 4.93%.",
+    "data_months": {
+      "newest_loans": "2026-01",
+      "rate_benchmark": "2026-10"
+    },
+    "recalibrated": null,
+    "rule_of_thumb": {
+      "tier": "near-prime",
+      "new_or_used": "used",
+      "typical_pct": 17.23,
+      "range_low_pct": 12.74,
+      "range_high_pct": 25.44,
+      "test": {
+        "rule_mae": 3.5,
+        "model_mae": 2.53,
+        "rule_coverage_pct": 78.0,
+        "model_coverage_pct": 81.7,
+        "rule_width": 9.74,
+        "model_width": 8.13
+      }
+    },
+    "fresh_rates": {
+      "new_or_used": "used",
+      "as_of": "2026-06-30",
+      "n": 4136,
+      "median_pct": 6.28,
+      "p25_pct": 5.49,
+      "p75_pct": 7.29,
+      "g19": []
+    },
+    "forward_test": {
+      "lender": "CarMax",
+      "loans": 113200,
+      "months": "February to August 2026",
+      "model_mae": 1.72,
+      "rule_mae": 2.45,
+      "coverage_pct": 68.8,
+      "below_pct": 23.9
+    },
+    "lenders": [
+      {
+        "key": "carmax",
+        "lender": "CarMax Auto Finance",
+        "yours": false,
+        "n_loans": 168938,
+        "typical_pct": 16.57,
+        "range_low_pct": 13.49,
+        "range_high_pct": 19.6,
+        "percentile": 33.0,
+        "flag": "typical"
+      },
+      {
+        "key": "ally",
+        "lender": "Ally",
+        "yours": false,
+        "n_loans": 65372,
+        "typical_pct": 13.84,
+        "range_low_pct": 11.19,
+        "range_high_pct": 19.44,
+        "percentile": 72.8,
+        "flag": "typical"
+      },
+      {
+        "key": "santander",
+        "lender": "Santander Consumer",
+        "yours": true,
+        "n_loans": 157201,
+        "typical_pct": 20.08,
+        "range_low_pct": 13.68,
+        "range_high_pct": 26.48,
+        "percentile": 21.4,
+        "flag": "typical"
+      },
+      {
+        "key": "toyota",
+        "lender": "Toyota Financial Services",
+        "yours": false,
+        "n_loans": 24992,
+        "typical_pct": 13.89,
+        "range_low_pct": 12.02,
+        "range_high_pct": 16.53,
+        "percentile": 87.4,
+        "flag": "typical"
+      },
+      {
+        "key": "honda",
+        "lender": "American Honda Finance",
+        "yours": false,
+        "n_loans": 44888,
+        "typical_pct": 11.6,
+        "range_low_pct": 7.79,
+        "range_high_pct": 16.1,
+        "percentile": 90.2,
+        "flag": "typical"
+      },
+      {
+        "key": "hyundai",
+        "lender": "Hyundai Capital America",
+        "yours": false,
+        "n_loans": 13334,
+        "typical_pct": 13.31,
+        "range_low_pct": 11.03,
+        "range_high_pct": 15.66,
+        "percentile": 92.2,
+        "flag": "high"
+      },
+      {
+        "key": "nissan",
+        "lender": "Nissan Motor Acceptance",
+        "yours": false,
+        "n_loans": 3265,
+        "typical_pct": 12.1,
+        "range_low_pct": 10.0,
+        "range_high_pct": 15.13,
+        "percentile": 94.5,
+        "flag": "likely marked up"
+      },
+      {
+        "key": "ford",
+        "lender": "Ford Credit",
+        "yours": false,
+        "n_loans": 4158,
+        "typical_pct": 15.71,
+        "range_low_pct": 11.54,
+        "range_high_pct": 19.01,
+        "percentile": 52.8,
+        "flag": "typical"
+      },
+      {
+        "key": "gmf",
+        "lender": "GM Financial",
+        "yours": false,
+        "n_loans": 24400,
+        "typical_pct": 14.43,
+        "range_low_pct": 11.1,
+        "range_high_pct": 17.07,
+        "percentile": 76.8,
+        "flag": "typical"
+      },
+      {
+        "key": "capone",
+        "lender": "Capital One",
+        "yours": false,
+        "n_loans": 47473,
+        "typical_pct": 11.0,
+        "range_low_pct": 9.04,
+        "range_high_pct": 14.79,
+        "percentile": 97.5,
+        "flag": "likely marked up"
+      }
+    ],
+    "checks": [
+      {
+        "name": "score_lower",
+        "question": "If the score your lender used is 30 points lower (630)",
+        "typical_pct": 20.03,
+        "range_low_pct": 13.9,
+        "range_high_pct": 26.47,
+        "percentile": 22.1,
+        "flag": "typical",
+        "same_flag": true
+      },
+      {
+        "name": "score_higher",
+        "question": "If the score your lender used is 30 points higher (690)",
+        "typical_pct": 19.09,
+        "range_low_pct": 12.3,
+        "range_high_pct": 25.61,
+        "percentile": 29.4,
+        "flag": "typical",
+        "same_flag": true
+      },
+      {
+        "name": "rates_unchanged",
+        "question": "If car-loan rates haven't moved since January 2026 (we assume they followed the 5-year Treasury, 3.78% then and 4.93% in October 2026)",
+        "typical_pct": 18.94,
+        "range_low_pct": 12.54,
+        "range_high_pct": 25.34,
+        "percentile": 30.9,
+        "flag": "typical",
+        "same_flag": true
+      }
+    ],
+    "evidence": {
+      "n_similar": 49732,
+      "n_loans": 554021,
+      "rare": []
+    },
+    "risk": {
+      "months": 12.0,
+      "rows": [
+        {
+          "lender": "Santander Consumer",
+          "yours": true,
+          "bad_rate_high": 0.42115262824572514,
+          "bad_rate_other": 0.2965281430825881
+        }
+      ]
+    },
+    "credit_union": {
+      "new_or_used": "used",
+      "term_months": 48,
+      "credit_union_pct": 5.53,
+      "bank_pct": 7.73,
+      "rate_date": "December 26, 2025",
+      "source_url": "https://ncua.gov/analysis/cuso-economic-data/credit-union-bank-rates/credit-union-and-bank-rates-2025-q4"
+    },
+    "quantiles": [
+      [
+        0.05,
+        12.62
+      ],
+      [
+        0.1,
+        13.94
+      ],
+      [
+        0.15,
+        14.82
+      ],
+      [
+        0.2,
+        15.67
+      ],
+      [
+        0.25,
+        16.49
+      ],
+      [
+        0.3,
+        16.92
+      ],
+      [
+        0.35,
+        17.59
+      ],
+      [
+        0.4,
+        18.63
+      ],
+      [
+        0.45,
+        19.14
+      ],
+      [
+        0.5,
+        20.08
+      ],
+      [
+        0.55,
+        20.65
+      ],
+      [
+        0.6,
+        21.31
+      ],
+      [
+        0.65,
+        21.99
+      ],
+      [
+        0.7,
+        22.4
+      ],
+      [
+        0.75,
+        23.54
+      ],
+      [
+        0.8,
+        23.83
+      ],
+      [
+        0.85,
+        24.83
+      ],
+      [
+        0.9,
+        26.22
+      ],
+      [
+        0.95,
+        27.57
+      ]
+    ],
+    "waterfall": {
+      "start_pct": 15.45,
+      "end_pct": 20.08,
+      "steps": [
+        [
+          "Credit score 660",
+          2.5882
+        ],
+        [
+          "Car 7 years old",
+          0.7726
+        ],
+        [
+          "Loan 106% of car value",
+          0.711
+        ],
+        [
+          "Borrowing $18,500",
+          0.3815
+        ]
+      ]
+    }
+  },
+  "sam": {
+    "offer": {
+      "credit_score": 760,
+      "new_or_used": "used",
+      "vehicle_model_year": 2022,
+      "vehicle_price": 24000,
+      "amount_financed": 25000,
+      "term_months": 60,
+      "lender": null,
+      "offered_apr_pct": 14.5
+    },
+    "first_high_apr": 13.5,
+    "result": {
+      "stub": false,
+      "view": "whole market",
+      "range_low_pct": 6.93,
+      "range_high_pct": 13.03,
+      "typical_pct": 8.87,
+      "percentile": 97.5,
+      "flag": "likely marked up",
+      "range_coverage_pct": 76.3,
+      "monthly_payment_offer": 588.21,
+      "monthly_payment_typical": 517.34,
+      "extra_cost_usd": 4252.1,
+      "reasons": [
+        "Your credit score of 760 lowers the typical rate by about 2.7 points compared with a typical credit score of 719.",
+        "A 60-month term lowers the typical rate by about 1.0 points compared with a typical 72-month term.",
+        "A car 4 years old raises the typical rate by about 0.9 points compared with a typical 3-year-old car."
+      ],
+      "same_lender": null,
+      "market": null,
+      "weak_spots": [
+        "The data has no race, sex or age and no dealer details, so the tool can show how far a price is from similar loans, but not why.",
+        "Credit unions and banks that don't sell their loans into public bonds appear only as national averages, not loan by loan."
+      ],
+      "data_note": "Compared with 554,021 loans from 28 SEC-filed bond deals (Ally, American Honda Finance, Capital One, CarMax Auto Finance, Ford Credit, GM Financial, Hyundai Capital America, Nissan Motor Acceptance, Santander Consumer, Toyota Financial Services), originated 2023-01 to 2026-01. Prices are compared after removing the 5-year Treasury rate; your offer uses the 2026-10 average of 4.93%.",
+      "data_months": {
+        "newest_loans": "2026-01",
+        "rate_benchmark": "2026-10"
+      },
+      "recalibrated": null,
+      "rule_of_thumb": {
+        "tier": "prime",
+        "new_or_used": "used",
+        "typical_pct": 10.9,
+        "range_low_pct": 7.73,
+        "range_high_pct": 16.65,
+        "test": {
+          "rule_mae": 3.5,
+          "model_mae": 2.53,
+          "rule_coverage_pct": 78.0,
+          "model_coverage_pct": 81.7,
+          "rule_width": 9.74,
+          "model_width": 8.13
+        }
+      },
+      "fresh_rates": {
+        "new_or_used": "used",
+        "as_of": "2026-06-30",
+        "n": 4136,
+        "median_pct": 6.28,
+        "p25_pct": 5.49,
+        "p75_pct": 7.29,
+        "g19": []
+      },
+      "forward_test": {
+        "lender": "CarMax",
+        "loans": 113200,
+        "months": "February to August 2026",
+        "model_mae": 1.72,
+        "rule_mae": 2.45,
+        "coverage_pct": 68.8,
+        "below_pct": 23.9
+      },
+      "lenders": [
+        {
+          "key": "carmax",
+          "lender": "CarMax Auto Finance",
+          "yours": false,
+          "n_loans": 168938,
+          "typical_pct": 8.97,
+          "range_low_pct": 7.34,
+          "range_high_pct": 12.38,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "ally",
+          "lender": "Ally",
+          "yours": false,
+          "n_loans": 65372,
+          "typical_pct": 9.63,
+          "range_low_pct": 7.76,
+          "range_high_pct": 12.79,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "santander",
+          "lender": "Santander Consumer",
+          "yours": false,
+          "n_loans": 157201,
+          "typical_pct": 14.17,
+          "range_low_pct": 9.74,
+          "range_high_pct": 21.2,
+          "percentile": 59.8,
+          "flag": "typical"
+        },
+        {
+          "key": "toyota",
+          "lender": "Toyota Financial Services",
+          "yours": false,
+          "n_loans": 24992,
+          "typical_pct": 9.47,
+          "range_low_pct": 7.44,
+          "range_high_pct": 10.51,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "honda",
+          "lender": "American Honda Finance",
+          "yours": false,
+          "n_loans": 44888,
+          "typical_pct": 8.05,
+          "range_low_pct": 4.17,
+          "range_high_pct": 10.39,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "hyundai",
+          "lender": "Hyundai Capital America",
+          "yours": false,
+          "n_loans": 13334,
+          "typical_pct": 9.14,
+          "range_low_pct": 7.46,
+          "range_high_pct": 10.63,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "nissan",
+          "lender": "Nissan Motor Acceptance",
+          "yours": false,
+          "n_loans": 3265,
+          "typical_pct": 9.25,
+          "range_low_pct": 7.0,
+          "range_high_pct": 10.14,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "ford",
+          "lender": "Ford Credit",
+          "yours": false,
+          "n_loans": 4158,
+          "typical_pct": 10.91,
+          "range_low_pct": 8.56,
+          "range_high_pct": 13.27,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "gmf",
+          "lender": "GM Financial",
+          "yours": false,
+          "n_loans": 24400,
+          "typical_pct": 10.92,
+          "range_low_pct": 8.39,
+          "range_high_pct": 13.15,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        },
+        {
+          "key": "capone",
+          "lender": "Capital One",
+          "yours": false,
+          "n_loans": 47473,
+          "typical_pct": 8.51,
+          "range_low_pct": 6.67,
+          "range_high_pct": 10.34,
+          "percentile": 97.5,
+          "flag": "likely marked up"
+        }
+      ],
+      "checks": [
+        {
+          "name": "score_lower",
+          "question": "If the score your lender used is 30 points lower (730)",
+          "typical_pct": 10.8,
+          "range_low_pct": 8.1,
+          "range_high_pct": 15.12,
+          "percentile": 89.0,
+          "flag": "typical",
+          "same_flag": false
+        },
+        {
+          "name": "score_higher",
+          "question": "If the score your lender used is 30 points higher (790)",
+          "typical_pct": 7.98,
+          "range_low_pct": 6.63,
+          "range_high_pct": 10.91,
+          "percentile": 97.5,
+          "flag": "likely marked up",
+          "same_flag": true
+        },
+        {
+          "name": "rates_unchanged",
+          "question": "If car-loan rates haven't moved since January 2026 (we assume they followed the 5-year Treasury, 3.78% then and 4.93% in October 2026)",
+          "typical_pct": 7.72,
+          "range_low_pct": 5.78,
+          "range_high_pct": 11.89,
+          "percentile": 97.5,
+          "flag": "likely marked up",
+          "same_flag": true
+        }
+      ],
+      "evidence": {
+        "n_similar": 33444,
+        "n_loans": 554021,
+        "rare": []
+      },
+      "risk": {
+        "months": 12.0,
+        "rows": [
+          {
+            "lender": "CarMax Auto Finance",
+            "yours": false,
+            "bad_rate_high": 0.0858910891089109,
+            "bad_rate_other": 0.07151882269872534
+          },
+          {
+            "lender": "Ally",
+            "yours": false,
+            "bad_rate_high": 0.06296048225050234,
+            "bad_rate_other": 0.031172530196740333
+          },
+          {
+            "lender": "Santander Consumer",
+            "yours": false,
+            "bad_rate_high": 0.42115262824572514,
+            "bad_rate_other": 0.2965281430825881
+          }
+        ]
+      },
+      "credit_union": {
+        "new_or_used": "used",
+        "term_months": 48,
+        "credit_union_pct": 5.53,
+        "bank_pct": 7.73,
+        "rate_date": "December 26, 2025",
+        "source_url": "https://ncua.gov/analysis/cuso-economic-data/credit-union-bank-rates/credit-union-and-bank-rates-2025-q4"
+      },
+      "quantiles": [
+        [
+          0.05,
+          7.17
+        ],
+        [
+          0.1,
+          7.28
+        ],
+        [
+          0.15,
+          7.38
+        ],
+        [
+          0.2,
+          7.68
+        ],
+        [
+          0.25,
+          7.91
+        ],
+        [
+          0.3,
+          8.4
+        ],
+        [
+          0.35,
+          8.41
+        ],
+        [
+          0.4,
+          8.45
+        ],
+        [
+          0.45,
+          8.48
+        ],
+        [
+          0.5,
+          8.87
+        ],
+        [
+          0.55,
+          8.98
+        ],
+        [
+          0.6,
+          9.22
+        ],
+        [
+          0.65,
+          9.28
+        ],
+        [
+          0.7,
+          9.62
+        ],
+        [
+          0.75,
+          10.37
+        ],
+        [
+          0.8,
+          10.89
+        ],
+        [
+          0.85,
+          11.52
+        ],
+        [
+          0.9,
+          12.68
+        ],
+        [
+          0.95,
+          13.47
+        ]
+      ],
+      "waterfall": {
+        "start_pct": 11.91,
+        "end_pct": 8.87,
+        "steps": [
+          [
+            "Credit score 760",
+            -2.7085
+          ],
+          [
+            "60-month term",
+            -0.9977
+          ],
+          [
+            "Car 4 years old",
+            0.8984
+          ],
+          [
+            "Loan 104% of car value",
+            0.2162
+          ]
+        ]
+      }
+    }
+  }
+}

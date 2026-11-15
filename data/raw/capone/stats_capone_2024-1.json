@@ -1,0 +1,59 @@
+{
+ "bytes": 190447160,
+ "codes": {
+  "credit_score_type": {
+   "FICO": 49532
+  },
+  "employment_verification_code": {
+   "2": 49530,
+   "3": 2
+  },
+  "income_verification_code": {
+   "2": 49399,
+   "3": 133
+  },
+  "interest_rate_type_code": {
+   "1": 49532
+  },
+  "new_used_code": {
+   "1": 11706,
+   "2": 37826
+  },
+  "subvented": {
+   "0": 49532
+  },
+  "vehicle_type_code": {
+   "1": 11476,
+   "2": 8084,
+   "3": 28452,
+   "98": 1520
+  },
+  "vehicle_value_source_code": {
+   "1": 11582,
+   "98": 37950
+  }
+ },
+ "credit_score_max": 885.0,
+ "credit_score_min": 700.0,
+ "credit_score_outside_300_850": 943,
+ "duplicate_asset_numbers_dropped": 0,
+ "new_vehicle_pct_by_end_balance": 28.57,
+ "nonnumeric_credit_score_values": {},
+ "origination_month_max": "2024-02",
+ "origination_month_min": "2023-03",
+ "parquet_bytes": 1212403,
+ "pti_as_written_min_median_max": [
+  0.05,
+  5.53,
+  20.94
+ ],
+ "reporting_period_ending_dates": {
+  "09-30-2024": 49532
+ },
+ "rows_parsed": 49532,
+ "rows_written": 49532,
+ "slug": "capone_2024-1",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2039534/000095013124004424/copart241ex102_1112-1953.xml",
+ "sum_reporting_period_actual_end_balance": 1116124822.45,
+ "xml_file": "copart241ex102_1112-1953.xml"
+}

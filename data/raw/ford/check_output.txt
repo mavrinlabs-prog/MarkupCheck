@@ -1,0 +1,21 @@
+== ford_2024-A (Ford Credit Auto Owner Trust 2024-A): 46,551 rows; final-prospectus loan count 46,551 -> MATCH
+   columns match CONTRACT: True; duplicate asset_number: 0
+   origination_month 2017-03 .. 2024-02; missing 0; originated after 2026-01: 0
+   numeric credit_score: 45,758 of 46,551 = 98.30%
+   credit_score_type 'Commercial Bureau': n=7,285, numeric 7,076, min 1, median 67, max 649, below 300: 5155, above 850: 0
+   credit_score_type 'Consumer Bureau': n=39,266, numeric 38,682, min 430, median 774, max 900, below 300: 0, above 850: 4762
+   apr_pct min 0, median 3.9, max 24.99; exactly 0: 8132
+== ford_2025-A (Ford Credit Auto Owner Trust 2025-A): 45,722 rows; final-prospectus loan count 45,722 -> MATCH
+   columns match CONTRACT: True; duplicate asset_number: 0
+   origination_month 2018-04 .. 2025-02; missing 0; originated after 2026-01: 0
+   numeric credit_score: 44,985 of 45,722 = 98.39%
+   credit_score_type 'Commercial Bureau': n=9,173, numeric 8,916, min 1, median 65, max 670, below 300: 6452, above 850: 0
+   credit_score_type 'Consumer Bureau': n=36,549, numeric 36,069, min 424, median 774, max 900, below 300: 0, above 850: 4618
+   apr_pct min 0, median 3.9, max 25.14; exactly 0: 8624
+== ford_2025-C (Ford Credit Auto Owner Trust 2025-C): 29,520 rows; final-prospectus loan count 29,520 -> MATCH
+   columns match CONTRACT: True; duplicate asset_number: 0
+   origination_month 2018-11 .. 2025-10; missing 0; originated after 2026-01: 0
+   numeric credit_score: 28,997 of 29,520 = 98.23%
+   credit_score_type 'Commercial Bureau': n=5,619, numeric 5,443, min 1, median 67, max 647, below 300: 3867, above 850: 0
+   credit_score_type 'Consumer Bureau': n=23,901, numeric 23,554, min 452, median 772, max 900, below 300: 0, above 850: 3123
+   apr_pct min 0, median 3.9, max 20.89; exactly 0: 5563

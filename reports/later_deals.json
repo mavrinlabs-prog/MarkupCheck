@@ -1,0 +1,398 @@
+{
+  "what": "Their training deals end before the test months (2025-08 to 2026-01), so the notebook could not test the check on their loans. Each deal here was filed after every training deal of its lender, so none of its loans was used to train or calibrate anything. This script scores them the way the app would: the same-lender view (used when a buyer names the lender), next to the whole-market view and the B1 rule of thumb, after the same counted cleaning as training.",
+  "newest_training_month": "2026-01",
+  "deals": {
+    "toyota_2026-C": {
+      "lender": "toyota",
+      "parsed_rows": 68025,
+      "asset_numbers_also_in_training": 0,
+      "drops": [
+        {
+          "step": "all loans parsed",
+          "rows_removed": 0,
+          "rows_left": 68025
+        },
+        {
+          "step": "duplicate (deal, asset_number) removed",
+          "rows_removed": 0,
+          "rows_left": 68025
+        },
+        {
+          "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+          "rows_removed": 53495,
+          "rows_left": 14530
+        },
+        {
+          "step": "fixed-rate loans only",
+          "rows_removed": 0,
+          "rows_left": 14530
+        },
+        {
+          "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+          "rows_removed": 0,
+          "rows_left": 14530
+        },
+        {
+          "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+          "rows_removed": 0,
+          "rows_left": 14530
+        },
+        {
+          "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+          "rows_removed": 8062,
+          "rows_left": 6468
+        },
+        {
+          "step": "APR above 0% and at most 40%",
+          "rows_removed": 35,
+          "rows_left": 6433
+        },
+        {
+          "step": "new (1) or used (2) code",
+          "rows_removed": 0,
+          "rows_left": 6433
+        },
+        {
+          "step": "term 12\u201396 months",
+          "rows_removed": 0,
+          "rows_left": 6433
+        },
+        {
+          "step": "loan amount and vehicle value above $1,000",
+          "rows_removed": 0,
+          "rows_left": 6433
+        },
+        {
+          "step": "loan-to-value 0.2\u20133.0",
+          "rows_removed": 22,
+          "rows_left": 6411
+        },
+        {
+          "step": "origination month has a Treasury benchmark",
+          "rows_removed": 0,
+          "rows_left": 6411
+        },
+        {
+          "step": "vehicle model year plausible (1990 to origination year + 1)",
+          "rows_removed": 0,
+          "rows_left": 6411
+        }
+      ],
+      "loans": 6411,
+      "months": [
+        "2025-07",
+        "2026-01"
+      ],
+      "loans_after_newest_training_month": 0,
+      "same_lender": {
+        "loans": 6411,
+        "model_mae": 1.072438635187963,
+        "b1_mae": 1.379061729670527,
+        "coverage": 0.7638433941662767,
+        "mean_width": 3.1941276728198824,
+        "prime_used_loans": 1656,
+        "coverage_prime_used": 0.8067632850241546,
+        "b1_coverage": 0.8277959756668226,
+        "share_high": 0.03571985649664639,
+        "share_well_above": 0.008890968647636874,
+        "share_below_range": 0.2004367493370769,
+        "mean_residual": -0.6457661192251272
+      },
+      "market": {
+        "loans": 6411,
+        "model_mae": 1.1625881151492758,
+        "b1_mae": 1.379061729670527,
+        "coverage": 0.8905007019185774,
+        "mean_width": 4.772451987411159,
+        "prime_used_loans": 1656,
+        "coverage_prime_used": 0.9112318840579711,
+        "b1_coverage": 0.8277959756668226,
+        "share_high": 0.023085322102636096,
+        "share_well_above": 0.004679457182966776,
+        "share_below_range": 0.08641397597878646,
+        "mean_residual": -0.20169485319635289
+      }
+    },
+    "nissan_2026-A": {
+      "lender": "nissan",
+      "parsed_rows": 51130,
+      "asset_numbers_also_in_training": 0,
+      "drops": [
+        {
+          "step": "all loans parsed",
+          "rows_removed": 0,
+          "rows_left": 51130
+        },
+        {
+          "step": "duplicate (deal, asset_number) removed",
+          "rows_removed": 0,
+          "rows_left": 51130
+        },
+        {
+          "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+          "rows_removed": 51130,
+          "rows_left": 0
+        },
+        {
+          "step": "fixed-rate loans only",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "APR above 0% and at most 40%",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "new (1) or used (2) code",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "term 12\u201396 months",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "loan amount and vehicle value above $1,000",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "loan-to-value 0.2\u20133.0",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "origination month has a Treasury benchmark",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "vehicle model year plausible (1990 to origination year + 1)",
+          "rows_removed": 0,
+          "rows_left": 0
+        }
+      ],
+      "loans": 0
+    },
+    "nissan_2026-B": {
+      "lender": "nissan",
+      "parsed_rows": 54150,
+      "asset_numbers_also_in_training": 0,
+      "drops": [
+        {
+          "step": "all loans parsed",
+          "rows_removed": 0,
+          "rows_left": 54150
+        },
+        {
+          "step": "duplicate (deal, asset_number) removed",
+          "rows_removed": 0,
+          "rows_left": 54150
+        },
+        {
+          "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+          "rows_removed": 54150,
+          "rows_left": 0
+        },
+        {
+          "step": "fixed-rate loans only",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "APR above 0% and at most 40%",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "new (1) or used (2) code",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "term 12\u201396 months",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "loan amount and vehicle value above $1,000",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "loan-to-value 0.2\u20133.0",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "origination month has a Treasury benchmark",
+          "rows_removed": 0,
+          "rows_left": 0
+        },
+        {
+          "step": "vehicle model year plausible (1990 to origination year + 1)",
+          "rows_removed": 0,
+          "rows_left": 0
+        }
+      ],
+      "loans": 0
+    },
+    "capone_2026-1": {
+      "lender": "capone",
+      "parsed_rows": 91627,
+      "asset_numbers_also_in_training": 0,
+      "drops": [
+        {
+          "step": "all loans parsed",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "duplicate (deal, asset_number) removed",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "subsidised (subvented) loans removed \u2014 a promo rate is not a market price",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "fixed-rate loans only",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "consumer credit-bureau score only (drops business 'Commercial Bureau' and 'None' score types; each lender labels the consumer score its own way)",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "credit score present and 250\u2013900 (lenders report FICO Auto scores, which run 250\u2013900; 0 and 999 mean no score)",
+          "rows_removed": 0,
+          "rows_left": 91627
+        },
+        {
+          "step": "originated at most 12 months before the deal's first pool filing \u2014 older loans still in a pool are survivors of years of payoffs and defaults",
+          "rows_removed": 46875,
+          "rows_left": 44752
+        },
+        {
+          "step": "APR above 0% and at most 40%",
+          "rows_removed": 0,
+          "rows_left": 44752
+        },
+        {
+          "step": "new (1) or used (2) code",
+          "rows_removed": 0,
+          "rows_left": 44752
+        },
+        {
+          "step": "term 12\u201396 months",
+          "rows_removed": 0,
+          "rows_left": 44752
+        },
+        {
+          "step": "loan amount and vehicle value above $1,000",
+          "rows_removed": 0,
+          "rows_left": 44752
+        },
+        {
+          "step": "loan-to-value 0.2\u20133.0",
+          "rows_removed": 62,
+          "rows_left": 44690
+        },
+        {
+          "step": "origination month has a Treasury benchmark",
+          "rows_removed": 0,
+          "rows_left": 44690
+        },
+        {
+          "step": "vehicle model year plausible (1990 to origination year + 1)",
+          "rows_removed": 0,
+          "rows_left": 44690
+        }
+      ],
+      "loans": 44690,
+      "months": [
+        "2025-09",
+        "2026-01"
+      ],
+      "loans_after_newest_training_month": 0,
+      "same_lender": {
+        "loans": 44690,
+        "model_mae": 0.95109169129315,
+        "b1_mae": 1.4513484424689953,
+        "coverage": 0.8409935108525397,
+        "mean_width": 3.325656109860666,
+        "prime_used_loans": 10016,
+        "coverage_prime_used": 0.8090055910543131,
+        "b1_coverage": 0.6925039158648467,
+        "share_high": 0.0047214141866189305,
+        "share_well_above": 0.0010516894159767285,
+        "share_below_range": 0.15428507496084135,
+        "mean_residual": -0.6443182509947868
+      },
+      "market": {
+        "loans": 44690,
+        "model_mae": 1.1917564040721125,
+        "b1_mae": 1.4513484424689953,
+        "coverage": 0.7707988364287313,
+        "mean_width": 4.249577238813648,
+        "prime_used_loans": 10016,
+        "coverage_prime_used": 0.6971845047923323,
+        "b1_coverage": 0.6925039158648467,
+        "share_high": 0.006175878272544193,
+        "share_well_above": 0.0005146565227120161,
+        "share_below_range": 0.22302528529872453,
+        "mean_residual": -0.825988077948772
+      }
+    }
+  },
+  "hyundai_test_months": {
+    "loans": 210,
+    "market_mae": 1.640562026575271,
+    "same_lender_mae": 1.163263111819294,
+    "rule_mae": 1.292201071943929,
+    "market_minus_rule_ci95": [
+      0.21060524497055721,
+      0.4888813418804735
+    ],
+    "same_lender_minus_rule_ci95": [
+      -0.24217146212719415,
+      -0.01625191696583553
+    ]
+  }
+}

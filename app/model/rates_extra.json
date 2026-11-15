@@ -1,0 +1,882 @@
+{
+ "built": {
+  "g19": "2026-11-15",
+  "ncua_callreport": "2026-11-15"
+ },
+ "sources": {
+  "g19": [
+   {
+    "title": "Federal Reserve Board, G.19 Consumer Credit, Terms of Credit table, release of November 6, 2026",
+    "url": "https://www.federalreserve.gov/releases/g19/20261106/default.htm"
+   },
+   {
+    "title": "G.19 Terms of Credit CSV, Fed Data Download Program (preformatted packages retire Mar 31 2027; FRED keeps the same series)",
+    "url": "https://www.federalreserve.gov/datadownload/Output.aspx?rel=G19&series=10264fd36110a9c4906bd99f1daccf29&lastObs=&from=&to=&filetype=csv&label=include&layout=seriescolumn&type=package"
+   },
+   {
+    "title": "Terms of use: Federal Reserve Board website policies, checked 2026-11-15",
+    "url": "https://www.federalreserve.gov/disclaimer.htm",
+    "note": "Board website information is in the public domain unless otherwise indicated and may be copied and distributed without permission; cite the Board as the source. The finance-company series is produced from Experian's AutoCount Risk Report (https://www.federalreserve.gov/releases/g19/about.htm); credit it as Federal Reserve Board G.19."
+   },
+   {
+    "title": "Terms of use: FRED, checked 2026-11-15",
+    "url": "https://fred.stlouisfed.org/legal/",
+    "note": "All three series are tagged 'Public Domain: Citation Requested' on FRED: usable without permission if you cite the source and FRED. FRED's terms bar disruptive scraping, mirroring or robots."
+   }
+  ],
+  "ncua_callreport": [
+   {
+    "title": "NCUA 5300 Call Report quarterly data, 2026-06",
+    "url": "https://ncua.gov/files/publications/analysis/call-report-data-2026-06.zip",
+    "page": "https://ncua.gov/analysis/credit-union-corporate-call-report-data/quarterly-data"
+   },
+   {
+    "title": "NCUA Form 5300 (Version 2025.1, effective March 31 2025), Schedule A Section 1 lines 5-6",
+    "url": "https://ncua.gov/files/publications/regulations/call-report-form-march-2025.pdf"
+   },
+   {
+    "title": "NCUA Call Report instructions (effective September 30 2025), Schedule A Interest Rates",
+    "url": "https://ncua.gov/files/publications/regulations/call-report-instructions-september-2025.pdf"
+   },
+   {
+    "title": "Terms of use: NCUA public data inventory, checked 2026-11-15",
+    "url": "https://ncua.gov/data.json",
+    "note": "Lists 'NCUA Natural Person 5300 Call Report Data' (the quarterly-data page) under the public asset 'Credit Union and Call Report Data': license https://www.usa.gov/government-works, use restriction 'Unrestricted' ('Use of this dataset is not restricted'). NCUA's website policies page (https://ncua.gov/about/open-government/website-policies) states no copyright terms. Cite NCUA."
+   }
+  ]
+ },
+ "g19": {
+  "bank_new_60m": {
+   "label": "Commercial banks, new car, 60-month",
+   "value_pct": 7.54,
+   "period": "2026 Q3",
+   "preliminary": true,
+   "observation_month": "2026-08",
+   "measures": "Simple average of each reporting bank's most common APR on 60-month new-car loans, charged in the first calendar week of the middle month of the quarter. No credit-score split.",
+   "fed_series": "RIFLPBCIANM60_N.M",
+   "url": "https://fred.stlouisfed.org/series/RIFLPBCIANM60NM",
+   "release_date": "2026-11-06"
+  },
+  "bank_new_72m": {
+   "label": "Commercial banks, new car, 72-month",
+   "value_pct": 7.17,
+   "period": "2026 Q3",
+   "preliminary": true,
+   "observation_month": "2026-08",
+   "measures": "Simple average of each reporting bank's most common APR on 72-month new-car loans, charged in the first calendar week of the middle month of the quarter. No credit-score split.",
+   "fed_series": "RIFLPBCIANM72_N.M",
+   "url": "https://fred.stlouisfed.org/series/RIFLPBCIANM72NM",
+   "release_date": "2026-11-06"
+  },
+  "finco_new": {
+   "label": "Finance companies, new car (all terms)",
+   "value_pct": 6.31,
+   "period": "2026 Q2",
+   "preliminary": false,
+   "observation_month": "2026-06",
+   "measures": "Average APR on new-car loans at captive and non-captive finance companies for the quarter, weighted by amount financed, across all loan terms (the Fed produces it from Experian's AutoCount Risk Report). No credit-score or term split.",
+   "fed_series": "RIELPCFAN_N.M",
+   "url": "https://fred.stlouisfed.org/series/RIELPCFANNM",
+   "release_date": "2026-11-06"
+  }
+ },
+ "ncua_callreport": {
+  "quarter": "2026 Q2",
+  "as_of": "2026-06-30",
+  "credit_unions_filed": 4299,
+  "field_meanings": {
+   "new": "The interest rate the credit union was offering on new-vehicle loans as of 2026-06-30, as reported on NCUA Form 5300 Schedule A Section 1 line 5 (account 523). The instructions say to report rates 'being offered as of the reporting period' and, if more than one rate applies, 'the most common rate' in the category. Reported only by credit unions with new-vehicle loans outstanding. One rate per credit union: not tied to a credit score or term, and not an average of loans made. Label it 'a rate this credit union offers', never 'your rate'.",
+   "used": "The interest rate the credit union was offering on used-vehicle loans as of 2026-06-30, as reported on NCUA Form 5300 Schedule A Section 1 line 6 (account 524). The instructions say to report rates 'being offered as of the reporting period' and, if more than one rate applies, 'the most common rate' in the category. Reported only by credit unions with used-vehicle loans outstanding. One rate per credit union: not tied to a credit score or term, and not an average of loans made. Label it 'a rate this credit union offers', never 'your rate'.",
+   "stats": "n = credit unions kept; p25, median, p75 in percent (pandas linear interpolation), one value per credit union, unweighted. State = the credit union's mailing-address state in FOICU.txt, not where its members live. Small n (under about 10) gives unstable percentiles.",
+   "outlier_rule": "Dropped rates more than 3 interquartile ranges outside the national 25th-75th percentile for that product; fences_pct shows the kept range."
+  },
+  "national": {
+   "new": {
+    "n": 4082,
+    "p25": 4.85,
+    "median": 5.44,
+    "p75": 6.0,
+    "fences_pct": [
+     1.26,
+     9.66
+    ],
+    "reporting": 4137,
+    "dropped_low": 3,
+    "dropped_high": 52,
+    "loans_but_no_rate": 4
+   },
+   "used": {
+    "n": 4136,
+    "p25": 5.49,
+    "median": 6.28,
+    "p75": 7.29,
+    "fences_pct": [
+     -0.07,
+     12.91
+    ],
+    "reporting": 4178,
+    "dropped_low": 0,
+    "dropped_high": 42,
+    "loans_but_no_rate": 2
+   }
+  },
+  "by_state": {
+   "AK": {
+    "new": {
+     "n": 8,
+     "p25": 5.55,
+     "median": 6.12,
+     "p75": 6.57
+    },
+    "used": {
+     "n": 8,
+     "p25": 6.19,
+     "median": 7.17,
+     "p75": 8.05
+    }
+   },
+   "AL": {
+    "new": {
+     "n": 85,
+     "p25": 5.0,
+     "median": 5.75,
+     "p75": 6.5
+    },
+    "used": {
+     "n": 86,
+     "p25": 5.8,
+     "median": 7.0,
+     "p75": 8.01
+    }
+   },
+   "AR": {
+    "new": {
+     "n": 44,
+     "p25": 4.88,
+     "median": 5.63,
+     "p75": 6.33
+    },
+    "used": {
+     "n": 45,
+     "p25": 5.61,
+     "median": 6.8,
+     "p75": 8.27
+    }
+   },
+   "AZ": {
+    "new": {
+     "n": 33,
+     "p25": 5.5,
+     "median": 6.14,
+     "p75": 6.49
+    },
+    "used": {
+     "n": 33,
+     "p25": 5.75,
+     "median": 6.58,
+     "p75": 7.42
+    }
+   },
+   "CA": {
+    "new": {
+     "n": 235,
+     "p25": 4.9,
+     "median": 5.44,
+     "p75": 5.99
+    },
+    "used": {
+     "n": 235,
+     "p25": 5.24,
+     "median": 5.99,
+     "p75": 6.75
+    }
+   },
+   "CO": {
+    "new": {
+     "n": 60,
+     "p25": 4.99,
+     "median": 5.49,
+     "p75": 6.01
+    },
+    "used": {
+     "n": 62,
+     "p25": 5.74,
+     "median": 6.46,
+     "p75": 7.29
+    }
+   },
+   "CT": {
+    "new": {
+     "n": 59,
+     "p25": 4.74,
+     "median": 5.0,
+     "p75": 5.5
+    },
+    "used": {
+     "n": 61,
+     "p25": 5.0,
+     "median": 5.99,
+     "p75": 6.5
+    }
+   },
+   "DC": {
+    "new": {
+     "n": 20,
+     "p25": 4.46,
+     "median": 5.14,
+     "p75": 5.97
+    },
+    "used": {
+     "n": 20,
+     "p25": 4.75,
+     "median": 5.75,
+     "p75": 7.71
+    }
+   },
+   "DE": {
+    "new": {
+     "n": 13,
+     "p25": 5.35,
+     "median": 5.69,
+     "p75": 6.5
+    },
+    "used": {
+     "n": 14,
+     "p25": 6.0,
+     "median": 6.87,
+     "p75": 7.54
+    }
+   },
+   "FL": {
+    "new": {
+     "n": 106,
+     "p25": 4.99,
+     "median": 5.43,
+     "p75": 5.99
+    },
+    "used": {
+     "n": 106,
+     "p25": 5.49,
+     "median": 6.03,
+     "p75": 6.99
+    }
+   },
+   "GA": {
+    "new": {
+     "n": 68,
+     "p25": 4.52,
+     "median": 5.26,
+     "p75": 6.0
+    },
+    "used": {
+     "n": 68,
+     "p25": 5.22,
+     "median": 6.37,
+     "p75": 7.74
+    }
+   },
+   "GU": {
+    "new": {
+     "n": 2,
+     "p25": 3.12,
+     "median": 4.0,
+     "p75": 4.88
+    },
+    "used": {
+     "n": 2,
+     "p25": 5.81,
+     "median": 6.12,
+     "p75": 6.44
+    }
+   },
+   "HI": {
+    "new": {
+     "n": 45,
+     "p25": 5.25,
+     "median": 5.75,
+     "p75": 6.08
+    },
+    "used": {
+     "n": 43,
+     "p25": 5.69,
+     "median": 6.24,
+     "p75": 7.38
+    }
+   },
+   "IA": {
+    "new": {
+     "n": 66,
+     "p25": 4.8,
+     "median": 5.41,
+     "p75": 6.03
+    },
+    "used": {
+     "n": 66,
+     "p25": 5.58,
+     "median": 7.0,
+     "p75": 7.54
+    }
+   },
+   "ID": {
+    "new": {
+     "n": 26,
+     "p25": 4.97,
+     "median": 5.47,
+     "p75": 6.04
+    },
+    "used": {
+     "n": 26,
+     "p25": 5.86,
+     "median": 6.51,
+     "p75": 7.6
+    }
+   },
+   "IL": {
+    "new": {
+     "n": 167,
+     "p25": 4.45,
+     "median": 4.99,
+     "p75": 5.79
+    },
+    "used": {
+     "n": 172,
+     "p25": 5.24,
+     "median": 6.0,
+     "p75": 7.0
+    }
+   },
+   "IN": {
+    "new": {
+     "n": 114,
+     "p25": 4.98,
+     "median": 5.61,
+     "p75": 6.16
+    },
+    "used": {
+     "n": 117,
+     "p25": 5.75,
+     "median": 6.57,
+     "p75": 7.63
+    }
+   },
+   "KS": {
+    "new": {
+     "n": 57,
+     "p25": 4.99,
+     "median": 5.75,
+     "p75": 6.48
+    },
+    "used": {
+     "n": 59,
+     "p25": 6.0,
+     "median": 6.94,
+     "p75": 7.68
+    }
+   },
+   "KY": {
+    "new": {
+     "n": 48,
+     "p25": 4.75,
+     "median": 5.38,
+     "p75": 5.92
+    },
+    "used": {
+     "n": 50,
+     "p25": 5.74,
+     "median": 6.17,
+     "p75": 7.22
+    }
+   },
+   "LA": {
+    "new": {
+     "n": 123,
+     "p25": 5.0,
+     "median": 5.55,
+     "p75": 6.3
+    },
+    "used": {
+     "n": 124,
+     "p25": 6.0,
+     "median": 6.99,
+     "p75": 7.87
+    }
+   },
+   "MA": {
+    "new": {
+     "n": 119,
+     "p25": 4.82,
+     "median": 5.25,
+     "p75": 5.87
+    },
+    "used": {
+     "n": 120,
+     "p25": 5.3,
+     "median": 5.88,
+     "p75": 6.57
+    }
+   },
+   "MD": {
+    "new": {
+     "n": 56,
+     "p25": 4.16,
+     "median": 4.99,
+     "p75": 5.7
+    },
+    "used": {
+     "n": 57,
+     "p25": 4.75,
+     "median": 5.5,
+     "p75": 6.49
+    }
+   },
+   "ME": {
+    "new": {
+     "n": 48,
+     "p25": 4.93,
+     "median": 5.5,
+     "p75": 6.01
+    },
+    "used": {
+     "n": 48,
+     "p25": 5.25,
+     "median": 5.99,
+     "p75": 7.15
+    }
+   },
+   "MI": {
+    "new": {
+     "n": 167,
+     "p25": 5.0,
+     "median": 5.5,
+     "p75": 6.15
+    },
+    "used": {
+     "n": 169,
+     "p25": 5.49,
+     "median": 6.22,
+     "p75": 7.25
+    }
+   },
+   "MN": {
+    "new": {
+     "n": 77,
+     "p25": 4.94,
+     "median": 5.49,
+     "p75": 5.79
+    },
+    "used": {
+     "n": 79,
+     "p25": 5.49,
+     "median": 6.0,
+     "p75": 6.74
+    }
+   },
+   "MO": {
+    "new": {
+     "n": 85,
+     "p25": 4.99,
+     "median": 5.5,
+     "p75": 6.03
+    },
+    "used": {
+     "n": 85,
+     "p25": 5.74,
+     "median": 6.75,
+     "p75": 7.7
+    }
+   },
+   "MS": {
+    "new": {
+     "n": 51,
+     "p25": 4.99,
+     "median": 5.49,
+     "p75": 6.38
+    },
+    "used": {
+     "n": 48,
+     "p25": 5.68,
+     "median": 7.24,
+     "p75": 8.82
+    }
+   },
+   "MT": {
+    "new": {
+     "n": 39,
+     "p25": 4.65,
+     "median": 5.15,
+     "p75": 5.93
+    },
+    "used": {
+     "n": 40,
+     "p25": 5.76,
+     "median": 6.35,
+     "p75": 7.03
+    }
+   },
+   "NC": {
+    "new": {
+     "n": 53,
+     "p25": 4.5,
+     "median": 5.25,
+     "p75": 6.13
+    },
+    "used": {
+     "n": 56,
+     "p25": 5.5,
+     "median": 6.25,
+     "p75": 6.79
+    }
+   },
+   "ND": {
+    "new": {
+     "n": 29,
+     "p25": 4.5,
+     "median": 5.1,
+     "p75": 5.63
+    },
+    "used": {
+     "n": 29,
+     "p25": 5.0,
+     "median": 6.0,
+     "p75": 7.5
+    }
+   },
+   "NE": {
+    "new": {
+     "n": 48,
+     "p25": 4.75,
+     "median": 5.25,
+     "p75": 6.0
+    },
+    "used": {
+     "n": 50,
+     "p25": 5.96,
+     "median": 7.0,
+     "p75": 8.28
+    }
+   },
+   "NH": {
+    "new": {
+     "n": 12,
+     "p25": 4.95,
+     "median": 5.18,
+     "p75": 5.64
+    },
+    "used": {
+     "n": 12,
+     "p25": 5.24,
+     "median": 6.1,
+     "p75": 6.5
+    }
+   },
+   "NJ": {
+    "new": {
+     "n": 108,
+     "p25": 4.5,
+     "median": 5.24,
+     "p75": 5.91
+    },
+    "used": {
+     "n": 112,
+     "p25": 5.5,
+     "median": 6.14,
+     "p75": 7.24
+    }
+   },
+   "NM": {
+    "new": {
+     "n": 35,
+     "p25": 4.77,
+     "median": 5.61,
+     "p75": 6.64
+    },
+    "used": {
+     "n": 36,
+     "p25": 5.9,
+     "median": 6.95,
+     "p75": 8.14
+    }
+   },
+   "NV": {
+    "new": {
+     "n": 13,
+     "p25": 4.99,
+     "median": 5.35,
+     "p75": 5.75
+    },
+    "used": {
+     "n": 13,
+     "p25": 4.5,
+     "median": 6.03,
+     "p75": 6.8
+    }
+   },
+   "NY": {
+    "new": {
+     "n": 235,
+     "p25": 4.49,
+     "median": 5.02,
+     "p75": 5.77
+    },
+    "used": {
+     "n": 238,
+     "p25": 5.27,
+     "median": 6.12,
+     "p75": 7.0
+    }
+   },
+   "OH": {
+    "new": {
+     "n": 184,
+     "p25": 4.99,
+     "median": 5.49,
+     "p75": 5.99
+    },
+    "used": {
+     "n": 186,
+     "p25": 5.74,
+     "median": 6.49,
+     "p75": 7.21
+    }
+   },
+   "OK": {
+    "new": {
+     "n": 49,
+     "p25": 4.99,
+     "median": 5.74,
+     "p75": 6.05
+    },
+    "used": {
+     "n": 51,
+     "p25": 5.75,
+     "median": 6.61,
+     "p75": 7.42
+    }
+   },
+   "OR": {
+    "new": {
+     "n": 45,
+     "p25": 4.99,
+     "median": 5.49,
+     "p75": 5.92
+    },
+    "used": {
+     "n": 46,
+     "p25": 5.74,
+     "median": 6.0,
+     "p75": 7.12
+    }
+   },
+   "PA": {
+    "new": {
+     "n": 256,
+     "p25": 4.83,
+     "median": 5.25,
+     "p75": 5.95
+    },
+    "used": {
+     "n": 258,
+     "p25": 5.5,
+     "median": 6.21,
+     "p75": 6.99
+    }
+   },
+   "PR": {
+    "new": {
+     "n": 3,
+     "p25": 4.12,
+     "median": 5.24,
+     "p75": 6.5
+    },
+    "used": {
+     "n": 3,
+     "p25": 5.65,
+     "median": 6.31,
+     "p75": 8.11
+    }
+   },
+   "RI": {
+    "new": {
+     "n": 13,
+     "p25": 4.99,
+     "median": 4.99,
+     "p75": 5.75
+    },
+    "used": {
+     "n": 13,
+     "p25": 5.49,
+     "median": 6.0,
+     "p75": 6.66
+    }
+   },
+   "SC": {
+    "new": {
+     "n": 45,
+     "p25": 4.99,
+     "median": 5.59,
+     "p75": 6.21
+    },
+    "used": {
+     "n": 45,
+     "p25": 5.87,
+     "median": 6.69,
+     "p75": 7.76
+    }
+   },
+   "SD": {
+    "new": {
+     "n": 32,
+     "p25": 5.21,
+     "median": 5.56,
+     "p75": 6.23
+    },
+    "used": {
+     "n": 32,
+     "p25": 5.81,
+     "median": 6.42,
+     "p75": 7.47
+    }
+   },
+   "TN": {
+    "new": {
+     "n": 125,
+     "p25": 4.99,
+     "median": 5.5,
+     "p75": 6.22
+    },
+    "used": {
+     "n": 125,
+     "p25": 5.84,
+     "median": 6.52,
+     "p75": 7.69
+    }
+   },
+   "TX": {
+    "new": {
+     "n": 368,
+     "p25": 4.99,
+     "median": 5.58,
+     "p75": 6.25
+    },
+    "used": {
+     "n": 373,
+     "p25": 5.49,
+     "median": 6.5,
+     "p75": 7.64
+    }
+   },
+   "UT": {
+    "new": {
+     "n": 49,
+     "p25": 4.99,
+     "median": 5.24,
+     "p75": 5.82
+    },
+    "used": {
+     "n": 50,
+     "p25": 4.99,
+     "median": 5.99,
+     "p75": 6.48
+    }
+   },
+   "VA": {
+    "new": {
+     "n": 87,
+     "p25": 4.64,
+     "median": 5.19,
+     "p75": 5.88
+    },
+    "used": {
+     "n": 90,
+     "p25": 5.74,
+     "median": 6.56,
+     "p75": 7.77
+    }
+   },
+   "VI": {
+    "new": {
+     "n": 3,
+     "p25": 7.0,
+     "median": 8.0,
+     "p75": 8.0
+    },
+    "used": {
+     "n": 4,
+     "p25": 7.75,
+     "median": 8.0,
+     "p75": 9.0
+    }
+   },
+   "VT": {
+    "new": {
+     "n": 12,
+     "p25": 5.34,
+     "median": 5.93,
+     "p75": 6.55
+    },
+    "used": {
+     "n": 12,
+     "p25": 5.91,
+     "median": 6.72,
+     "p75": 7.75
+    }
+   },
+   "WA": {
+    "new": {
+     "n": 71,
+     "p25": 5.25,
+     "median": 5.74,
+     "p75": 6.41
+    },
+    "used": {
+     "n": 73,
+     "p25": 5.79,
+     "median": 6.57,
+     "p75": 7.33
+    }
+   },
+   "WI": {
+    "new": {
+     "n": 98,
+     "p25": 4.49,
+     "median": 5.02,
+     "p75": 5.6
+    },
+    "used": {
+     "n": 97,
+     "p25": 4.99,
+     "median": 5.99,
+     "p75": 6.75
+    }
+   },
+   "WV": {
+    "new": {
+     "n": 70,
+     "p25": 5.0,
+     "median": 5.45,
+     "p75": 6.5
+    },
+    "used": {
+     "n": 71,
+     "p25": 5.94,
+     "median": 6.5,
+     "p75": 7.57
+    }
+   },
+   "WY": {
+    "new": {
+     "n": 18,
+     "p25": 4.79,
+     "median": 5.43,
+     "p75": 6.25
+    },
+    "used": {
+     "n": 18,
+     "p25": 4.99,
+     "median": 6.28,
+     "p75": 6.99
+    }
+   }
+  }
+ }
+}

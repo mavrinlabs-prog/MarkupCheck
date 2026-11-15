@@ -1,0 +1,68 @@
+{
+ "bytes": 205716878,
+ "codes": {
+  "credit_score_type": {
+   "Credit Bureau Score": 50457,
+   "None": 266
+  },
+  "employment_verification_code": {
+   "1": 2,
+   "2": 50386,
+   "3": 335
+  },
+  "income_verification_code": {
+   "1": 1,
+   "2": 50284,
+   "3": 438
+  },
+  "interest_rate_type_code": {
+   "1": 50723
+  },
+  "new_used_code": {
+   "1": 36642,
+   "2": 14081
+  },
+  "subvented": {
+   "0": 14714,
+   "1": 15527,
+   "1|2": 9436,
+   "2": 1187,
+   "2|1": 9859
+  },
+  "vehicle_type_code": {
+   "1": 3702,
+   "2": 20616,
+   "3": 26404,
+   "99": 1
+  },
+  "vehicle_value_source_code": {
+   "1": 36775,
+   "3": 1293,
+   "98": 12655
+  }
+ },
+ "credit_score_max": 900.0,
+ "credit_score_median": 784.0,
+ "credit_score_min": 450.0,
+ "credit_score_outside_300_850": 6217,
+ "duplicate_asset_numbers_dropped": 0,
+ "nonnumeric_credit_score_values": {
+  "None": 266
+ },
+ "origination_month_max": "2024-08",
+ "origination_month_min": "2018-09",
+ "parquet_bytes": 1222059,
+ "rows_parsed": 50723,
+ "rows_written": 50723,
+ "slug": "gmf_2025-1",
+ "source_url": "https://www.sec.gov/Archives/edgar/data/2047316/000134718525000003/exh1024740112024_lp.xml",
+ "subvented_each_code": {
+  "0": 14714,
+  "1": 34822,
+  "2": 20482
+ },
+ "sum_reportingPeriodActualEndBalanceAmount": 1648810962.97,
+ "sum_reportingPeriodBeginningLoanBalanceAmount": 1680114716.35,
+ "unparsed_origination_dates": {},
+ "xml_file": "exh1024740112024_lp.xml"
+}
